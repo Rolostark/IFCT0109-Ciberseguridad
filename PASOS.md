@@ -1,0 +1,76 @@
+---
+title: "Historial de Pasos — Migración y Creación del Vault Obsidian IFCT0109"
+aliases:
+  - Pasos
+  - Historial
+  - Registro de Migracion
+tags:
+  - ifct0109
+  - documentacion
+  - git
+  - pasos
+---
+
+# 📜 Registro de Pasos — Migración a Obsidian Vault IFCT0109
+
+Este documento registra cronológicamente los pasos ejecutados para transformar el material docente del curso **IFCT0109: Seguridad Informática** en una bóveda de **Obsidian** 100% funcional y autónoma offline.
+
+---
+
+## 📌 Paso 1: Análisis del Contenido Original
+* Inspección de los archivos HTML originales alojados en la carpeta del curso.
+* Detección de la correspondencia con el Certificado de Profesionalidad oficial **IFCT0109 (Seguridad Informática)** impartido por Manuel FR (`cursosmfr.es`).
+* Identificación de dependencias externas: enlaces web, formularios, descargas en `.7z`, documentos `.docx`, hojas `.xlsx` y archivos `.pdf`.
+
+---
+
+## 📌 Paso 2: Conversión Inicial a Markdown para Obsidian
+* Transformación de los portales web estáticos en notas Markdown con sintaxis enriquecida:
+  * **Metadatos YAML (Frontmatter):** `title`, `aliases`, `tags`.
+  * **Wikilinks bidireccionales:** `[[Nota|Texto]]`.
+  * **Callouts visuales de Obsidian:** `> [!info]`, `> [!tip]`, `> [!abstract]`, `> [!example]`, `> [!warning]`.
+  * **Diagramas Mermaid:** Diagrama de flujo de aprendizaje en el Roadmap (`flowchart LR`).
+  * **Extracción de Dorks:** Tabulación de las 54 consultas de Google Dorks para OSINT y Bug Bounty clasificadas por nivel y categoría.
+
+---
+
+## 📌 Paso 3: Reorganización según `INDICE.png`
+* Adaptación de la estructura del Vault siguiendo fielmente la captura de referencia `INDICE.png`:
+  * Numeración de carpetas y archivos para forzar el orden visual exacto en el explorador de archivos de Obsidian:
+    * `01 - CURSO/` (`01 - Tablero de contenidos`, `02 - Tablero de contenidos curso 023`, `03 - Roadmap`).
+    * `02 - MODULOS/` (`01 - Magerit`, `02 - ISO 27002`, `03 - Google Dorks`, `04 - Hacking Ético`, `05 - Prácticas (PoCs)`).
+    * `03 - EXTRA/` (`01 - Enlaces favoritos`, `02 - Recursos Bug Bounty`, `03 - Retos de Ciberseguridad`, `04 - Conclusiones Finales`).
+  * Creación de `00 - INDICE.md` e `Inicio.md` reproduciendo las tarjetas, descripciones y el panel de novedades.
+
+---
+
+## 📌 Paso 4: Configuración de Tableros Kanban
+* Transformación de los tableros de contenido al formato oficial del plugin **Obsidian Kanban** (`kanban-plugin: basic`).
+* Columnas horizontales por cada Unidad Formativa oficial (`MF0490_3`, `MF0486_3`, `MF0487_3`, `MF0489_3`, `MF0488_3`, etc.) con tarjetas arrastrables (*drag and drop*) y casillas `- [ ]`.
+* Descarga e instalación directa del plugin de la comunidad `obsidian-kanban` (v2.0.51) dentro de `.obsidian/plugins/obsidian-kanban/` y activación en `community-plugins.json`.
+
+---
+
+## 📌 Paso 5: Descarga de Recursos y Archivos Pesados
+* Creación de la carpeta dedicada `archivos_descargados/` para aislar los recursos binarios del cuerpo de notas:
+  * **`documentos/`**: `simulacro.docx`, `riesgos.xlsx`, `msdos.pdf`, `linuxcommands.pdf`, `nmap_cs.pdf`, `lpi-material.pdf` (8.7 MB).
+  * **`imagenes/`**: `certificaciones.jpg`, `linux.png`, `nmap.png`, `tmux.png`, `terminator.png`.
+  * **`paquetes_7z/`**: Paquete Bug Bounty `bb_recursos_20260321.7z` y los 12 retos de laboratorio CTF (`bitlocker.7z`, `office.7z`, `creds_hunting.7z`, `lsass.7z`, `unshadow.7z`, `reverse.7z`, `usbsmith.7z`, `ftpzip.7z`, `wifi.7z`, `memoria.7z`, `evidencias.7z`, `infected.7z`).
+
+---
+
+## 📌 Paso 6: Transformación de Documentos Office y PDF a Markdown
+* **Word (`simulacro.docx`):** Convertido a `02 - MODULOS/MAGERIT - Simulacro Clínica.md` (628 líneas con inventario de activos A1–A17, árbol de dependencias, matrices y caso práctico ClínicaSalud).
+* **Excel (`riesgos.xlsx`):** Convertido a `02 - MODULOS/MAGERIT - Matriz de Análisis de Riesgos.md` (tabulación completa de hojas: Matriz, Clasificación, Amenazas INCIBE, Salvaguardas).
+* **PDFs:** Convertidos a notas Markdown en `03 - EXTRA/Documentos/`:
+  * `MS-DOS CheatSheet.md`
+  * `Linux Comandos Esenciales.md`
+  * `Nmap CheatSheet.md`
+  * `Material Preparación LPIC.md`
+
+---
+
+## 📌 Paso 7: Desacoplamiento Offline y Gestión con Git
+* Reemplazo de todos los enlaces que apuntaban al servidor remoto `cursosmfr.es` por rutas relativas locales y wikilinks.
+* Configuración de `.gitignore` para excluir binarios pesados (`*.7z`) y mantener el repositorio optimizado.
+* Inicialización del repositorio Git con commits estructurados por etapas.
