@@ -1,0 +1,6 @@
+# Archivos de espacio de trabajo local de Obsidian
+.obsidian/workspace.json
+
+# Archivos binarios pesados (evita exceder el límite de 100MB de GitHub)
+archivos_descargados/paquetes_7z/
+*.7z
