@@ -21,9 +21,9 @@ tags:
 ## 🌐 1. Tutoriales Técnicos
 
 * **Enumeración Web (Fuzzing):**
-  * Descubrimiento de rutas, subdominios y parámetros ocultos con `ffuf`, `gobuster` y `wfuzz`.
+  * Descubrimiento de rutas, subdominios y parámetros ocultos con `ffuf`, `gobuster` y `feroxbuster`.
   * Diccionarios especializados de [SecLists](https://github.com/danielmiessler/SecLists).
-  * [Acceso al Tutorial Web Fuzzing]([[02 - MODULOS/04 - Hacking Ético#1. Tutoriales Técnicos|Fuzzing Web]])
+  * 📖 **Guía completa del curso:** [[02 - MODULOS/Hacking Ético - Guía de Web Fuzzing|🔍 Acceso a la Guía Detallada de Web Fuzzing (Herramientas, Comandos y Filtros)]]
 * **Reconocimiento Bug Bounty Hunter:**
   * Metodología estructurada de recolección de información pasiva y activa.
   * Detección de subdominios (`subfinder`, `amass`), resolución DNS y rastreo de puertos masivos (`httpx`, `naabu`).

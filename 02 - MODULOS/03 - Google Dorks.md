@@ -114,14 +114,14 @@ tags:
 ### ⚠️ Vulnerabilidades Potenciales y Fugas
 > Directorios expuestos, volcados SQL, backups y logs.
 
-| Nivel | Búsqueda / Objetivo | Dork de Google |
-| :---: | :--- | :--- |
-| 🔴 Avanzado | **Credenciales en GitHub** | `site:github.com "{simpleDomain}" (password OR passwd OR pwd OR credentials OR token OR API_KEY)` |
-| 🔴 Avanzado | **Archivos de backup expuestos** | `site:{domain} (filetype:bak OR filetype:backup OR filetype:sql)` |
-| 🔴 Avanzado | **Listados de directorios** | `site:{domain} intitle:"index of"` |
-| 🔴 Avanzado | **Logs del servidor** | `site:{domain} (filetype:log OR filetype:txt) (error OR warning OR debug)` |
-| 🟡 Intermedio | **Información en Pastebin** | `site:pastebin.com "{simpleDomain}"` |
-| 🔴 Avanzado | **Páginas de error con info** | `site:{domain} (intitle:"error" OR intitle:"404" OR intitle:"500") (stack OR trace)` |
+|     Nivel     | Búsqueda / Objetivo              | Dork de Google                                                                                    |
+| :-----------: | :------------------------------- | :------------------------------------------------------------------------------------------------ |
+|  🔴 Avanzado  | **Credenciales en GitHub**       | `site:github.com "{simpleDomain}" (password OR passwd OR pwd OR credentials OR token OR API_KEY)` |
+|  🔴 Avanzado  | **Archivos de backup expuestos** | `site:{domain} (filetype:bak OR filetype:backup OR filetype:sql)`                                 |
+|  🔴 Avanzado  | **Listados de directorios**      | `site:{domain} intitle:"index of"`                                                                |
+|  🔴 Avanzado  | **Logs del servidor**            | `site:{domain} (filetype:log OR filetype:txt) (error OR warning OR debug)`                        |
+| 🟡 Intermedio | **Información en Pastebin**      | `site:pastebin.com "{simpleDomain}"`                                                              |
+|  🔴 Avanzado  | **Páginas de error con info**    | `site:{domain} (intitle:"error" OR intitle:"404" OR intitle:"500") (stack OR trace)`              |
 
 ---
 

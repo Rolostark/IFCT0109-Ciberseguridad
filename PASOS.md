@@ -85,3 +85,16 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * **`03 - Robustecimiento de Sistemas y Redes.md`**: 15 controles tecnológicos (código malicioso, análisis de vulnerabilidades, CIS Benchmarks, borrado seguro, DLP, backups 3-2-1, alta disponibilidad, microsegmentación de redes, filtrado web y ciclo de vida de claves criptográficas).
 * Actualización de la nota central `02 - MODULOS/02 - ISO 27002.md` con enlaces directos por control hacia sus anclajes respectivos.
 
+---
+
+## 📌 Paso 9: Guía Integral de Web Fuzzing para Hacking Ético
+* Descarga y conversión del tutorial técnico alojado en `cursosmfr.es/ifct0109/hacking/fuzzing/` y su módulo de herramientas `tools/index.html`:
+  * Creación de `02 - MODULOS/Hacking Ético - Guía de Web Fuzzing.md`.
+  * Catálogo de herramientas ofensivas (FFUF, Gobuster, Feroxbuster, cURL, Subfinder, API Fuzzer, SecLists).
+  * Tabulación de rutas exactas de diccionarios SecLists para directorios, parámetros, VHosts, subdominios y APIs.
+  * Comandos prácticos de enumeración, recursión, parameter fuzzing (GET y POST) y VHosts.
+  * Metodología de auditoría de APIs (REST, SOAP WSDL, GraphQL con introspección y herramienta `webfuzz_api`).
+  * Tablas comparativas de banderas de filtrado y matchers (códigos de estado, tamaño, palabras, líneas, regex y similitud).
+  * Vinculación bidireccional desde `02 - MODULOS/04 - Hacking Ético.md`.
+
+
