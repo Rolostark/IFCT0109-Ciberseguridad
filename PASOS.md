@@ -189,3 +189,14 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * **`03 - Máquinas Hackeables (VMs).md`:** Catálogo integral de máquinas de laboratorio para entrenamiento práctico: procedimiento previo de conexión en Red NAT con Kali Linux y descubrimiento con `netdiscover`, catálogo clasificado de máquinas Linux (Conceptos Básicos, Vulnerabilidades Web OWASP, Avanzadas), sistemas Windows Server y Active Directory (`dc01` a `dc03`, examen, big), y plataforma Dockerlabs con guía paso a paso de despliegue mediante scripts `auto_deploy.sh`.
 * **Alineación del Hub Central y Navegación:**
   * Reestructuración de `02 - MODULOS/04 - Hacking Ético.md` interconectando las 3 secciones principales del módulo (Web Fuzzing, Reconocimiento Bug Bounty y Máquinas Hackeables).
+
+---
+
+## 📌 Paso 15: Integración de Guía de Laboratorio Thoth y Descarga Offline de Capturas de WS2008
+* **Creación de la Guía de Máquina Thoth:**
+  * Elaboración de `02 - MODULOS/Hacking Ético/Máquinas/Thoth.md` transcribiendo la guía oficial paso a paso: LHOST/RHOST, escaneo Nmap (puertos 21, 22, 80), acceso anónimo FTP y lectura de `note.txt`, ataque de diccionario con Hydra sobre FTP utilizando `rockyou.txt`, acceso SSH, captura de `user.txt`, enumeración con `sudo -l`, elevación con GTFOBins y lectura de `/root/root.txt`.
+  * Vinculación bidireccional desde la matriz `02 - MODULOS/Hacking Ético/03 - Máquinas Hackeables (VMs).md`.
+* **Cosecha de Medios Offline para Máquinas Windows:**
+  * Descarga e incorporación local de las **39 capturas de pantalla** oficiales de Windows Server 2008 en `archivos_descargados/imagenes/vms/ws2008_images/media/` (`image2.png` a `image40.png`).
+* **Rastreo Completo de las 42 Máquinas Virtuales:**
+  * Descarga y validación en local del contenido íntegro de las 42 páginas de laboratorio de máquinas vulnerables del servidor oficial (`cursosmfr.es/ifct0109/hacking/vms/`).
