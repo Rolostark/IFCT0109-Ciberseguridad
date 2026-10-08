@@ -70,20 +70,20 @@ Máquinas introductorias diseñadas para asentar enumeración de servicios (FTP 
 ### 📂 Vulnerabilidades Web
 Entornos enfocados en la explotación de vectores OWASP Top 10 (LFI/RFI, Subida arbitraria de archivos, Inyección SQL, SSTI y bypass de controles).
 
-| Máquina         | Vector Principal de Ataque                                  |
-| :-------------- | :---------------------------------------------------------- |
-| **`vulny`**     | Arbitrary File Upload & Web Shell                           |
-| **`evilbox`**   | LFI (Local File Inclusion) & PHP Wrappers                   |
-| **`uvalde`**    | Inyecciones en formularios y autenticación rota             |
-| **`inferno`**   | Fuerza bruta HTTP y paneles administrativos expuestos       |
-| **`friendly2`** | Deserialización / Explotación de endpoints web              |
-| **`flower`**    | SSTI (Server-Side Template Injection) en Python/Node        |
-| **`insomnia`**  | JWT manipulation & Insecure Direct Object References (IDOR) |
-| **`cengbox`**   | SQL Injection ciega y volcado de bases de datos             |
-| **`faust`**     | Bypass de filtros WAF y evasión de extensiones              |
-| **`liceo`**     | Explotación de aplicaciones educativas y CMS obsoletos      |
-| **`nebula`**    | Command Injection en formularios de utilidades de red       |
-| **`medusa`**    | Explotación web encadenada y movimientos laterales          |
+| Máquina | Vector Principal de Ataque |
+| :--- | :--- |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Vulny\|vulny]]** | Arbitrary File Upload & Web Shell |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Evil box one\|evilbox]]** | LFI (Local File Inclusion) & PHP Wrappers |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Uvalde\|uvalde]]** | Inyecciones en formularios y autenticación rota |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Inferno\|inferno]]** | Fuerza bruta HTTP y paneles administrativos expuestos |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Friendly2\|friendly2]]** | Deserialización / Explotación de endpoints web |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Flower\|flower]]** | SSTI (Server-Side Template Injection) en Python/Node |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Insomnia\|insomnia]]** | JWT manipulation & Insecure Direct Object References (IDOR) |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Cengbox\|cengbox]]** | SQL Injection ciega y volcado de bases de datos |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Faust\|faust]]** | Bypass de filtros WAF y evasión de extensiones |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Liceo\|liceo]]** | Explotación de aplicaciones educativas y CMS obsoletos |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Nebula\|nebula]]** | Command Injection en formularios de utilidades de red |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Medusa\|medusa]]** | Explotación web encadenada y movimientos laterales |
 
 ---
 
@@ -92,13 +92,13 @@ Laboratorios que exigen análisis forense de binarios, pivoteo interno, encadena
 
 | Máquina | Escenario Complejo |
 | :--- | :--- |
-| **`superhuman`** | Reverse engineering ligero y servicios personalizados |
-| **`chromatica`** | Explotación web a nivel de API y escalada multi-usuario |
-| **`w140`** | Hardening de servicios y bypass de restricciones AppArmor |
-| **`aragog`** | Análisis de capacidades de Linux (`getcap` / `setcap`) |
-| **`observer`** | Fugas de información en logs, depuración y pivoteo local |
-| **`twisted`** | Evasión de entornos enjaulados (*Restricted Shells / rbash*) |
-| **`dc09`** | Ataques estilo DefCon / OSCP con vectores encadenados |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Superhuman\|superhuman]]** | Reverse engineering ligero y servicios personalizados |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Chromatica\|chromatica]]** | Explotación web a nivel de API y escalada multi-usuario |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/w140\|w140]]** | Hardening de servicios y bypass de restricciones AppArmor |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Aragog\|aragog]]** | Análisis de capacidades de Linux (`getcap` / `setcap`) |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Observer\|observer]]** | Fugas de información en logs, depuración y pivoteo local |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Twister\|twisted]]** | Evasión de entornos enjaulados (*Restricted Shells / rbash*) |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/dc09\|dc09]]** | Ataques estilo DefCon / OSCP con vectores encadenados |
 
 ---
 
@@ -107,9 +107,9 @@ Laboratorios que exigen análisis forense de binarios, pivoteo interno, encadena
 ### 📂 Windows Server Standalone
 Escenarios de sistemas Windows sin controlador de dominio para practicar enumeración de puertos SMB/RPC, búsqueda de credenciales en memoria y escalada con privilegios de Windows (`SeImpersonatePrivilege`, Potato exploits, servicios no cotizados).
 
-* **`Windows Server 2008` (`ws2008`):** Explotación de vulnerabilidades heredadas (MS17-010 EternalBlue, servicios sin parches).
-* **`liar`:** Escalada de privilegios local en Windows, abuso de tareas programadas y DLL Hijacking.
-* **`simple`:** Enumeración SMB, extracción de hashes NTLM y elevación vía permisos débiles en servicios (`sc.exe`).
+* **[[02 - MODULOS/Hacking Ético/Máquinas/ws2008|Windows Server 2008 (ws2008)]]:** Explotación de vulnerabilidades heredadas (MS17-010 EternalBlue, servicios sin parches) con capturas de pantalla integradas.
+* **[[02 - MODULOS/Hacking Ético/Máquinas/Liar|liar]]:** Escalada de privilegios local en Windows, abuso de tareas programadas y DLL Hijacking.
+* **[[02 - MODULOS/Hacking Ético/Máquinas/Simple|simple]]:** Enumeración SMB, extracción de hashes NTLM y elevación vía permisos débiles en servicios (`sc.exe`).
 
 ---
 
@@ -118,11 +118,11 @@ Entornos corporativos de dominio completo para auditar la cadena completa de ata
 
 | Laboratorio AD | Objetivos y Técnicas Cubiertas |
 | :--- | :--- |
-| **`dc01`** | Enumeración de usuarios (`rpcclient`, `cme`), Kerberoasting y AS-REP Roasting |
-| **`dc02`** | Abuso de ACLs y permisos delegados, recolección con SharpHound y BloodHound |
-| **`dc03`** | Escalada a Domain Admin mediante credenciales en memoria (Mimikatz) y tokens |
-| **`examen`** | Auditoría integral estilo prueba técnica: compromiso perimetral $\rightarrow$ DA |
-| **`big`** | Bosque corporativo con relaciones de confianza entre dominios (*domain trusts*) |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/dc01\|dc01]]** | Enumeración de usuarios (`rpcclient`, `cme`), Kerberoasting y AS-REP Roasting |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/dc02\|dc02]]** | Abuso de ACLs y permisos delegados, recolección con SharpHound y BloodHound |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/dc03\|dc03]]** | Escalada a Domain Admin mediante credenciales en memoria (Mimikatz) y tokens |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Examen ad\|examen]]** | Auditoría integral estilo prueba técnica: compromiso perimetral $\rightarrow$ DA |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/BIG\|big]]** | Bosque corporativo con relaciones de confianza entre dominios (*domain trusts*) |
 
 > [!tip] Laboratorio Paso a Paso de Active Directory
 > Para el despliegue y auditoría detallada de AD 2019 con BloodHound y herramientas de recolección, consulta:
