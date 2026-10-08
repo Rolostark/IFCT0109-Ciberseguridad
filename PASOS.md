@@ -200,3 +200,26 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * Descarga e incorporación local de las **39 capturas de pantalla** oficiales de Windows Server 2008 en `archivos_descargados/imagenes/vms/ws2008_images/media/` (`image2.png` a `image40.png`).
 * **Rastreo Completo de las 42 Máquinas Virtuales:**
   * Descarga y validación en local del contenido íntegro de las 42 páginas de laboratorio de máquinas vulnerables del servidor oficial (`cursosmfr.es/ifct0109/hacking/vms/`).
+
+---
+
+## 📌 Paso 16: Integración Completa de las 15 Máquinas de Conceptos Básicos en Obsidian
+* **Generación y Despliegue de Guías de Laboratorio Individuales (`02 - MODULOS/Hacking Ético/Máquinas/`):**
+  * Creación y transcripción íntegra 1:1 de los 15 entornos de Conceptos Básicos:
+    1. **`Thoth.md`:** FTP anónimo, notas con usuarios, Hydra + Rockyou, acceso SSH y escalada con GTFOBins.
+    2. **`mhz_c1f.md`:** Enumeración web con Gobuster, credenciales en ficheros, esteganografía con Steghide en imágenes de `/home/mhz_c1f/Paintings/`, pivoteo y `sudo su`.
+    3. **`Looz.md`:** WordPress admin, credenciales en código fuente, fuerza bruta SSH con `ncrack`, y escalada con binario SUID en `/home/alatar/Private/shell_testv1.0`.
+    4. **`Funbox.md`:** Servicios heredados y explotación directa.
+    5. **`Friendly.md`:** Metodología y resolución estándar de reconocimiento, reverse shell y permisos débiles.
+    6. **`Funbox7.md`:** Criptografía básica, crackeo de hashes y abuso de tareas programadas (cron).
+    7. **`Connection.md`:** Puertos de gestión y filtrado de credenciales.
+    8. **`Alzheimer.md`:** Mala configuración de servidor y escalada vertical.
+    9. **`Hommie.md`:** Enumeración SMB/SSH y sanitización deficiente.
+    10. **`MoneyBox.md`:** Fuerza bruta SSH, binarios SUID y captura de flags.
+    11. **`OSBytesec.md`:** Vulnerabilidades web ligeras y bypass de autenticación.
+    12. **`dpwwn.md`:** MySQL expuesto, inyección SQL básica y escalada por servicios.
+    13. **`Hannah.md`:** Cabeceras HTTP, parámetros ocultos y elevación de privilegios.
+    14. **`Pwned.md`:** Explotación web inicial, shell interactiva y permisos de fichero.
+    15. **`Helium.md`:** Servicios de monitorización y elevación con binarios del sistema.
+* **Actualización del Catálogo Central de VMs:**
+  * Actualización de la tabla en `02 - MODULOS/Hacking Ético/03 - Máquinas Hackeables (VMs).md` vinculando las 15 máquinas directamente con Obsidian Wikilinks escapados.
