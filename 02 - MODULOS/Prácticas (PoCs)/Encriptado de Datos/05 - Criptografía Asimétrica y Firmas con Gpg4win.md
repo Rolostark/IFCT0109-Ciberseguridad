@@ -1,22 +1,12 @@
 ---
-title: "🔒 Práctica: Criptografía Asimétrica, Firmas Digitales y Claves PGP con Gpg4win"
+title: "🔐 Encriptado con GPG4Win"
 aliases:
-  - Criptografía Asimétrica, Firmas Digitales y Claves PGP con Gpg4win
-  - PoC gpg4win
+  - 🔐 Encriptado con GPG4Win
 tags:
   - ifct0109/pocs
   - encriptado
   - gpg4win
   - pgp
-  - firmas-digitales
-  - pki
----
-
-# 🔒 Práctica: Criptografía Asimétrica, Firmas Digitales y Claves PGP con Gpg4win
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Cifrado y Criptografía Aplicada del Certificado IFCT0109: implementación de algoritmos simétricos y asimétricos, cifrado en reposo, firmas digitales, gestión de claves y técnicas forenses de esteganografía.
-
 ---
 
 # 🔐 Encriptado con GPG4Win
@@ -57,19 +47,39 @@ En una comunicación hay un **receptor** y un **emisor**. Nosotros somos el emis
 
 * Así tiene acceso a la información
 
+![Esquema cifrado asimétrico](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image49.png)
+
 > [!warning] 📝 Importante:  Si el receptor son varios, un mismo mensaje se puede cifrar con todas las claves públicas de cada receptor y luego cada uno de ellos descifra el mensaje con su clave privada.
 
 ## 📥 Instalación del Programa GPG4Win
+
+![Instalador GPG4Win](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image50.png)
+
+![Instalación paso 1](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image51.png)
+
+![Instalación paso 2](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image52.png)
+
+![Instalación paso 3](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image53.png)
+
+![Instalación paso 4](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image54.png)
+
+![Instalación completada](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image55.png)
 
 ## 🔧 Configuración Inicial - Kleopatra
 
 Se abrirá el programa **Kleopatra** con la siguiente interfaz.
 
+![Interfaz Kleopatra](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image56.png)
+
 ### 🆕 Generar Nuevo Par de Claves
 
 Lo primero que vamos a hacer es generarnos un nuevo par de claves, salvo que ya las tengamos, en cuyo caso tendríamos que importarlas.
 
+![Nuevo par de claves](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image57.png)
+
 En la siguiente pantalla:
+
+![Tipo de certificado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image58.png)
 
 #### 🎯 ¿Qué opción elegir?
 
@@ -95,11 +105,15 @@ Elegimos la opción de arriba, ya que la segunda es una certificación similar a
 
 Rellenamos nuestros datos en la siguiente imagen, con nombre y apellidos y correo electrónico.
 
+![Datos personales](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image59.png)
+
 Marcamos **Proteger la clave generada con una contraseña**.
 
 Pulsamos **Crear** y si todo ha ido bien se genera nuestras claves. Nos pedirá la clave privada en el proceso.
 
 ### ✅ Claves Generadas
+
+![Claves generadas](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image60.png)
 
 Se ha generado la huella digital de nuestra clave.
 
@@ -121,11 +135,15 @@ Vamos a exportar ahora nuestra clave pública, que podremos enviar por correo a 
 
 En el entorno de Kleopatra, sobre nuestro certificado pulsamos al botón derecho y **Exportar**, o con él seleccionado pulsamos en **Exportar** en la barra superior.
 
+![Exportar clave pública](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image61.png)
+
 Esto nos permite exportar nuestra clave pública que podremos enviar por correo.
 
 ## 📥 Importar Clave Pública
 
 Partimos de una clave que hemos recibido por correo y vamos a importarla.
+
+![Archivo de clave pública](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image62.png)
 
 Desde Kleopatra pulsamos en **Importar** y seleccionamos el archivo.
 
@@ -135,7 +153,11 @@ Lo vamos a certificar como válido. Al contrario que en certificados que utiliza
 
 Es posible que para certificarlo nos pida nuestra clave privada.
 
+![Certificar clave](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image63.png)
+
 Una vez finalizada la importación, nos aparecerá en la zona de certificados.
+
+![Clave importada](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image64.png)
 
 ## 🌐 Importar Clave desde Servidor
 
@@ -147,17 +169,29 @@ Primero vamos a generar un certificado de revocación.
 
 Vamos a la zona de certificados y pulsamos doble clic sobre nuestro certificado, y posteriormente en **Generar certificado de revocación**.
 
+![Generar certificado de revocación](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image65.png)
+
 Y lo guardamos en un lugar seguro. Cerramos esa ventana.
 
 ### 🌐 Paso 2: Publicar en Servidor
 
 Ahora pulsamos botón derecho en nuestro certificado y **Publicar en servidor**.
 
+![Publicar en servidor](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image66.png)
+
+![Confirmación publicación](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image67.png)
+
 ### 🔍 Paso 3: Buscar y Descargar Claves
 
 Esto permite ahora que no necesitemos enviar nuestra clave pública, sino que desde el propio Kleopatra, cualquiera puede darle a **Búsqueda en el servidor** y descargar nuestra clave, bien conociendo nuestro correo o mediante la huella digital.
 
+![Buscar en servidor](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image68.png)
+
+![Resultados de búsqueda](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image69.png)
+
 Solo tiene que seleccionarlo y pulsar en **Importar**.
+
+![Importar desde servidor](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image70.png)
 
 ## ✉️ Encriptado de Texto
 
@@ -165,9 +199,15 @@ Una vez hemos importado la clave pública del receptor, ya podemos encriptar men
 
 Desde el mismo Kleopatra lo podemos hacer desde el **Bloc de notas**.
 
+![Abrir bloc de notas](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image71.png)
+
+![Bloc de notas abierto](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image72.png)
+
 ### 👥 Paso 1: Seleccionar Destinatarios
 
 Dentro del bloc de notas, dentro de la pestaña **Destinatarios**, elegimos los destinatarios de nuestro mensaje, podemos cifrar para nosotros mismos, podemos firmar ese cifrado para darle autenticidad al texto, y luego podemos añadir más destinatarios de ese cifrado.
+
+![Seleccionar destinatarios](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image73.png)
 
 #### 📋 Opciones:
 
@@ -180,6 +220,8 @@ Dentro del bloc de notas, dentro de la pestaña **Destinatarios**, elegimos los 
 ### ✏️ Paso 2: Escribir el Mensaje
 
 Volvemos a la Pestaña **Bloc de notas** y escribimos el mensaje.
+
+![Escribir mensaje](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image74.png)
 
 Y pulsamos en el botón **Firmar y cifrar bloc de notas**.
 
@@ -231,7 +273,13 @@ Este mensaje tal cual lo podemos enviar por correo a Juan que es nuestro recepto
 
 Juan una vez recibido el mensaje lo copia y lo pega en el bloc de notas de su Kleopatra.
 
+![Mensaje cifrado pegado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image75.png)
+
 Pulsaría en **Descifrar bloc de notas**, el programa le pedirá su clave secreta, y gracias a ella obtendría el texto en claro descifrado.
+
+![Introducir clave privada](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image76.png)
+
+![Mensaje descifrado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image77.png)
 
 ## 📁 Encriptado de Archivos
 
@@ -241,7 +289,11 @@ En ocasiones en vez de texto, lo que necesitamos es encriptar archivos enteros, 
 
 Desde el programa Kleopatra, pulsaríamos en el botón **Firmar/Cifrar**.
 
+![Botón Firmar/Cifrar](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image78.png)
+
 Elegimos el documento que queramos firmar y cifrar.
+
+![Seleccionar documento](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image79.png)
 
 ### 👥 Paso 2: Configurar Destinatarios
 
@@ -249,11 +301,17 @@ Se nos abrirá una pantalla similar a la que usamos para encriptar texto, donde 
 
 Es posible que sólo queramos cifrarlo para nosotros. En este caso lo vamos a cifrar también para Juan.
 
+![Configurar cifrado de archivo](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image80.png)
+
 ### ⚙️ Opciones Adicionales
 
 Antes de cifrar, tenemos dos opciones que comentar.
 
+![Opción cifrar con contraseña](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image81.png)
+
 > [!warning] ⚠️ No recomendable:  Esta opción no es muy recomendable, al final sería como poner una clave simétrica al documento. Cualquiera podría descifrar el documento aunque no apareciese en la lista de claves públicas para los que se ha cifrado el archivo.
+
+![Opciones de carpeta destino](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image82.png)
 
 #### 📋 Esta opción permite:
 
@@ -267,9 +325,13 @@ Antes de cifrar, tenemos dos opciones que comentar.
 
 Una vez elegidas las opciones pulsamos en **Firmar/Cifrar**, y obtendremos nuestro documento cifrado.
 
+![Archivo cifrado generado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image83.png)
+
 Podemos ahora por ejemplo enviárselo a Juan que para descifrarlo sólo tiene que desde Kleopatra pulsar en el botón **Descifrar**.
 
 ### 🔓 Descifrar Archivo (Receptor)
+
+![Botón Descifrar](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image84.png)
 
 Seleccionamos el archivo cifrado y después de poner nuestra clave secreta, en la misma carpeta donde tenemos el archivo cifrado, nos aparecerá el descifrado.
 
@@ -280,6 +342,8 @@ Otra opción de manejo de este tipo de encriptado, es gracias a la integración 
 Si pulsamos al botón derecho del ratón sobre algún elemento de Windows como archivo o carpeta, nos aparece un menú desde el que podemos manejar las opciones que hemos visto anteriormente, lo que hace más rápido si cabe el proceso de firma/encriptado o desencriptado/verificación de archivos.
 
 ### 📋 Opciones del Menú Contextual
+
+![Menú contextual GPG4Win](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image85.png)
 
 #### 🔧 Opciones Disponibles:
 
@@ -350,9 +414,3 @@ Entre una de las opciones interesantes que añade GPG4Win es la posibilidad de c
 | Firma Digital | Garantiza que el mensaje viene de quien dice ser (autenticidad). |
 | Certificación | Los usuarios validan que una clave pública pertenece realmente a quien dice. |
 | Huella Digital | Identificador único de una clave pública (como un DNI). |
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🛡️ [[02 - MODULOS/02 - ISO 27002|Controles Criptográficos ISO 27002]]

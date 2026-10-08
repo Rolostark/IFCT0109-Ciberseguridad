@@ -1,22 +1,11 @@
 ---
-title: "🔍 Práctica: Fuzzing de Directorios, DNS y VHosts con Gobuster"
+title: "Enumeración Web - Gobuster, Feroxbuster y FFUF"
 aliases:
-  - Fuzzing de Directorios, DNS y VHosts con Gobuster
-  - PoC gobuster
+  - Enumeración Web - Gobuster, Feroxbuster y FFUF
 tags:
   - ifct0109/pocs
   - auditoria
   - gobuster
-  - fuzzing
-  - web
-  - dns
----
-
-# 🔍 Práctica: Fuzzing de Directorios, DNS y VHosts con Gobuster
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 📂 Enumeración Web - Gobuster, Feroxbuster y FFUF
@@ -249,10 +238,4 @@ subfinder -d example.org -silent
 
 * WAF/IDS: Los firewalls de aplicaciones web pueden bloquear fuzzing agresivo. Ajusta la velocidad si es necesario.
 
-← Volver al índice principal
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]
+[← Volver al índice principal](../../)

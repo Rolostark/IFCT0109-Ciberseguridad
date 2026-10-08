@@ -1,21 +1,11 @@
 ---
-title: "🔍 Práctica: Escaneo de Puertos, Detección de Servicios y Scripts NSE con Nmap"
+title: "🔍 Guía Completa de Nmap"
 aliases:
-  - Escaneo de Puertos, Detección de Servicios y Scripts NSE con Nmap
-  - PoC nmap
+  - 🔍 Guía Completa de Nmap
 tags:
   - ifct0109/pocs
   - auditoria
   - nmap
-  - escaneo-red
-  - nse
----
-
-# 🔍 Práctica: Escaneo de Puertos, Detección de Servicios y Scripts NSE con Nmap
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 🔍 Guía Completa de Nmap
@@ -534,9 +524,3 @@ nmap --script vuln 192.168.10.50
 # 7. Escaneo completo guardando resultados
 sudo nmap -A -p- -oA escaneo_completo 192.168.10.50
 ```
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]

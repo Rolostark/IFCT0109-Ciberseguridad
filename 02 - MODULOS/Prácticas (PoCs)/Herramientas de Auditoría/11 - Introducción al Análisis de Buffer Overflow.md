@@ -1,22 +1,11 @@
 ---
-title: "🔍 Práctica: Prueba de Concepto de Desbordamiento de Búfer en Memoria"
+title: "Buffer Overflow"
 aliases:
-  - Prueba de Concepto de Desbordamiento de Búfer en Memoria
-  - PoC buffer-overflow
+  - Buffer Overflow
 tags:
   - ifct0109/pocs
   - auditoria
-  - buffer-overflow
-  - reversing
-  - gdb
-  - inmunity-debugger
----
-
-# 🔍 Práctica: Prueba de Concepto de Desbordamiento de Búfer en Memoria
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
+  - bufferoverflow
 ---
 
 # Buffer Overflow
@@ -59,10 +48,11 @@ BufferOverflow.7z
 
         Programa vulnerable y herramientas de explotación para las prácticas
 
-      ⬇️ Descargar
+      [⬇️ Descargar](../../../archivos_descargados/paquetes_7z/BufferOverflow.7z)
 
 ## 📚 Prácticas del módulo
 
+      [
         Práctica 01
         🔎
         La vulnerabilidad
@@ -75,7 +65,9 @@ BufferOverflow.7z
           Memoria
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/11a - Buffer Overflow - Práctica 1 - Identificación de la Vulnerabilidad|11a - Buffer Overflow 1 - Análisis]])
 
+      [
         Práctica 02
         💥
         La explotación
@@ -88,13 +80,10 @@ BufferOverflow.7z
           Payload
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/11b - Buffer Overflow - Práctica 2 - Control de Flujo y Shellcode|11b - Buffer Overflow 2 - Explotación]])
 
 ## 📚 Navegación del curso
 
+      [
         ↑ Volver al Menú Principal
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap|Índice de Herramientas de Auditoría]])

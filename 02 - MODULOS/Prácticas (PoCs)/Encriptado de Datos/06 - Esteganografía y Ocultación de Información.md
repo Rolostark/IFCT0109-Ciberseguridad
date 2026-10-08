@@ -1,21 +1,11 @@
 ---
-title: "🔒 Práctica: Técnicas de Esteganografía y Extracción de Secretos en Medios"
+title: "🖼️ Esteganografía con OpenPuff"
 aliases:
-  - Técnicas de Esteganografía y Extracción de Secretos en Medios
-  - PoC esteganografia
+  - 🖼️ Esteganografía con OpenPuff
 tags:
   - ifct0109/pocs
   - encriptado
   - esteganografia
-  - steghide
-  - analisis-forense
----
-
-# 🔒 Práctica: Técnicas de Esteganografía y Extracción de Secretos en Medios
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Cifrado y Criptografía Aplicada del Certificado IFCT0109: implementación de algoritmos simétricos y asimétricos, cifrado en reposo, firmas digitales, gestión de claves y técnicas forenses de esteganografía.
-
 ---
 
 # 🖼️ Esteganografía con OpenPuff
@@ -89,9 +79,11 @@ Existen algunas técnicas y herramientas que se pueden utilizar para detectar si
 
 Como hemos comentado anteriormente vamos a usar **OpenPuff** para demostrar la esteganografía.
 
-Primero descargamos el archivo **Esteganografía** de la zona de recursos y lo descomprimimos.
+Primero descargamos el archivo **[Esteganografía](recursos/esteganografia.zip)** de la zona de recursos y lo descomprimimos.
 
 Dentro encontraremos los siguientes archivos y carpetas:
+
+![Contenido carpeta Esteganografía](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image2.png)
 
 #### 📂 Contenido del Paquete:
 
@@ -119,11 +111,15 @@ Dentro encontraremos los siguientes archivos y carpetas:
 
 Abrimos OpenPuff y pulsamos en el apartado de **Steganography** en **Hide**
 
+![Menú OpenPuff - Hide](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image3.png)
+
 La siguiente ventana vamos a ver que se divide en 4 diferentes zonas.
 
 ### 🔑 Zona 1: Configurar Contraseñas
 
 **En el primer paso** tenemos la zona 1 donde ponemos la o las claves que queremos utilizar para encriptar la información dentro del archivo.
+
+![Zona de contraseñas](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image4.png)
 
 #### 🔐 Configuración de Contraseñas:
 
@@ -139,6 +135,8 @@ La siguiente ventana vamos a ver que se divide en 4 diferentes zonas.
 
 **El segundo paso** en la zona 2, elegimos el archivo de información que queremos ocultar.
 
+![Seleccionar archivo a ocultar](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image5.png)
+
 Pulsamos en el botón **[...]** y navegamos hasta el archivo que queremos ocultar (por ejemplo, `confidencial.txt`).
 
 ### 🖼️ Zona 3: Seleccionar Carriers (Archivos Contenedores)
@@ -151,9 +149,13 @@ Pulsamos **Add**, entramos en la carpeta **ejemplos** y seleccionamos varios car
 
 En función del archivo que queramos ocultar, necesitamos más o menos carriers. Hay que añadir hasta que la siguiente zona aparezca en **verde**:
 
+![Indicador de capacidad](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image6.png)
+
 ### ⚙️ Zona 4: Bit Selection Options
 
 **En el cuarto paso** en la zona 4 elegimos el **bit selection options**. Este parámetro determina cómo se seleccionan los bits del archivo original y cómo se modifican para incorporar los datos ocultos.
+
+![Bit selection options](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image7.png)
 
 > [!warning] 🎯 Importante:  Permite elegir la estrategia que mejor se adapte a tus necesidades, equilibrando la seguridad y la calidad del archivo resultante. El uso de opciones de selección de bits más seguras puede generar cambios más notorios en los archivos, lo que podría aumentar las posibilidades de detección.
 
@@ -161,7 +163,11 @@ En función del archivo que queramos ocultar, necesitamos más o menos carriers.
 
 Finalmente, pulsamos en **"Hide Data!"** y guardamos el resultado en la carpeta **pruebas**.
 
+![Hide Data button](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image8.png)
+
 Cuando termina, en mi caso sólo ha necesitado una imagen para ocultar la información.
+
+![Proceso completado](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image9.png)
 
 Tendremos la imagen con la información oculta dentro.
 
@@ -171,7 +177,11 @@ Tenemos el software **exiftoolgui** para comparar el resultado de ambos archivos
 
 Vamos a hacer otra prueba añadiendo ahora el archivo PDF.
 
+![Ocultar PDF](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image10.png)
+
 En este caso se han necesitado **3 carriers**, es importante el orden para luego poder extraer la información.
+
+![3 carriers necesarios](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image11.png)
 
 > [!warning] ⚠️ Muy Importante:  El  ORDEN de los carriers  es crucial. Debes recordar el orden exacto en que los añadiste para poder extraer la información correctamente después.
 
@@ -179,13 +189,19 @@ En este caso se han necesitado **3 carriers**, es importante el orden para luego
 
 Abrimos OpenPuff y elegimos **Unhide**.
 
+![Menú Unhide](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image12.png)
+
 ### 🔑 Paso 1: Introducir Contraseña(s)
 
 Ponemos la **Clave en (A)**, añadimos el o los carriers, pulsamos **Unhide** y obtendremos el archivo `confidencial.txt`.
 
+![Proceso Unhide - archivo txt](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image13.png)
+
 ### 📄 Paso 2: Extraer PDF (Múltiples Carriers)
 
 Lo mismo si añadimos los carriers que contienen el PDF:
+
+![Proceso Unhide - archivo PDF](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image14.png)
 
 > [!warning] ⚠️ Orden Importante:  Al ser varios carriers tenemos que añadirlos en el  mismo orden  en el que se usaron para ocultar la información.
 
@@ -193,7 +209,11 @@ Lo mismo si añadimos los carriers que contienen el PDF:
 
 Podemos limpiar el contenido de un Carrier usando el propio OpenPuff, lo abrimos y pulsamos en **CleanUp**.
 
+![Menú CleanUp](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image15.png)
+
 Añadimos el archivo Carrier y pulsamos **Clean Up**.
+
+![Proceso CleanUp](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image16.png)
 
 Limpiará el documento y ya no podremos extraer información de él.
 
@@ -211,7 +231,11 @@ OpenPuff también se puede usar para añadir algún tipo de firma o marca al doc
 
 Abrimos OpenPuff y seleccionamos **SetMark**.
 
+![Menú SetMark](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image17.png)
+
 Vamos a añadir una marca al archivo **ballon** y pulsamos **Set Mark**.
+
+![Proceso SetMark](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image18.png)
 
 Elegimos el destino del archivo, vamos a elegir la carpeta **pruebas**.
 
@@ -220,6 +244,12 @@ Elegimos el destino del archivo, vamos a elegir la carpeta **pruebas**.
 Se genera una marca invisible en el documento, ni siquiera en los metadatos la podemos ver.
 
 La forma de ver esa marca es con el propio OpenPuff en la opción **Check Mark**.
+
+![Menú CheckMark](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image19.png)
+
+![Seleccionar archivo](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image20.png)
+
+![Resultado CheckMark](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image21.png)
 
 #### 💡 Usos de las Marcas de Agua:
 
@@ -241,11 +271,11 @@ También se puede eliminar la marca con el mismo procedimiento que para eliminar
 
 **Información sobre comprobación de esteganografía:**
 
-https://stegonline.georgeom.net/checklist
+[https://stegonline.georgeom.net/checklist](https://stegonline.georgeom.net/checklist)
 
 **Analizar archivos en línea:**
 
-https://stegonline.georgeom.net/upload
+[https://stegonline.georgeom.net/upload](https://stegonline.georgeom.net/upload)
 
 **Otros sitios para analizar imágenes:**
 
@@ -285,15 +315,21 @@ D:\Esteganografia\stego> strings strings-stego.jpg
 
 Usando herramientas para comprobar los metadatos, en busca de información que pueda ayudar.
 
+![Análisis de metadatos](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image22.png)
+
 #### 📷 Ejemplo: Imagen "Juegos de Guerra"
 
 En la imagen **Juegos de guerra** el thumbnail es diferente a la imagen original. Con **exiftool** vemos la siguiente información en la pestaña Exif:
 
+![Información Exif](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image23.png)
+
 La extraemos con la línea de comandos de exiftool:
+
+![Extraer thumbnail](../../../archivos_descargados/imagenes/encriptado_de_datos/stego_images/media/image24.png)
 
 Se genera una imagen con un mensaje.
 
-Podemos usar la web https://29a.ch/photo-forensics/#forensic-magnifier para verlo directamente.
+Podemos usar la web [https://29a.ch/photo-forensics/#forensic-magnifier](https://29a.ch/photo-forensics/#forensic-magnifier) para verlo directamente.
 
 ## 📚 Conclusiones
 
@@ -343,9 +379,3 @@ Podemos usar la web https://29a.ch/photo-forensics/#forensic-magnifier para verl
 * 🧹 Usa CleanUp para borrar rastros
 
 * 🔍 Verifica archivos sospechosos con herramientas de análisis
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🛡️ [[02 - MODULOS/02 - ISO 27002|Controles Criptográficos ISO 27002]]

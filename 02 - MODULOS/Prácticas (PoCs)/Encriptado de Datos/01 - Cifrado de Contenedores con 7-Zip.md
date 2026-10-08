@@ -1,21 +1,12 @@
 ---
-title: "🔒 Práctica: Cifrado de Archivos y Contenedores con 7-Zip"
+title: "🗜️ Encriptado con 7z"
 aliases:
-  - Cifrado de Archivos y Contenedores con 7-Zip
-  - PoC 7zip
+  - 🗜️ Encriptado con 7z
 tags:
   - ifct0109/pocs
   - encriptado
   - 7zip
   - aes-256
-  - compresion
----
-
-# 🔒 Práctica: Cifrado de Archivos y Contenedores con 7-Zip
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Cifrado y Criptografía Aplicada del Certificado IFCT0109: implementación de algoritmos simétricos y asimétricos, cifrado en reposo, firmas digitales, gestión de claves y técnicas forenses de esteganografía.
-
 ---
 
 # 🗜️ Encriptado con 7z
@@ -24,7 +15,7 @@ tags:
 
 Otra forma de realizar encriptación de archivos, es recurrir a programas de compresión de archivos, los cuales tienen opciones para encriptar archivos.
 
-Vemos el caso de **7z**, que lo puedes descargar desde aquí.
+Vemos el caso de **7z**, que lo puedes descargar desde [aquí](https://www.7-zip.org/).
 
 ## 🚀 Prueba de Concepto (PoC)
 
@@ -34,13 +25,19 @@ Vamos a partir de una carpeta que deseamos comprimir y encriptar.
 
 Una vez instalado en nuestro sistema el programa 7z, pulsamos al botón derecho sobre esa carpeta. Y en el menú **7-Zip** elegimos la opción **Añadir al archivo...**
 
+![Menú contextual 7-Zip](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image1.png)
+
 ### 📝 Paso 2: Configurar Nombre y Ubicación
 
 Elegimos el nombre del archivo y dónde se va a crear.
 
+![Configurar nombre del archivo](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image2.png)
+
 ### 🔐 Paso 3: Opciones de Encriptación
 
 Y por otro lado rellenamos las opciones de encriptación.
+
+![Opciones de encriptación](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image3.png)
 
 #### 🔑 Configuración de Contraseña:
 
@@ -54,6 +51,8 @@ Y por otro lado rellenamos las opciones de encriptación.
 
 Marcar la opción de **encriptar nombres de fichero** es conveniente, ya que esto oculta el nombre de los archivos que hay dentro de nuestro documento encriptado.
 
+![Encriptar nombres de archivo](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image4.png)
+
 ### ✅ Paso 4: Crear el Archivo
 
 Pulsamos **Aceptar** y obtendremos el fichero comprimido y encriptado.
@@ -61,6 +60,8 @@ Pulsamos **Aceptar** y obtendremos el fichero comprimido y encriptado.
 ### 🔓 Desencriptar el Archivo
 
 Cuando necesitemos desencriptarlo, pulsamos con el botón derecho encima, menú **7-Zip** y **Extraer aquí**.
+
+![Extraer archivo](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image5.png)
 
 Nos pedirá la contraseña para poder descomprimirlo.
 
@@ -85,9 +86,3 @@ Nos pedirá la contraseña para poder descomprimirlo.
 * ⚠️ Si se olvida la contraseña, NO hay recuperación
 
 * ⚠️ Hay que descomprimir para acceder a los archivos
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🛡️ [[02 - MODULOS/02 - ISO 27002|Controles Criptográficos ISO 27002]]

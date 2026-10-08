@@ -1,21 +1,12 @@
 ---
-title: "🔒 Práctica: Protección de Volúmenes de Disco con BitLocker"
+title: "🔐 Encriptado con BitLocker"
 aliases:
-  - Protección de Volúmenes de Disco con BitLocker
-  - PoC bitlocker
+  - 🔐 Encriptado con BitLocker
 tags:
   - ifct0109/pocs
   - encriptado
   - bitlocker
   - tpm
-  - windows-security
----
-
-# 🔒 Práctica: Protección de Volúmenes de Disco con BitLocker
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Cifrado y Criptografía Aplicada del Certificado IFCT0109: implementación de algoritmos simétricos y asimétricos, cifrado en reposo, firmas digitales, gestión de claves y técnicas forenses de esteganografía.
-
 ---
 
 # 🔐 Encriptado con BitLocker
@@ -32,11 +23,15 @@ tags:
 
 Para encriptar una unidad debemos acceder a BitLocker, desde el menú inicio escribimos **administrar bitlocker**.
 
+![Buscar administrar BitLocker](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image22.png)
+
 Nos saldrán todas las unidades disponibles tanto internas como externas.
 
 ### 📀 Paso 2: Seleccionar Unidad
 
 Elegimos la unidad que queramos encriptar y pulsamos en **Activar BitLocker**
+
+![Activar BitLocker](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image23.png)
 
 #### 📋 Importante:
 
@@ -46,6 +41,10 @@ La unidad puede contener datos, los datos **NO se borrarán**, sino que se encri
 
 En el siguiente paso marcamos **Usar contraseña** y rellenamos la contraseña con la que queremos que se encripte la unidad.
 
+![Configurar contraseña inicial](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image24.png)
+
+![Configurar contraseña final](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image25.png)
+
 Pulsamos en **Siguiente**.
 
 ### 💾 Paso 4: Guardar Clave de Recuperación
@@ -53,6 +52,10 @@ Pulsamos en **Siguiente**.
 El siguiente paso nos pregunta la opción de guardar un archivo para recuperar la unidad en caso de que se olvide la clave.
 
 Pulsamos en **Guardar en un archivo** y lo guardamos en nuestro equipo.
+
+![Guardar clave de recuperación](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image26.png)
+
+![Archivo de clave guardado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image27.png)
 
 > [!warning] ⚠️ Seguridad:  Esta clave recuperaría los datos por lo que lo importante es  NO olvidar la contraseña . Es recomendable este archivo hacer un borrado seguro de él, así quitamos la posibilidad de acceder a los archivos si no tenemos la clave.
 
@@ -62,11 +65,15 @@ Pulsamos en **Siguiente** ahora que nos lo permite.
 
 En el siguiente paso vamos a elegir la opción de **Cifrar la unidad entera**.
 
+![Cifrar unidad entera](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image28.png)
+
 Pulsamos en **Siguiente**.
 
 ### 🔧 Paso 6: Modo de Cifrado
 
 El siguiente paso va a depender del uso que le demos a la unidad:
+
+![Seleccionar modo de cifrado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image29.png)
 
 #### 🎯 ¿Qué modo elegir?
 
@@ -94,6 +101,8 @@ Una vez realizada la selección pulsamos en **Siguiente**.
 
 Y finalmente pulsamos en **Iniciar cifrado**.
 
+![Iniciar cifrado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image30.png)
+
 El proceso de cifrado puede tardar dependiendo del tamaño de la unidad y la cantidad de datos.
 
 ## 💼 Uso de BitLocker
@@ -102,9 +111,13 @@ El proceso de cifrado puede tardar dependiendo del tamaño de la unidad y la can
 
 Una vez termine veremos el icono de un candado abierto o cerrado en la unidad.
 
+![Unidad con BitLocker](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image31.png)
+
 ### ⚙️ Opciones de Administración
 
 Y ahora desde el **administrador de BitLocker** podemos acceder a diferentes opciones sobre la unidad encriptada.
+
+![Opciones de administración](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image32.png)
 
 #### 🔧 Opciones disponibles:
 
@@ -155,9 +168,3 @@ Ahora cada vez que iniciemos el sistema, para acceder al contenido de esta unida
 * 🔒 Pendrives con información confidencial
 
 * 🏢 Cumplimiento normativo (RGPD, ISO 27001)
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🛡️ [[02 - MODULOS/02 - ISO 27002|Controles Criptográficos ISO 27002]]

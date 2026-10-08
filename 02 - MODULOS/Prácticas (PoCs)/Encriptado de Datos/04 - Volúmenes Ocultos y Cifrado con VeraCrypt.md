@@ -1,21 +1,11 @@
 ---
-title: "🔒 Práctica: Creación de Volúmenes Cifrados y Ocultos con VeraCrypt"
+title: "🛡️ Encriptado con VeraCrypt"
 aliases:
-  - Creación de Volúmenes Cifrados y Ocultos con VeraCrypt
-  - PoC veracrypt
+  - 🛡️ Encriptado con VeraCrypt
 tags:
   - ifct0109/pocs
   - encriptado
   - veracrypt
-  - cifrado-disco
-  - privacidad
----
-
-# 🔒 Práctica: Creación de Volúmenes Cifrados y Ocultos con VeraCrypt
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Cifrado y Criptografía Aplicada del Certificado IFCT0109: implementación de algoritmos simétricos y asimétricos, cifrado en reposo, firmas digitales, gestión de claves y técnicas forenses de esteganografía.
-
 ---
 
 # 🛡️ Encriptado con VeraCrypt
@@ -44,7 +34,9 @@ tags:
 
 ## 📥 Instalación de VeraCrypt
 
-En este caso vamos a crear un contenedor de archivos encriptados. Pero antes de nada debemos instalar el software. Se puede descargar de https://www.veracrypt.fr/en/Downloads.html
+En este caso vamos a crear un contenedor de archivos encriptados. Pero antes de nada debemos instalar el software. Se puede descargar de [https://www.veracrypt.fr/en/Downloads.html](https://www.veracrypt.fr/en/Downloads.html)
+
+![Página de descarga VeraCrypt](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image33.png)
 
 El proceso de instalación es sencillo y de pulsar siguiente...
 
@@ -54,17 +46,25 @@ El proceso de instalación es sencillo y de pulsar siguiente...
 
 Una vez instalado abrimos el programa:
 
+![Interfaz principal VeraCrypt](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image34.png)
+
 ### 📦 Paso 2: Crear Volumen
 
 Debemos crear el volumen que va a contener los archivos cifrados, por lo que el primer paso debemos pulsar en **Crear volumen**:
 
+![Botón crear volumen](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image35.png)
+
 El siguiente paso nos pregunta el volumen que vamos a crear, en nuestro caso vamos a hacer un **contenedor**.
+
+![Tipo de volumen](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image36.png)
 
 Pulsamos en **Siguiente**.
 
 ### 🎭 Paso 3: Volumen Estándar u Oculto
 
 El siguiente paso es una característica de VeraCrypt que permite crear un volumen oculto. Ese volumen oculto contiene información sin relevancia, si alguien se encuentra en una situación como por ejemplo de extorsión, en vez de escribir la clave real del volumen cifrado, puede escribir una segunda clave que daría acceso a ese volumen oculto que contendría información no relevante.
+
+![Volumen estándar u oculto](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image37.png)
 
 #### 🎯 ¿Qué es un Volumen Oculto?
 
@@ -86,17 +86,23 @@ La siguiente pantalla elegimos dónde queremos que se cree el contenedor de arch
 
 En mi caso lo he puesto en una unidad S:
 
+![Ubicación del volumen](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image38.png)
+
 Una vez elegido el destino del contenedor pulsamos en **Siguiente**.
 
 ### 🔐 Paso 5: Opciones de Cifrado
 
 A continuación, elegimos las opciones de cifrado, yo dejo las que vienen por defecto:
 
+![Opciones de cifrado](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image39.png)
+
 Y pulsamos **Siguiente**.
 
 ### 💾 Paso 6: Tamaño del Volumen
 
 En la siguiente pantalla elegimos el tamaño del contenedor, en mi caso lo estoy guardando en una partición de 4 GB y el contenedor tendrá un tamaño de 2 GB.
+
+![Tamaño del volumen](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image40.png)
 
 Pulsamos en **Siguiente**.
 
@@ -114,19 +120,27 @@ La siguiente pantalla escribimos la clave que cifrará el volumen. Podemos gener
 
 En nuestro caso sólo vamos a poner contraseña.
 
+![Contraseña del volumen](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image41.png)
+
 Pulsamos en **Siguiente**.
 
 ### 🎲 Paso 8: Formatear el Volumen
 
 La siguiente pantalla, elegimos sistema de **NTFS** y debemos mover el ratón hasta que la barra de la parte inferior llegue al final.
 
+![Formatear volumen](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image42.png)
+
 > [!warning] ⚠️ Movimiento del ratón:  El movimiento aleatorio del ratón genera entropía que se usa para crear claves criptográficas más seguras.
 
 Ahora ya pulsamos en **Formatear**, iniciará un proceso que puede tardar mucho. Una alternativa es elegir la opción **Formato rápido** si la unidad es nueva o se ha realizado un borrado seguro o estamos en una unidad que ya ha sido encriptada.
 
+![Proceso de formateo](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image43.png)
+
 ### ✅ Volumen Creado
 
 Si todo va bien obtendremos el volumen creado.
+
+![Volumen creado exitosamente](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image44.png)
 
 Pulsamos en **SALIR**.
 
@@ -138,17 +152,25 @@ Pulsamos en **SALIR**.
 
 Una vez creado el volumen, tenemos que montarlo para acceder a él y poder guardar archivos encriptados en el interior del contenedor. Para ello volvemos a abrir el programa VeraCrypt.
 
+![Interfaz para montar](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image45.png)
+
 Elegimos la letra donde queremos montar el contenedor y pulsamos **Seleccionar archivo**.
 
 Navegamos donde tenemos el contenedor y lo seleccionamos. Posteriormente pulsamos en **Montar**.
 
+![Seleccionar archivo a montar](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image46.png)
+
 Nos pedirá la clave para montar el contenedor, así como el archivo clave o el PIM si los hubiéramos creado.
+
+![Introducir contraseña](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image47.png)
 
 Pulsamos **Aceptar**.
 
 ### ✅ Volumen Montado
 
 Montará el contenedor y tendremos acceso a una nueva unidad, en esta unidad al grabar datos dentro es donde se irán cifrando directamente dentro del contenedor.
+
+![Volumen montado como unidad](../../../archivos_descargados/imagenes/encriptado_de_datos/cifrado_images/media/image48.png)
 
 ## 📚 Conclusiones
 
@@ -191,9 +213,3 @@ Montará el contenedor y tendremos acceso a una nueva unidad, en esta unidad al 
 * 🎭 Situaciones que requieren negación plausible
 
 * 🆓 Alternativa gratuita a BitLocker (Windows Home)
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🛡️ [[02 - MODULOS/02 - ISO 27002|Controles Criptográficos ISO 27002]]

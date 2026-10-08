@@ -1,22 +1,11 @@
 ---
-title: "🔍 Práctica: Pivoting, Redirección de Puertos y Doble Salto de Red"
+title: "Pivoting"
 aliases:
-  - Pivoting, Redirección de Puertos y Doble Salto de Red
-  - PoC pivoting
+  - Pivoting
 tags:
   - ifct0109/pocs
   - auditoria
   - pivoting
-  - chisel
-  - ssh-tunnel
-  - port-forwarding
----
-
-# 🔍 Práctica: Pivoting, Redirección de Puertos y Doble Salto de Red
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # Pivoting
@@ -65,12 +54,13 @@ pivoting.7z
 
         Herramientas necesarias (socat, chisel, ligolo, nmap, scripts)
 
-      ⬇️ Descargar
+      [⬇️ Descargar](../../../archivos_descargados/paquetes_7z/pivoting.7z)
 
 ## 📚 Prácticas del módulo
 
       🔀 Técnicas de pivoting
 
+      [
         Práctica 01
         🔌
         Pivoting con Socat
@@ -83,7 +73,9 @@ pivoting.7z
           Cadena
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/10a - Pivoting - Práctica 1 - Redirección y Relays con Socat|10a - Pivoting 1 - Socat]])
 
+      [
         Práctica 02
         🔐
         Pivoting con Túnel SSH
@@ -97,7 +89,9 @@ pivoting.7z
           Escalada
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/10b - Pivoting - Práctica 2 - Túnel SSH Dinámico y Proxychains|10b - Pivoting 2 - Túnel SSH]])
 
+      [
         Práctica 03
         ⛏️
         Pivoting con Chisel
@@ -111,7 +105,9 @@ pivoting.7z
           Hydra
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/10c - Pivoting - Práctica 3 - Pivoting con Chisel|10c - Pivoting 3 - Chisel]])
 
+      [
         Práctica 04
         🔗
         Pivoting con Chisel + Socat
@@ -125,7 +121,9 @@ pivoting.7z
           Upload
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/10d - Pivoting - Práctica 4 - Encadenamiento Chisel y Socat (4 Saltos)|10d - Pivoting 4 - Chisel + Socat]])
 
+      [
         Práctica 05
         🌐
         Pivoting con Ligolo-ng
@@ -139,13 +137,10 @@ pivoting.7z
           3 túneles
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/10e - Pivoting - Práctica 5 - Pivoting Avanzado con Ligolo-ng|10e - Pivoting 5 - Ligolo-ng]])
 
 ## 📚 Navegación del curso
 
+      [
         ↑ Volver al Menú Principal
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap|Índice de Herramientas de Auditoría]])

@@ -1,22 +1,11 @@
 ---
-title: "🔍 Práctica: Recuperación de Contraseñas y Cracking de Hashes con Hashcat"
+title: "PoC - Hashcat"
 aliases:
-  - Recuperación de Contraseñas y Cracking de Hashes con Hashcat
-  - PoC hashcat
+  - PoC - Hashcat
 tags:
   - ifct0109/pocs
   - auditoria
   - hashcat
-  - cracking
-  - gpu
-  - hashes
----
-
-# 🔍 Práctica: Recuperación de Contraseñas y Cracking de Hashes con Hashcat
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # PoC – Hashcat
@@ -187,7 +176,7 @@ Resultado: 50a742905949102c961929823a2e8ca0:HASHCATqrstu2020
 
 **¿Qué significa `-1`?** Define un conjunto de caracteres personalizados (0,1,2).
 
-Más info sobre máscaras: Mask Attack Wiki
+Más info sobre máscaras: [Mask Attack Wiki](https://hashcat.net/wiki/doku.php?id=mask_attack)
 
 Finalmente, prueba a desencriptar este hash
 
@@ -236,7 +225,7 @@ Resultado: St@r5h1p2019
 ```
 
 Guía avanzada:
-    OneRuleToRuleThemAll
+    [OneRuleToRuleThemAll](https://github.com/NotSoSecure/password_cracking_rules/blob/master/OneRuleToRuleThemAll.rule)
 
 ## John the Ripper
 
@@ -247,9 +236,3 @@ $ john --list=formats
 $ john --list=formats | grep "MD5"
 $ john ejemplo_md5 --format=Raw-MD5 --wordlist=/usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt
 ```
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]

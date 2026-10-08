@@ -1,21 +1,11 @@
 ---
-title: "🔍 Práctica: Metodología de Explotación y Manejo de Handlers con Metasploit"
+title: "🎯 Explotación de Metasploitable 2 con Metasploit Framework"
 aliases:
-  - Metodología de Explotación y Manejo de Handlers con Metasploit
-  - PoC metasploit
+  - 🎯 Explotación de Metasploitable 2 con Metasploit Framework
 tags:
   - ifct0109/pocs
   - auditoria
   - metasploit
-  - meterpreter
-  - exploits
----
-
-# 🔍 Práctica: Metodología de Explotación y Manejo de Handlers con Metasploit
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 🎯 Explotación de Metasploitable 2 con Metasploit Framework
@@ -691,9 +681,3 @@ Este conocimiento debe usarse ÚNICAMENTE para:
 * 📖 Investigación en entornos controlados
 
 **NUNCA para actividades ilegales. Acceder sin autorización a sistemas informáticos es un delito grave que puede resultar en penas de prisión.**
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]

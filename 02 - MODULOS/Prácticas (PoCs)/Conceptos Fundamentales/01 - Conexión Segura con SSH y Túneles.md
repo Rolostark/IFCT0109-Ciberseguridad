@@ -1,21 +1,12 @@
 ---
-title: "📖 Práctica: Conexión Segura con SSH y Creación de Túneles"
+title: "🔐 Configuración y Uso de SSH"
 aliases:
-  - Conexión Segura con SSH y Creación de Túneles
-  - PoC ssh
+  - 🔐 Configuración y Uso de SSH
 tags:
   - ifct0109/pocs
-  - conceptos-fundamentales
+  - conceptos
   - ssh
   - tuneles
-  - redes
----
-
-# 📖 Práctica: Conexión Segura con SSH y Creación de Túneles
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Conceptos Fundamentales del Certificado IFCT0109: análisis de mecanismos base de redes, inspección de protocolos, desarrollo de pruebas de concepto e interactividad con herramientas de diagnóstico y auditoría técnica.
-
 ---
 
 # 🔐 Configuración y Uso de SSH
@@ -474,9 +465,3 @@ http://localhost:8888
 * ✅ Usar fail2ban para bloquear IPs con intentos fallidos en Debian
 
 * ✅ Revisar logs periódicamente en Debian (`/var/log/auth.log`)
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏠 [[00 - INDICE|Inicio del Vault]]

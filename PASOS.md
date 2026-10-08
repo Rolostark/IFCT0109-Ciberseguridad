@@ -156,8 +156,24 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * **Creación de `02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing.md`:** Transcripción fiel del módulo de instalación y catálogo de herramientas (`tools/index.html`) para FFUF, Gobuster, Feroxbuster, cURL, Subfinder, API Fuzzer (`webfuzz_api`) y SecLists.
   * Vinculación bidireccional entre la guía principal, la ficha de herramientas y el nodo central `02 - MODULOS/04 - Hacking Ético.md`.
 
+---
 
-
-
-
-
+## 📌 Paso 13: Sincronización Integral 1:1 de PoCs, Descarga de Recursos y Desacoplamiento Completo de Laboratorios
+* **Auditoría e Inspección Profunda de Todo el Portal (`cursosmfr.es/ifct0109`):**
+  * Rastreo automatizado completo y descubrimiento de todas las páginas y submódulos prácticos oficiales que se encontraban tras enlaces de navegación (`ws2019_1` a `6`, `devtools` 0 a 9, `handler`, `retos`, `bloodhound` 1 a 4, `pivoting` 1 a 5, `bufferoverflow` 1 a 2).
+* **Descarga Masiva y Centralizada de Medios Offline:**
+  * **Más de 450 capturas técnicas e infografías** descargadas localmente en `archivos_descargados/imagenes/` organizadas por módulos (`sistemas/`, `conceptos/`, `encriptado/`, `firewall/`, `pentesting_en_android/`, `herramientas_de_auditoría/`).
+  * **Paquetes pesados de laboratorio** descargados en `archivos_descargados/paquetes_7z/` (`docker_bloodhound.7z` ~100MB, `pivoting.7z` ~16MB, `BufferOverflow.7z` ~37MB, `recursos_android.7z` ~134MB, `recursos_filtros.7z`), cumpliendo las directivas de `.gitignore` para no sobrecargar el repositorio Git.
+  * **Herramientas complementarias y binarios** descargados en `archivos_descargados/recursos/` (`SharpHound.exe`, `SharpHound.ps1`, `minirock.txt` y archivos de datos de Active Directory).
+* **Desacoplamiento Modular 1:1 de Todos los Laboratorios:**
+  * **Linux (`02 - MODULOS/Prácticas (PoCs)/Linux/` - 17 notas):** Reorganización completa en notas independientes: Instalación en WSL y Docker, Introducción y Arquitectura, Entorno Gráfico, FHS, Comandos Básicos, Grupos, Usuarios, Permisos, Filtrado de Información, Bash Scripting, Linux Capabilities, Debian + DWM, y writeups íntegros de Venus (54 misiones) y Hades (50 misiones).
+  * **Sistemas (`02 - MODULOS/Prácticas (PoCs)/Sistemas/` - 8 notas):** Servidor NAS OMV y laboratorio de 6 partes de Active Directory 2019 (`02a` a `02f`: Red/IP fija, Roles AD DS/DNS, Promoción a DC/Bosque, OUs y Cuentas, Directivas GPO y Registro/Auditoría) con `02` como portal unificado.
+  * **Conceptos Fundamentales (`02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/` - 18 notas):** Despliegue íntegro de Firefox DevTools Lab en 10 módulos (`03a` a `03j`: Introducción, Inspector HTML, Inspector CSS, Consola, Debugger, Red HTTP, Almacenamiento, Diseño adaptable, Accesibilidad y Rendimiento), junto a SSH, cURL, transferencia de archivos, HTTP, MITM, Phishing y Msfvenom.
+  * **Herramientas de Auditoría (`02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/` - 24 notas):**
+    * Nmap, Responder, Metasploit (+ Meterpreter `03a`), Hashcat, Gobuster, Hydra, WiFi y Wireshark (+ Retos prácticos `08a`).
+    * BloodHound: 4 notas paso a paso (`09a` a `09d`: Instalación, Recolección con SharpHound, Análisis Cypher y Alternativas).
+    * Pivoting: 5 notas paso a paso (`10a` a `10e`: Socat relays, Túnel SSH dinámico con Proxychains, Chisel inverso, Chisel + Socat en 4 saltos, y Ligolo-ng con interfaces TUN).
+    * Buffer Overflow: 2 notas paso a paso (`11a` y `11b`: Identificación de fallo y Explotación con Shellcode).
+* **Interconexión Total mediante Obsidian Wikilinks y Navegación Bidireccional:**
+  * Reemplazo de todos los enlaces `.html` remotos o huérfanos por wikilinks nativos (`[[...]]`) de Obsidian que garantizan navegación fluida y funcionalidad 100% offline.
+  * Actualización integral del catálogo matriz `02 - MODULOS/05 - Prácticas (PoCs).md`.

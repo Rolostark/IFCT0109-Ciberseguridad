@@ -1,22 +1,13 @@
 ---
-title: "🛡️ Práctica: Configuración de Proxy Squid y Filtrado Web en IPFire"
+title: "🌐 Proxy Web con IPFire"
 aliases:
-  - Configuración de Proxy Squid y Filtrado Web en IPFire
-  - PoC ipfire
+  - 🌐 Proxy Web con IPFire
 tags:
   - ifct0109/pocs
   - firewall
   - ipfire
   - proxy
   - squid
-  - filtrado-web
----
-
-# 🛡️ Práctica: Configuración de Proxy Squid y Filtrado Web en IPFire
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Seguridad Perimetral y Cortafuegos del Certificado IFCT0109: topologías por zonas (ROJA, VERDE, AZUL, NARANJA), segmentación perimetral, políticas de filtrado, túneles cifrados VPN, sistemas IDS/IPS y filtrado a nivel de host.
-
 ---
 
 # 🌐 Proxy Web con IPFire
@@ -198,12 +189,6 @@ Haz pruebas utilizando **Lista de expresiones** y bloqueando también por **exte
 
 ### 🎯 Navegación:
 
-← Práctica 04: IDS/IPS con IPFire
+← [Práctica 04: IDS/IPS con IPFire]([[02 - MODULOS/Prácticas (PoCs)/Firewall/04 - Sistema de Detección de Intrusos (IDS) en IPFire|04 - Sistema de Detección de Intrusos (IDS) en IPFire]])
 
-→ Práctica 06A: Firewall de Windows
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🔒 [[02 - MODULOS/ISO 27002/03 - Robustecimiento de Sistemas y Redes|ISO 27002 — Robustecimiento y Segmentación de Redes]]
+→ [Práctica 06A: Firewall de Windows]([[02 - MODULOS/Prácticas (PoCs)/Firewall/06 - Cortafuegos de Windows (Reglas Avanzadas)|06 - Cortafuegos de Windows]])

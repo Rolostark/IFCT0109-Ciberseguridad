@@ -1,22 +1,12 @@
 ---
-title: "🛡️ Práctica: Filtrado de Paquetes en Linux con Iptables, NFTables y UFW"
+title: "🐧 Firewall en Linux - UFW e IPTables"
 aliases:
-  - Filtrado de Paquetes en Linux con Iptables, NFTables y UFW
-  - PoC iptables
+  - 🐧 Firewall en Linux - UFW e IPTables
 tags:
   - ifct0109/pocs
   - firewall
   - iptables
-  - nftables
   - ufw
-  - linux-firewall
----
-
-# 🛡️ Práctica: Filtrado de Paquetes en Linux con Iptables, NFTables y UFW
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Seguridad Perimetral y Cortafuegos del Certificado IFCT0109: topologías por zonas (ROJA, VERDE, AZUL, NARANJA), segmentación perimetral, políticas de filtrado, túneles cifrados VPN, sistemas IDS/IPS y filtrado a nivel de host.
-
 ---
 
 # 🐧 Firewall en Linux - UFW e IPTables
@@ -90,6 +80,8 @@ sudo ufw status verbose
 En la ruta `/etc/default/ufw` podemos comprobar la configuración por defecto del firewall, entre ellas podemos comprobar si se encuentra activado IPv6.
 
 Vamos a editar el archivo y ponemos IPv6 en **no**:
+
+![Configuración IPv6 en UFW](../../../archivos_descargados/imagenes/firewall/06b_firewall_linux_images/media/image2.png)
 
 > [!warning] ⚠️ Importante:  En caso de realizar algún cambio en este archivo, luego debemos  reiniciar el firewall  mediante los siguientes comandos:
 >
@@ -238,7 +230,7 @@ Añade la siguiente regla:
 sudo ufw deny out proto tcp from any to any port 80
 ```
 
-Navega a **Google.es** y busca información sobre Almagro. Entra en la web almagro.es
+Navega a **Google.es** y busca información sobre Almagro. Entra en la web [almagro.es](http://almagro.es)
 
 > [!warning] 💡 Recuerda:  En la máquina Debian puedes abrir el navegador pulsando  ALT + W
 
@@ -270,6 +262,8 @@ Ahora pon la siguiente regla de permiso:
 sudo ufw allow out proto tcp from any to any port 443
 ```
 
+![Reglas UFW configuradas](../../../archivos_descargados/imagenes/firewall/06b_firewall_linux_images/media/image3.png)
+
 #### 🔍 Observación:
 
 Aún estando esta última regla añadida **no debería dejarnos navegar** por distintos sitios seguros.
@@ -283,6 +277,8 @@ Elimina la última regla y agrégala en la **posición 1**:
 ```bash
 sudo ufw insert 1 allow out proto tcp from any to any port 443
 ```
+
+![Regla insertada en posición 1](../../../archivos_descargados/imagenes/firewall/06b_firewall_linux_images/media/image4.png)
 
 #### ✅ Resultado:
 
@@ -362,12 +358,6 @@ Las reglas se procesan **de arriba a abajo**. La primera regla que coincide con 
 
 ### 🎯 Navegación:
 
-← Práctica 06A: Firewall de Windows
+← [Práctica 06A: Firewall de Windows]([[02 - MODULOS/Prácticas (PoCs)/Firewall/06 - Cortafuegos de Windows (Reglas Avanzadas)|06 - Cortafuegos de Windows]])
 
-← 🏠 Volver al Índice del Módulo
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🔒 [[02 - MODULOS/ISO 27002/03 - Robustecimiento de Sistemas y Redes|ISO 27002 — Robustecimiento y Segmentación de Redes]]
+← [🏠 Volver al Índice del Módulo](index.html)

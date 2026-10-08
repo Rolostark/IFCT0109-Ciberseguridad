@@ -1,22 +1,13 @@
 ---
-title: "🖥️ Práctica: Creación de Servidor NAS con OpenMediaVault"
+title: "Práctica Open Media Vault - NAS con SMB y FTP"
 aliases:
-  - Creacion de NAS
-  - OpenMediaVault NAS
-  - PoC OMV
+  - Práctica Open Media Vault - NAS con SMB y FTP
 tags:
   - ifct0109/pocs
   - sistemas
+  - omv
   - nas
   - almacenamiento
-  - omv
----
-
-# 🖥️ Práctica: Creación de Servidor NAS con OpenMediaVault (OMV)
-
-> [!abstract] Resumen del Laboratorio
-> Implementación de una solución de almacenamiento conectado en red (**NAS**) utilizando la distribución Open Source **OpenMediaVault (OMV)** basada en Debian. Gestión de discos, volúmenes RAID, sistemas de archivos, usuarios, permisos y servicios compartidos (SMB/CIFS, NFS, FTP).
-
 ---
 
 # 💾 Práctica Open Media Vault
@@ -440,9 +431,3 @@ omv-firstaid
 * 💬 Foro de la comunidad
 
 * 🎥 Tutoriales en YouTube sobre OMV
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏢 [[02 - MODULOS/Prácticas (PoCs)/Sistemas/02 - Active Directory en Windows Server 2019|Active Directory en Windows Server 2019]]

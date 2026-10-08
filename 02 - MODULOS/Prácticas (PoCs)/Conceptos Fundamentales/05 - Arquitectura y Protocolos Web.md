@@ -1,22 +1,12 @@
 ---
-title: "📖 Práctica: Arquitectura Web, Cabeceras HTTP y Protocolos"
+title: "🌐 PoC - Desarrollo de Aplicaciones Web"
 aliases:
-  - Arquitectura Web, Cabeceras HTTP y Protocolos
-  - PoC arquitectura-web
+  - 🌐 PoC - Desarrollo de Aplicaciones Web
 tags:
   - ifct0109/pocs
-  - conceptos-fundamentales
+  - conceptos
   - arquitectura-web
   - http
-  - cookies
-  - headers
----
-
-# 📖 Práctica: Arquitectura Web, Cabeceras HTTP y Protocolos
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Conceptos Fundamentales del Certificado IFCT0109: análisis de mecanismos base de redes, inspección de protocolos, desarrollo de pruebas de concepto e interactividad con herramientas de diagnóstico y auditoría técnica.
-
 ---
 
 # 🌐 Desarrollo de Aplicaciones Web - Frontend y Backend
@@ -193,7 +183,7 @@ Agregamos el código JavaScript. Guardamos y recargamos.
 
 #### 🌐 Ejemplo en Línea
 
-Puedes ver un ejemplo funcional en: https://cursosmfr.es/web/
+Puedes ver un ejemplo funcional en: [https://cursosmfr.es/web/](https://cursosmfr.es/web/)
 
 ### 🔐 Ejemplo: Validación de Contraseña con JavaScript
 
@@ -218,7 +208,7 @@ Pegamos el código generado, guardamos.
 http://localhost/pass.html
 ```
 
-**Ejemplo en línea:** https://cursosmfr.es/web/pass.html
+**Ejemplo en línea:** [https://cursosmfr.es/web/pass.html](https://cursosmfr.es/web/pass.html)
 
 > [!warning] ⚠️ Problema de Seguridad
 >        Si abres las  DevTools del navegador  (F12) y miras el código fuente JavaScript, verás la contraseña en texto claro:
@@ -348,9 +338,9 @@ Debe mostrar: "¡Hola, Manuel! Bienvenido a nuestra página."
 
 #### 🌐 Ejemplo en Línea
 
-https://cursosmfr.es/web/saludo_get.php
+[https://cursosmfr.es/web/saludo_get.php](https://cursosmfr.es/web/saludo_get.php)
 
-https://cursosmfr.es/web/saludo_get.php?nombre=Estudiante
+[https://cursosmfr.es/web/saludo_get.php?nombre=Estudiante](https://cursosmfr.es/web/saludo_get.php?nombre=Estudiante)
 
 ### 🔍 Análisis del Código PHP
 
@@ -403,7 +393,7 @@ Aparecerá un formulario. Introducimos un nombre y enviamos.
 
 #### 🌐 Ejemplo en Línea
 
-https://cursosmfr.es/web/saludo_post.php
+[https://cursosmfr.es/web/saludo_post.php](https://cursosmfr.es/web/saludo_post.php)
 
 ### 🔍 Análisis del Código PHP
 
@@ -478,7 +468,7 @@ Prueba con contraseñas incorrectas y luego con `SegInf`.
 
 #### 🌐 Ejemplo en Línea
 
-https://cursosmfr.es/web/pass.php
+[https://cursosmfr.es/web/pass.php](https://cursosmfr.es/web/pass.php)
 
 ### 🔍 Análisis del Código PHP
 
@@ -529,9 +519,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 | Seguridad | NO confiable (cliente controla) | Confiable (servidor controla) |
 | Datos sensibles | ❌ NUNCA poner credenciales aquí | ✅ Procesamiento seguro |
 | Velocidad | Instantánea (no hay red) | Requiere petición HTTP |
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏠 [[00 - INDICE|Inicio del Vault]]

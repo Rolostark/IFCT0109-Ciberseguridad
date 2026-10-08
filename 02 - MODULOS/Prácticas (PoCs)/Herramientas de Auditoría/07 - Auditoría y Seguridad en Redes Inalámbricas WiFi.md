@@ -1,22 +1,11 @@
 ---
-title: "🔍 Práctica: Auditoría de Redes WiFi (Aircrack-ng, WPA2, Handshakes y WPS)"
+title: "📡 Ataques a Redes WiFi con Aircrack-ng Suite"
 aliases:
-  - Auditoría de Redes WiFi (Aircrack-ng, WPA2, Handshakes y WPS)
-  - PoC wifi
+  - 📡 Ataques a Redes WiFi con Aircrack-ng Suite
 tags:
   - ifct0109/pocs
   - auditoria
   - wifi
-  - aircrack-ng
-  - wpa2
-  - handshake
----
-
-# 🔍 Práctica: Auditoría de Redes WiFi (Aircrack-ng, WPA2, Handshakes y WPS)
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 📡 Ataques a Redes WiFi con Aircrack-ng Suite
@@ -146,6 +135,8 @@ wlan0     IEEE 802.11  ESSID:off/any
 
 **✅ Identificación:** La interfaz WiFi normalmente se llama `wlan0`, `wlan1`, o nombres similares.
 
+![Salida del comando iwconfig mostrando wlan0](../../../archivos_descargados/imagenes/herramientas_de_auditoría/wifi_images/media/image2.png)
+
 > 📝 Nota:  En esta práctica usaremos `wlan0` como ejemplo. Si tu interfaz tiene otro nombre (ej: `wlp3s0`), sustitúyelo en todos los comandos.
 
 ## 📡 Paso 2: Activar Modo Monitor
@@ -218,6 +209,8 @@ airodump-ng wlan0
 ```
 
 #### Información mostrada por airodump-ng:
+
+![Salida de airodump-ng mostrando redes WiFi detectadas](../../../archivos_descargados/imagenes/herramientas_de_auditoría/wifi_images/media/image3.png)
 
 **Sección superior - Access Points (Routers/APs):**
 
@@ -303,6 +296,8 @@ airodump-ng -c 9 -w auditoriaWifi --bssid 1C:3B:F3:A0:77:88 wlan0mon
 
 #### Captura en progreso:
 
+![Airodump-ng capturando tráfico focalizado](../../../archivos_descargados/imagenes/herramientas_de_auditoría/wifi_images/media/image4.png)
+
 **Elementos a monitorizar:**
 
 * #Data: Debe ir incrementándose (indica actividad de clientes)
@@ -364,6 +359,8 @@ Ambos terminales deben estar ejecutándose simultáneamente.
 aireplay-ng --help
 ```
 
+![Ayuda de aireplay-ng mostrando tipos de ataques](../../../archivos_descargados/imagenes/herramientas_de_auditoría/wifi_images/media/image5.png)
+
 | Ataque | Código | Descripción | Uso |
 | --- | --- | --- | --- |
 | Deauth | `-0` o `--deauth` | Desconecta clientes del AP | ✅ Capturar handshake |
@@ -399,6 +396,8 @@ aireplay-ng -0 1 -a 1C:3B:F3:A0:77:88 -c 48:D2:24:AA:BB:CC wlan0mon
 
 * `-c [MAC_CLIENTE]` → MAC del cliente a desconectar
 
+![Aireplay-ng enviando paquetes de deautenticación](../../../archivos_descargados/imagenes/herramientas_de_auditoría/wifi_images/media/image6.png)
+
 #### Deauth broadcast (todos los clientes)
 
 Si no especificas `-c`, se desconectan TODOS los clientes:
@@ -418,6 +417,8 @@ Esto envía 5 deauths broadcast.
 ### 📊 Interpretar Resultados del Deauth
 
 #### Valores ACK
+
+![ACK values en aireplay-ng](../../../archivos_descargados/imagenes/herramientas_de_auditoría/wifi_images/media/image7.png)
 
 El formato es `ACK [enviados]/[recibidos]`:
 
@@ -925,9 +926,3 @@ Este conocimiento debe usarse ÚNICAMENTE para:
 * Kismet: Detector y sniffer WiFi pasivo
 
 * WiFi Pineapple: Hardware especializado para pentesting WiFi
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]

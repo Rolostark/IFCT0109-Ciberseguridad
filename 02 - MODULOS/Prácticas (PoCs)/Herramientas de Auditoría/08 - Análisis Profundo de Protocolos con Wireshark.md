@@ -1,21 +1,11 @@
 ---
-title: "🔍 Práctica: Inspección de Tráfico y Filtros Forenses con Wireshark"
+title: "📊 Introducción a Wireshark - Análisis de Tráfico de Red"
 aliases:
-  - Inspección de Tráfico y Filtros Forenses con Wireshark
-  - PoC wireshark
+  - 📊 Introducción a Wireshark - Análisis de Tráfico de Red
 tags:
   - ifct0109/pocs
   - auditoria
   - wireshark
-  - pcap
-  - analisis-red
----
-
-# 🔍 Práctica: Inspección de Tráfico y Filtros Forenses con Wireshark
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 📊 Introducción a Wireshark - Análisis de Tráfico de Red
@@ -143,6 +133,8 @@ Durante la instalación aparecerá una pregunta:
 
 Responde **YES** (Sí) para permitir que usuarios no-root puedan capturar paquetes.
 
+![Pregunta de configuración de Wireshark en Debian](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image2.png)
+
 #### Paso 3: Añadir usuario al grupo wireshark
 
 ```bash
@@ -154,6 +146,8 @@ O para un usuario específico:
 ```bash
 sudo usermod -aG wireshark nombre_usuario
 ```
+
+![Comando usermod en terminal](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image3.png)
 
 > [!warning] ⚠️ Importante:  Debes cerrar sesión y volver a iniciarla para que los cambios de grupo surtan efecto.
 
@@ -175,7 +169,7 @@ En Windows, además de Wireshark, se instalará automáticamente **Npcap** (ante
 
 #### Paso 1: Descargar instalador
 
-Descarga el instalador desde https://www.wireshark.org/download.html
+Descarga el instalador desde [https://www.wireshark.org/download.html](https://www.wireshark.org/download.html)
 
 Selecciona la versión de 64 bits para sistemas modernos.
 
@@ -183,9 +177,17 @@ Selecciona la versión de 64 bits para sistemas modernos.
 
 Ejecuta el instalador descargado (.exe) con permisos de administrador.
 
+![Pantalla de bienvenida del instalador de Wireshark](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image4.png)
+
+![Selección de componentes de instalación](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image5.png)
+
 #### Paso 3: Instalación de Npcap
 
 Durante la instalación se te pedirá instalar **Npcap**, que es la librería que permite capturar paquetes en Windows.
+
+![Instalador de Npcap](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image6.png)
+
+![Configuración de Npcap](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image7.png)
 
 **📋 Sobre Npcap/WinPcap:**
 
@@ -208,6 +210,8 @@ Wireshark estará disponible en el menú Inicio.
 ### 🖥️ Interfaz Principal
 
 Al abrir Wireshark verás la pantalla principal:
+
+![Pantalla principal de Wireshark](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image8.png)
 
 En esta pantalla se muestran:
 
@@ -245,11 +249,15 @@ O de forma equivalente:
 tcp port 80
 ```
 
+![Filtro de captura HTTP en Wireshark](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image9.png)
+
 #### Ejemplo: Capturar solo protocolo ARP
 
 ```bash
 arp
 ```
+
+![Filtro de captura ARP](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image10.png)
 
 Inicia la captura y espera unos segundos. Verás paquetes ARP apareciendo (cuando dispositivos buscan MACs de IPs).
 
@@ -258,6 +266,8 @@ Inicia la captura y espera unos segundos. Verás paquetes ARP apareciendo (cuand
 ```bash
 icmp
 ```
+
+![Filtro de captura ICMP](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image11.png)
 
 Inicia la captura y desde otra terminal ejecuta:
 
@@ -310,9 +320,13 @@ Los filtros de captura utilizan la sintaxis de **libpcap/BPF (Berkeley Packet Fi
 
 Pulsa el botón rojo de "Stop" en la barra de herramientas:
 
+![Botones de control de captura](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image21.png)
+
 #### Guardar captura
 
 Menú: **Archivo → Guardar** o **Archivo → Guardar como...**
+
+![Diálogo de guardar archivo](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image22.png)
 
 Formatos comunes:
 
@@ -326,9 +340,13 @@ La interfaz de Wireshark se divide en varias áreas funcionales:
 
 ### 1️⃣ Barra de Menús
 
+![Barra de menús de Wireshark](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image23.png)
+
 Contiene todas las opciones: Archivo, Editar, Ver, Ir, Capturar, Analizar, Estadísticas, Telefonía, Inalámbrico, Herramientas, Ayuda.
 
 ### 2️⃣ Barra de Herramientas Principal
+
+![Barra de herramientas principal](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image24.png)
 
 Acceso rápido a:
 
@@ -346,9 +364,13 @@ Acceso rápido a:
 
 ### 3️⃣ Barra de Filtros de Visualización
 
+![Barra de filtros de visualización](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image25.png)
+
 Permite filtrar paquetes YA capturados para visualizar solo los que cumplen ciertas condiciones. A diferencia de los filtros de captura, estos no descartan datos, solo los ocultan temporalmente.
 
 ### 4️⃣ Panel de Lista de Paquetes
+
+![Panel de lista de paquetes](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image26.png)
 
 Muestra todos los paquetes capturados en formato de tabla con columnas:
 
@@ -395,6 +417,8 @@ Muestra el contenido completo del paquete en tres formatos:
 * Resaltado: Al seleccionar un campo en el panel de detalles, se resalta su posición en bytes
 
 ### 7️⃣ Barra de Estado
+
+![Barra de estado](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image27.png)
 
 Muestra información sobre:
 
@@ -505,11 +529,15 @@ ip.addr == 192.168.1.10 and http
 
 → Tráfico HTTP desde/hacia 192.168.1.10
 
+![Filtro combinado IP y HTTP](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image28.png)
+
 ```bash
 tcp.port == 80 or tcp.port == 443
 ```
 
 → Tráfico HTTP o HTTPS
+
+![Filtro HTTP o HTTPS](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image29.png)
 
 ```bash
 http.request.method == "POST" and http contains "password"
@@ -517,11 +545,15 @@ http.request.method == "POST" and http contains "password"
 
 → Peticiones POST que contienen la palabra "password"
 
+![Filtro POST con password](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image30.png)
+
 ## 🛠️ Operaciones Avanzadas
 
 ### 🖱️ Menú Contextual (Clic Derecho)
 
 Al hacer clic derecho sobre un paquete o campo, aparecen opciones muy útiles:
+
+![Menú contextual de Wireshark](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image31.png)
 
 #### Opciones principales:
 
@@ -616,6 +648,8 @@ El menú **Estadísticas** ofrece análisis muy útiles:
 * En "Tipo", despliega y selecciona el campo que quieres mostrar
 
 * Acepta
+
+![Añadir columnas personalizadas](../../../archivos_descargados/imagenes/herramientas_de_auditoría/w_01_intro_images/media/image32.png)
 
 ## 🎯 Práctica Básica
 
@@ -758,10 +792,6 @@ Wireshark es una herramienta fundamental para cualquier profesional de redes y s
 >          ✅ Laboratorios de pruebas
 >          ✅ Auditorías de seguridad contratadas
 
+    [
       🎯 Continuar con los Retos Prácticos →
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]
+    ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/08a - Wireshark - Retos Prácticos de Análisis de Tráfico|08a - Wireshark - Retos Prácticos de Tráfico]])

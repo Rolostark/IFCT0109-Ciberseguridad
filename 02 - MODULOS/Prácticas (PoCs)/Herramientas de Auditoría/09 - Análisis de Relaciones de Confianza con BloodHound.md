@@ -1,22 +1,11 @@
 ---
-title: "🔍 Práctica: Mapeo de Rutas de Ataque en Active Directory con BloodHound"
+title: "🩸 Módulo BloodHound - Active Directory Security"
 aliases:
-  - Mapeo de Rutas de Ataque en Active Directory con BloodHound
-  - PoC bloodhound
+  - 🩸 Módulo BloodHound - Active Directory Security
 tags:
   - ifct0109/pocs
   - auditoria
   - bloodhound
-  - sharphound
-  - active-directory
-  - privesc
----
-
-# 🔍 Práctica: Mapeo de Rutas de Ataque en Active Directory con BloodHound
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 🩸 Módulo BloodHound
@@ -61,6 +50,7 @@ En este módulo aprenderás a instalar, configurar y utilizar **BloodHound**, un
 
       🔧 Instalación y Configuración
 
+      [
         Práctica 01
         💿
         Instalación de BloodHound
@@ -73,7 +63,9 @@ En este módulo aprenderás a instalar, configurar y utilizar **BloodHound**, un
           Kali Linux
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/09a - BloodHound - Práctica 1 - Instalación de BloodHound|09a - BloodHound - Práctica 1 - Instalación]])
 
+      [
         Práctica 02
         📊
         Recolección de Información
@@ -86,9 +78,11 @@ En este módulo aprenderás a instalar, configurar y utilizar **BloodHound**, un
           Evil-WinRM
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/09b - BloodHound - Práctica 2 - Recolección de Información|09b - BloodHound - Práctica 2 - Recolección]])
 
       🔍 Análisis y Explotación
 
+      [
         Práctica 03
         🎯
         Análisis de Datos
@@ -101,7 +95,9 @@ En este módulo aprenderás a instalar, configurar y utilizar **BloodHound**, un
           Cypher
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/09c - BloodHound - Práctica 3 - Análisis de Datos y Rutas de Ataque|09c - BloodHound - Práctica 3 - Análisis]])
 
+      [
         Práctica 04
         🔧
         Herramientas Alternativas
@@ -114,6 +110,7 @@ En este módulo aprenderás a instalar, configurar y utilizar **BloodHound**, un
           CLI
 
         → Ir a la práctica
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/09d - BloodHound - Práctica 4 - Herramientas Alternativas|09d - BloodHound - Práctica 4 - Alternativas]])
 
 ### 📥 Zona de Descargas - Recursos del Módulo
 
@@ -125,15 +122,19 @@ Descarga todos los recursos necesarios para completar las prácticas del módulo
 
 Recolector binario para Windows (C#). Compatible con BloodHound Legacy.
 
+          [
             ⬇️ Descargar SharpHound.exe
             (1.0 MB)
+          ](../../../archivos_descargados/recursos/SharpHound.exe)
 
 #### 📜 SharpHound.ps1
 
 Script PowerShell para recolección en Windows. Ideal para entornos con PowerShell habilitado.
 
+          [
             ⬇️ Descargar SharpHound.ps1
             (1.2 MB)
+          ](../../../archivos_descargados/recursos/SharpHound.ps1)
 
 #### 📦 Datos de Ejemplo (Recursos)
 
@@ -141,29 +142,37 @@ Script PowerShell para recolección en Windows. Ideal para entornos con PowerShe
 
 **Archivo principal para la práctica.** Datos recolectados de la VM BIG.ova con SharpHound.
 
+          [
             ⬇️ Descargar Datos BIG.ova
             (11 KB)
+          ](../../../archivos_descargados/recursos/20240812121134_BloodHound.zip)
 
 #### 🌐 20240811202959_BloodHound_ce.zip
 
 Datos de ejemplo para BloodHound Community Edition. Compatible con versión 5.x.
 
+          [
             ⬇️ Descargar Datos CE
             (23 KB)
+          ](../../../archivos_descargados/recursos/20240811202959_BloodHound_ce.zip)
 
 #### 📊 ad_example_data_ce.zip
 
 Datos de ejemplo de Active Directory para Community Edition. Dominio WRAITH.CORP.
 
+          [
             ⬇️ Descargar Ejemplo AD
             (149 KB)
+          ](../../../archivos_descargados/recursos/ad_example_data_ce.zip)
 
 #### 🐳 docker_bloodhound.7z
 
 Entorno Docker completo con BloodHound Legacy preconfigurado. Incluye script de inicio.
 
+          [
             ⬇️ Descargar Docker BloodHound
             (95 MB)
+          ](../../../archivos_descargados/paquetes_7z/docker_bloodhound.7z)
 
 **💡 Consejo:** Para la práctica principal utiliza `20240812121134_BloodHound.zip`. Los demás archivos son opcionales para explorar diferentes escenarios.
 
@@ -238,12 +247,8 @@ Entorno Docker completo con BloodHound Legacy preconfigurado. Incluye script de 
 
 ## 🚀 ¡Comienza Tu Aprendizaje!
 
+      [
         🩸 Comenzar con la Práctica 01
+      ]([[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/09a - BloodHound - Práctica 1 - Instalación de BloodHound|09a - BloodHound - Práctica 1 - Instalación]])
 
 4 prácticas completas | Recursos descargables | Guías paso a paso
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]

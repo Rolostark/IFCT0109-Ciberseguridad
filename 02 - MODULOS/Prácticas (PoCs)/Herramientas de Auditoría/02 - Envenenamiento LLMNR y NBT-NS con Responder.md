@@ -1,22 +1,11 @@
 ---
-title: "🔍 Práctica: Captura de Credenciales NetNTLM con Responder"
+title: "Práctica Responder - Envenenamiento de Red"
 aliases:
-  - Captura de Credenciales NetNTLM con Responder
-  - PoC responder
+  - Práctica Responder - Envenenamiento de Red
 tags:
   - ifct0109/pocs
   - auditoria
   - responder
-  - llmnr
-  - nbt-ns
-  - active-directory
----
-
-# 🔍 Práctica: Captura de Credenciales NetNTLM con Responder
-
-> [!abstract] Resumen del Laboratorio
-> Arsenal técnico de auditoría y pentesting del Certificado IFCT0109: reconocimiento de infraestructura, captura y análisis de hashes, explotación, pivoting perimetral e investigación de desbordamientos de memoria en entornos controlados.
-
 ---
 
 # 🎭 Práctica de Responder
@@ -78,6 +67,8 @@ Responder puede capturar credenciales cuando un usuario intenta autenticarse en 
         **📮 SMTP**
 
 ## ⚙️ Cómo Funciona Responder
+
+![Diagrama de funcionamiento de Responder](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image1.png)
 
 ### 📡 1. Escaneo de la Red
 
@@ -189,7 +180,11 @@ Interceptar solicitudes de resolución de nombres en una red local. Cuando un di
 
 El usuario intenta acceder a un recurso SMB que no existe:
 
+![Búsqueda de recurso SMB](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image2.png)
+
 Windows muestra que el recurso no se encuentra:
+
+![Recurso no encontrado](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image3.png)
 
 #### 🎭 Escenario con Responder Activo
 
@@ -201,9 +196,13 @@ sudo responder -I eth0
 
 Cuando la víctima intenta acceder al recurso SMB inexistente, Windows solicita credenciales:
 
+![Solicitud de credenciales](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image4.png)
+
 > [!warning] ⚡ Resultado:  Independientemente de si el usuario rellena o cancela, Responder captura el hash NTLM automáticamente.
 
 Hash capturado en Responder:
+
+![Hash capturado](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image5.png)
 
 #### 💾 Almacenamiento de Credenciales
 
@@ -221,21 +220,33 @@ Guardamos el hash en un archivo y usamos HashCat:
 hashcat -m 5600 hash_Manuel.txt /usr/share/wordlists/rockyou.txt
 ```
 
+![HashCat crackeando](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image6.png)
+
 #### 🔄 Otros Protocolos Vulnerables
 
 #### 🖥️ RDP (Remote Desktop Protocol)
 
 Intento de conexión RDP:
 
+![Conexión RDP](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image7.png)
+
 Credenciales capturadas en Responder:
+
+![Credenciales RDP capturadas](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image8.png)
 
 #### 📡 FTP (File Transfer Protocol)
 
 Intento de conexión FTP:
 
+![Conexión FTP](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image9.png)
+
 Solicitud de credenciales:
 
+![Solicitud FTP](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image10.png)
+
         **✨ Ventaja de FTP:** Las credenciales se capturan en **texto claro** (sin hash)
+
+![Credenciales en claro](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image11.png)
 
 ### 🔵 Ataque 2: Envenenamiento LLMNR/NBT a través de WPAD
 
@@ -257,7 +268,11 @@ sudo responder -I eth0 -wd
 
 Cuando la víctima accede a cualquier página web, se solicitan credenciales:
 
+![Solicitud WPAD](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image12.png)
+
 Credenciales capturadas en Responder:
+
+![Hash WPAD capturado](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image13.png)
 
 #### 🔓 Modo Credenciales en Claro
 
@@ -269,6 +284,8 @@ sudo responder -I eth0 -wdF -b
 
 Las credenciales recibidas **NO son hashes**, sino texto claro:
 
+![Credenciales en claro WPAD](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image14.png)
+
 #### ⚠️ Downgrade Attack (SMB v1)
 
 Podemos forzar el uso de versiones antiguas de SMB para obtener hashes LM (más fáciles de crackear):
@@ -278,6 +295,10 @@ sudo responder -I eth0 -wdF --lm --disable-ess
 ```
 
 > [!warning] 🛡️ Protección:  Las versiones modernas de Windows deberían advertir que se está usando SMB antiguo.
+
+![Advertencia SMB antiguo](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image15.png)
+
+![Hash LM capturado](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/image16.png)
 
 ## 📊 Resumen Comparativo de Ataques
 
@@ -373,6 +394,8 @@ Usuario   Dominio   Server Challenge     NTLMv2 Response              Blob
 * ✅ NTLM Relay: Se puede retransmitir en tiempo real
 
 ### 🔄 Proceso de Autenticación NTLMv2
+
+![Flujo de autenticación NTLM](../../../archivos_descargados/imagenes/herramientas_de_auditoría/responder_images/media/ntlm_flow.png)
 
         **1️⃣ Cliente solicita acceso**
 
@@ -693,9 +716,3 @@ Usar VLANs para separar segmentos críticos de la red.
 * ❌ Redes públicas o de terceros sin autorización
 
 **El uso no autorizado es un delito.**
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🧪 [[02 - MODULOS/04 - Hacking Ético|Módulo Central de Hacking Ético]]

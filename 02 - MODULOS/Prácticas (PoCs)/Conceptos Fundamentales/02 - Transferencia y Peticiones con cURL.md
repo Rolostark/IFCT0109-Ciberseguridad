@@ -1,22 +1,12 @@
 ---
-title: "📖 Práctica: Peticiones y Automatización Web con cURL"
+title: "🔧 Prácticas con CURL"
 aliases:
-  - Peticiones y Automatización Web con cURL
-  - PoC curl
+  - 🔧 Prácticas con CURL
 tags:
   - ifct0109/pocs
-  - conceptos-fundamentales
+  - conceptos
   - curl
   - http
-  - api
-  - web
----
-
-# 📖 Práctica: Peticiones y Automatización Web con cURL
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Conceptos Fundamentales del Certificado IFCT0109: análisis de mecanismos base de redes, inspección de protocolos, desarrollo de pruebas de concepto e interactividad con herramientas de diagnóstico y auditoría técnica.
-
 ---
 
 # 🔧 Prácticas con CURL
@@ -769,9 +759,3 @@ curl -s -o /dev/null -w "%{http_code}\n" "https://cursosmfr.es/ifct0109/curl/get
 * 💻 `man curl` - Manual completo en terminal
 
 * 🔍 `curl --help` - Ayuda rápida
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏠 [[00 - INDICE|Inicio del Vault]]

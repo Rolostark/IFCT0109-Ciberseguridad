@@ -1,21 +1,12 @@
 ---
-title: "🛡️ Práctica: Configuración de Reglas de Cortafuegos y NAT en IPFire"
+title: "📋 Reglas de Firewall en IPFire"
 aliases:
-  - Configuración de Reglas de Cortafuegos y NAT en IPFire
-  - PoC ipfire
+  - 📋 Reglas de Firewall en IPFire
 tags:
   - ifct0109/pocs
   - firewall
   - ipfire
-  - reglas-firewall
-  - nat
----
-
-# 🛡️ Práctica: Configuración de Reglas de Cortafuegos y NAT en IPFire
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Seguridad Perimetral y Cortafuegos del Certificado IFCT0109: topologías por zonas (ROJA, VERDE, AZUL, NARANJA), segmentación perimetral, políticas de filtrado, túneles cifrados VPN, sistemas IDS/IPS y filtrado a nivel de host.
-
+  - reglas
 ---
 
 # 📋 Reglas de Firewall en IPFire
@@ -84,7 +75,7 @@ FROM GREEN to RED → Protocol Preestablecido HTTPS → Accept
 
 ### 🧪 Paso 3: Comprobar Funcionamiento
 
-Comprobar navegando a https://www.marca.com
+Comprobar navegando a [https://www.marca.com](https://www.marca.com)
 
 > [!warning] ⚠️ Resultado esperado:  Con estas dos reglas, el acceso HTTP está bloqueado pero HTTPS funciona.
 
@@ -130,7 +121,11 @@ Activar en la máquina de Windows 7 el **Escritorio Remoto**. A continuación, v
 
 Vamos al menú **Red > Servidor DHCP** y abajo saldrá nuestro equipo con Windows 7:
 
+![Servidor DHCP - equipo Windows 7](../../../archivos_descargados/imagenes/firewall/02_ipfire_reglas_images/media/image1.png)
+
 Pulsamos en **Agregar**, luego pulsamos en **Editar** y lo cambiamos por `10.10.2.50` y pulsamos **Actualizar**.
+
+![Asignar IP estática 10.10.2.50](../../../archivos_descargados/imagenes/firewall/02_ipfire_reglas_images/media/image2.png)
 
 #### ✅ Resultado:
 
@@ -164,6 +159,8 @@ Redirigiremos la entrada a nuestro IPFire por el **puerto 5000** para que lo red
 
 Ponemos la regla arriba. Queda finalmente algo similar a lo siguiente:
 
+![Reglas de firewall configuradas](../../../archivos_descargados/imagenes/firewall/02_ipfire_reglas_images/media/image3.png)
+
 ### 🧪 Paso 10: Probar Escritorio Remoto desde el Exterior
 
 Ahora desde cualquier equipo probamos el **Escritorio Remoto** a esa IP de RED que hemos visto antes.
@@ -176,6 +173,8 @@ Equipo: [IP_RED_IPFIRE]:5000
 ```
 
 O desde **Conexión a Escritorio Remoto** introducimos `[IP_RED]:5000`
+
+![Conexión Escritorio Remoto](../../../archivos_descargados/imagenes/firewall/02_ipfire_reglas_images/media/image4.png)
 
 ## 📊 Paso 11: Revisar Registros y Conexiones
 
@@ -223,12 +222,6 @@ Revisar los registros de conexiones en:
 
 ### 🎯 Navegación:
 
-← Práctica 01: Instalación de IPFire
+← [Práctica 01: Instalación de IPFire]([[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire|01 - Instalación y Topología de Red con IPFire]])
 
-→ Práctica 03: VPN con IPFire
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🔒 [[02 - MODULOS/ISO 27002/03 - Robustecimiento de Sistemas y Redes|ISO 27002 — Robustecimiento y Segmentación de Redes]]
+→ [Práctica 03: VPN con IPFire]([[02 - MODULOS/Prácticas (PoCs)/Firewall/03 - Redes Privadas Virtuales (VPN) con IPFire|03 - Redes Privadas Virtuales (VPN) con IPFire]])

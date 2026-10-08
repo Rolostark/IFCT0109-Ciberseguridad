@@ -1,22 +1,11 @@
 ---
-title: "📖 Práctica: Técnicas de Transferencia de Archivos en Red"
+title: "🔄 PoC - Métodos de Transferencia de Archivos"
 aliases:
-  - Técnicas de Transferencia de Archivos en Red
-  - PoC transferencia-archivos
+  - 🔄 PoC - Métodos de Transferencia de Archivos
 tags:
   - ifct0109/pocs
-  - conceptos-fundamentales
+  - conceptos
   - transferencia-archivos
-  - wget
-  - scp
-  - nc
----
-
-# 📖 Práctica: Técnicas de Transferencia de Archivos en Red
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Conceptos Fundamentales del Certificado IFCT0109: análisis de mecanismos base de redes, inspección de protocolos, desarrollo de pruebas de concepto e interactividad con herramientas de diagnóstico y auditoría técnica.
-
 ---
 
 # 🔄 Transferencia de Archivos entre Sistemas
@@ -529,9 +518,3 @@ nc.exe -h
 | Netcat | ⚡⚡⚡ | ❌ Sin cifrado | ⭐⭐ Medio | Raw sockets, velocidad |
 | Base64 | ⚡ | ❌ Solo codificación | ⭐ Muy fácil | Comandos pequeños, copiar/pegar |
 | Certutil | ⚡⚡ | ❌ Sin cifrado | ⭐ Muy fácil | Windows, sin herramientas adicionales |
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏠 [[00 - INDICE|Inicio del Vault]]

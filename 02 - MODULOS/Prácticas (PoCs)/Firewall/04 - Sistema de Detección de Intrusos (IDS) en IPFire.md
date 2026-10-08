@@ -1,22 +1,13 @@
 ---
-title: "🛡️ Práctica: Despliegue y Reglas de Detección IDS/IPS (Suricata) en IPFire"
+title: "🚨 IDS/IPS con IPFire"
 aliases:
-  - Despliegue y Reglas de Detección IDS/IPS (Suricata) en IPFire
-  - PoC ipfire
+  - 🚨 IDS/IPS con IPFire
 tags:
   - ifct0109/pocs
   - firewall
   - ipfire
   - ids
-  - ips
   - suricata
----
-
-# 🛡️ Práctica: Despliegue y Reglas de Detección IDS/IPS (Suricata) en IPFire
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Seguridad Perimetral y Cortafuegos del Certificado IFCT0109: topologías por zonas (ROJA, VERDE, AZUL, NARANJA), segmentación perimetral, políticas de filtrado, túneles cifrados VPN, sistemas IDS/IPS y filtrado a nivel de host.
-
 ---
 
 # 🚨 IDS/IPS con IPFire
@@ -54,6 +45,8 @@ Primero vamos al menú **Firewall > Detección de Intrusiones**.
 
 Seleccionamos **Agregar proveedor** y vamos a seleccionar las **Reglas de la Comunidad**, marcamos **Monitorizar sólo el tráfico** y pulsamos **Agregar**.
 
+![Agregar proveedor de reglas IDS](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image2.png)
+
 > [!warning] ⚠️ Opción "Monitorear sólo tráfico" (Importante):
 >
 >          ✅  Marcada (IDS):  Solo monitoriza el tráfico. Los paquetes son registrados pero  NO bloqueados .
@@ -63,7 +56,11 @@ Seleccionamos **Agregar proveedor** y vamos a seleccionar las **Reglas de la Com
 
 Activamos **Enable IPS** y monitorizamos en **RED** y **GREEN**:
 
+![Activar IPS en interfaces RED y GREEN](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image3.png)
+
 Pulsamos **Guardar** y el servicio de detección de intrusiones debería aparecer ejecutándose:
+
+![Servicio IDS ejecutándose](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image4.png)
 
 ### 📋 Paso 3: Personalizar el Conjunto de Reglas
 
@@ -87,9 +84,13 @@ nmap -v -A [IP_FIREWALL]
 
 Obtendremos cierta información de ese escaneo:
 
+![Resultado escaneo Nmap](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image5.png)
+
 ### 📋 Paso 5: Revisar el Registro IDS
 
 Revisa el registro en **Registros > Registros IDS** para verificar si el escaneo ha sido detectado:
+
+![Registros IDS - escaneo detectado](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image6.png)
 
 #### ✅ Resultado Esperado:
 
@@ -103,9 +104,13 @@ A continuación, vamos a configurar **Guardian** para bloquear activamente ataqu
 
 Instalar Guardian desde el menú **IPFire > Pakfire**:
 
+![Instalar Guardian desde Pakfire](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image7.png)
+
 ### ⚙️ Paso 2: Configurar Guardian
 
 Ir a **Servicios > Guardian** y configurar con los siguientes parámetros:
+
+![Configuración Guardian](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image8.png)
 
 #### ⚙️ Parámetros de Guardian:
 
@@ -122,11 +127,17 @@ Pulsamos **Guardar**.
 
 En **Sistema > Acceso SSH** habilitamos el acceso por SSH para poder recibir el ataque de prueba:
 
+![Habilitar SSH](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image9.png)
+
+![Configuración SSH habilitada](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image10.png)
+
 ## 💥 Parte 4: Simulación de Ataque y Verificación
 
 ### 🔓 Paso 4: Ataque de Fuerza Bruta con ncrack
 
 Intentamos un ataque con **ncrack** contra la IP de nuestro firewall:
+
+![Ataque ncrack](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image11.png)
 
 ```bash
 ncrack -p ssh [IP_FIREWALL]
@@ -138,9 +149,13 @@ ncrack -p ssh [IP_FIREWALL]
 
 Ver registros en **Logs > System Logs** sección **Guardian**:
 
+![Registros Guardian en System Logs](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image12.png)
+
 ### 🚫 Paso 6: Verificar el Bloqueo en Guardian
 
 Ver en **Servicios > Guardian** cómo ha sido bloqueada la IP atacante:
+
+![IP bloqueada por Guardian](../../../archivos_descargados/imagenes/firewall/04_ipfire_ids_images/media/image13.png)
 
 #### ✅ Resultado Esperado:
 
@@ -184,12 +199,6 @@ La máquina bloqueada **no tendrá acceso a internet ni a ningún recurso de red
 
 ### 🎯 Navegación:
 
-← Práctica 03: VPN con IPFire
+← [Práctica 03: VPN con IPFire]([[02 - MODULOS/Prácticas (PoCs)/Firewall/03 - Redes Privadas Virtuales (VPN) con IPFire|03 - Redes Privadas Virtuales (VPN) con IPFire]])
 
-→ Práctica 05: Proxy Web con IPFire
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🔒 [[02 - MODULOS/ISO 27002/03 - Robustecimiento de Sistemas y Redes|ISO 27002 — Robustecimiento y Segmentación de Redes]]
+→ [Práctica 05: Proxy Web con IPFire]([[02 - MODULOS/Prácticas (PoCs)/Firewall/05 - Servidor Proxy y Filtrado de Contenidos en IPFire|05 - Servidor Proxy y Filtrado de Contenidos en IPFire]])

@@ -1,22 +1,12 @@
 ---
-title: "📖 Práctica: Ataques Man-in-the-Middle y Envenenamiento ARP"
+title: "🕵️ Ataque Man In The Middle - ARP Spoofing"
 aliases:
-  - Ataques Man-in-the-Middle y Envenenamiento ARP
-  - PoC mitm
+  - 🕵️ Ataque Man In The Middle - ARP Spoofing
 tags:
   - ifct0109/pocs
-  - conceptos-fundamentales
+  - conceptos
   - mitm
   - arp-spoofing
-  - ettercap
-  - redes
----
-
-# 📖 Práctica: Ataques Man-in-the-Middle y Envenenamiento ARP
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Conceptos Fundamentales del Certificado IFCT0109: análisis de mecanismos base de redes, inspección de protocolos, desarrollo de pruebas de concepto e interactividad con herramientas de diagnóstico y auditoría técnica.
-
 ---
 
 # 🕵️ Ataque Man In The Middle (ARP Spoofing)
@@ -107,11 +97,15 @@ Una vez encendidas, apunta las siguientes IPs:
 ip a
 ```
 
+![IP Kali Linux](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/ip_kali.png)
+
 #### 🔍 Obtener la IP en Windows 7:
 
 ```cmd
 ipconfig
 ```
+
+![IP Windows 7](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/ip_windows.png)
 
 ## 🔗 Paso 2: Verificar Conectividad
 
@@ -143,6 +137,8 @@ La máquina de Kali debería salir en el listado. Para asegurarnos, hicimos ping
 
 **En mi caso:**
 
+![Tabla ARP de Windows 7 antes del ataque](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/image1.png)
+
 > [!warning] 📝 Anota las direcciones MAC:
 >
 >          MAC del router (puerta de enlace): __________________
@@ -172,6 +168,8 @@ Traza a la dirección 8.8.8.8 ...
   3    ...
   ...
 ```
+
+![Tracert ANTES del ataque](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/imageXX.png)
 
 > [!warning] 🎯 Observa:  El primer salto es  192.168.10.1  (el router real)
 
@@ -236,6 +234,8 @@ Desde Kali sustituimos la sintaxis por nuestros valores:
 
 * `192.168.10.1` → IP del router
 
+![Ejecución de arpspoof](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/image2.png)
+
 Verás mensajes continuos del tipo:
 
 ```bash
@@ -256,6 +256,8 @@ Si vemos la tabla ARP de la víctima, deberían coincidir ambas MAC: la de Kali 
 arp -a
 ```
 
+![Tabla ARP envenenada](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/image3.png)
+
 > [!warning] 🎯 Observa:
 >
 >          La MAC del router ahora es la MISMA que la MAC de Kali
@@ -271,6 +273,8 @@ Sin embargo, aunque Kali está en medio, de momento si probamos internet desde W
 ```bash
 ping 8.8.8.8
 ```
+
+![Ping sin respuesta](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/image4.png)
 
 El ping falla porque Kali está capturando el tráfico pero NO lo está reenviando al router real.
 
@@ -291,6 +295,8 @@ sudo su
 # Habilitar IP forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
+
+![Habilitar IP forwarding](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/image5.png)
 
 Ahora ya estamos en medio y la máquina de Windows puede navegar, pero **todo el tráfico pasa primero por nuestra máquina** por lo que podríamos interceptarlo.
 
@@ -340,6 +346,8 @@ Traza a la dirección 8.8.8.8 ...
   ...
 ```
 
+![Tracert DESPUÉS del ataque](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/imageYY.png)
+
 > [!warning] 🎯 Diferencia clave:
 >     ANTES del ataque:  Windows → Router (192.168.10.1) → Internet
 >     DESPUÉS del ataque:  Windows → Kali (192.168.10.100) → Router (192.168.10.1) → Internet
@@ -350,6 +358,8 @@ Traza a la dirección 8.8.8.8 ...
 ### 🚀 Abrir Wireshark en Kali
 
 Abrimos desde Kali el software Wireshark y hacemos doble clic en el dispositivo de red en el que tenemos que capturar, en mi caso es `eth0`.
+
+![Wireshark interfaz de red](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/image6.png)
 
 Empezará a capturar el tráfico de toda la red que pasa por nuestra máquina.
 
@@ -378,6 +388,8 @@ Vamos a navegar a diversos lugares no seguros e iniciar sesión en correo no seg
 ### 🛑 Detener la Captura
 
 Para la captura de tráfico de Wireshark pulsando el botón rojo de stop.
+
+![Detener captura Wireshark](../../../archivos_descargados/imagenes/conceptos_fundamentales/mitm_images/media/image7.png)
 
 ## 🔍 Paso 11: Analizar el Tráfico Capturado
 
@@ -492,9 +504,3 @@ arp -d
 ```
 
 O simplemente reiniciar la máquina virtual.
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🏠 [[00 - INDICE|Inicio del Vault]]

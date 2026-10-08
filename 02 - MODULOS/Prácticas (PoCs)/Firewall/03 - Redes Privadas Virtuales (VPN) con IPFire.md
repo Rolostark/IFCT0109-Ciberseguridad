@@ -1,22 +1,12 @@
 ---
-title: "🛡️ Práctica: Implementación de Túneles VPN (OpenVPN / IPsec) en IPFire"
+title: "🔐 VPN con IPFire"
 aliases:
-  - Implementación de Túneles VPN (OpenVPN / IPsec) en IPFire
-  - PoC ipfire
+  - 🔐 VPN con IPFire
 tags:
   - ifct0109/pocs
   - firewall
   - ipfire
   - vpn
-  - openvpn
-  - ipsec
----
-
-# 🛡️ Práctica: Implementación de Túneles VPN (OpenVPN / IPsec) en IPFire
-
-> [!abstract] Resumen del Laboratorio
-> Módulo de Seguridad Perimetral y Cortafuegos del Certificado IFCT0109: topologías por zonas (ROJA, VERDE, AZUL, NARANJA), segmentación perimetral, políticas de filtrado, túneles cifrados VPN, sistemas IDS/IPS y filtrado a nivel de host.
-
 ---
 
 # 🔐 VPN con IPFire
@@ -45,7 +35,7 @@ Antes de realizar la configuración de nuestra propia VPN, vamos a instalar y co
 
 #### 🔗 Descarga del Cliente OpenVPN:
 
-https://openvpn.net/community-downloads/
+[https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 
 ### 📥 Paso 2: Descargar Configuraciones de VPN Gratuitas
 
@@ -77,6 +67,8 @@ Nos vamos a **Servicios > OpenVPN** en el entorno web de IPFire.
 
 Marcamos **OpenVPN en RED**, ponemos la IP que nos ha asignado de cara a internet, cambiamos la encriptación a **AES-GCM (256 bit)** y pulsamos **Guardar**.
 
+![Configuración OpenVPN en IPFire](../../../archivos_descargados/imagenes/firewall/03_ipfire_vpn_images/media/image2.png)
+
 #### ⚙️ Parámetros de Configuración:
 
 | Parámetro | Valor |
@@ -91,6 +83,8 @@ Generamos el **certificado root/host** para el servidor VPN:
 
 * Rellenamos los datos del certificado
 
+![Generar certificado Root/Host](../../../archivos_descargados/imagenes/firewall/03_ipfire_vpn_images/media/image3.png)
+
 Y generamos el certificado pulsando el botón correspondiente.
 
 ### 👤 Paso 4: Agregar Usuarios VPN
@@ -102,6 +96,8 @@ En **Control y Status** agregamos los usuarios:
 * Introducimos Nombre de Usuario / Contraseña
 
 * Pulsamos Guardar
+
+![Agregar usuario VPN](../../../archivos_descargados/imagenes/firewall/03_ipfire_vpn_images/media/image4.png)
 
 ### 🚀 Paso 5: Iniciar el Servidor OpenVPN
 
@@ -117,7 +113,7 @@ Descargamos el **paquete ZIP** con la configuración del cliente desde el panel 
 
 > [!warning] ⚠️ Recuerda:  Instalar el cliente  OpenVPN Community , NO el OpenVPN Connect.
 
-https://openvpn.net/community-downloads/
+[https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 
 ### 📂 Paso 8: Descomprimir y Configurar
 
@@ -147,6 +143,8 @@ data-ciphers-fallback 'AES-256-CBC'
 Hacemos clic derecho en el icono de OpenVPN en la bandeja del sistema y seleccionamos **Conectar**. Nos pedirá la clave del usuario creado anteriormente.
 
 Tu usuario aparecerá como **conectado**:
+
+![Usuario conectado a VPN](../../../archivos_descargados/imagenes/firewall/03_ipfire_vpn_images/media/image5.png)
 
 ## 🧪 Parte 4: Verificación de la Conexión VPN
 
@@ -179,6 +177,8 @@ https://10.10.2.1:444
 ### 📋 Ver Registro de Conexiones VPN
 
 Cuando nos conectamos podemos ver el registro de conexiones en el menú **Registros**:
+
+![Registro de conexiones VPN](../../../archivos_descargados/imagenes/firewall/03_ipfire_vpn_images/media/image6.png)
 
 ## 🛠️ Solución de Problemas
 
@@ -230,12 +230,6 @@ pkcs12 -export -out good.p12 -inkey key.pem -in cert.pem
 
 ### 🎯 Navegación:
 
-← Práctica 02: Reglas de Firewall
+← [Práctica 02: Reglas de Firewall]([[02 - MODULOS/Prácticas (PoCs)/Firewall/02 - Reglas Perimetrales y Políticas en IPFire|02 - Reglas Perimetrales y Políticas en IPFire]])
 
-→ Práctica 04: IDS con IPFire
-
----
-
-## 🔗 Enlaces y Referencias
-* 🗂️ [[02 - MODULOS/05 - Prácticas (PoCs)|Catálogo General de Prácticas (PoCs)]]
-* 🔒 [[02 - MODULOS/ISO 27002/03 - Robustecimiento de Sistemas y Redes|ISO 27002 — Robustecimiento y Segmentación de Redes]]
+→ [Práctica 04: IDS con IPFire]([[02 - MODULOS/Prácticas (PoCs)/Firewall/04 - Sistema de Detección de Intrusos (IDS) en IPFire|04 - Sistema de Detección de Intrusos (IDS) en IPFire]])
