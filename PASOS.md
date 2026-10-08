@@ -148,6 +148,15 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * Reestructuración de `02 - MODULOS/05 - Prácticas (PoCs).md` con matriz global y accesos directos temáticos.
   * Enlace de todas las tarjetas prácticas en `01 - CURSO/01 - Tablero de contenidos.md` y `01 - CURSO/02 - Tablero de contenidos curso 023.md`.
 
+---
+
+## 📌 Paso 12: Alineación Fiel 1:1 de la Guía de Web Fuzzing y Herramientas
+* Comparación e inspección del contenido original en vivo en `https://www.cursosmfr.es/ifct0109/hacking/fuzzing/` y `https://www.cursosmfr.es/ifct0109/hacking/fuzzing/tools/index.html`:
+  * **Reestructuración de `02 - MODULOS/Hacking Ético/01 - Web Fuzzing.md`:** Adaptación fiel al documento original, manteniendo el encabezado formal con metadatos de fase y descripción, el listado exacto de wordlists de SecLists (ficheros/directorios, parámetros, vhost, subdominios, extensiones, apis), comandos directos de fuzzing con `ffuf`, `gobuster`, `feroxbuster`, pruebas GET/POST, virtual hosts y APIs (REST, SOAP, GraphQL), y las tablas íntegras de matchers y filtros por herramienta.
+  * **Creación de `02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing.md`:** Transcripción fiel del módulo de instalación y catálogo de herramientas (`tools/index.html`) para FFUF, Gobuster, Feroxbuster, cURL, Subfinder, API Fuzzer (`webfuzz_api`) y SecLists.
+  * Vinculación bidireccional entre la guía principal, la ficha de herramientas y el nodo central `02 - MODULOS/04 - Hacking Ético.md`.
+
+
 
 
 

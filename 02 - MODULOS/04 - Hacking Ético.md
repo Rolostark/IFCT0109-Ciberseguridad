@@ -24,8 +24,9 @@ tags:
 
 ## 📚 Tutoriales y Guías Detalladas (Acceso Rápido)
 
-> [!info] 🔍 [[02 - MODULOS/Hacking Ético/01 - Web Fuzzing|1. Web Fuzzing (Herramientas, Comandos, APIs y Filtros)]]
-> *Guía completa de enumeración de directorios, archivos, parámetros GET/POST, VHosts, APIs REST/SOAP/GraphQL con `ffuf`, `gobuster`, `feroxbuster` y diccionarios SecLists.*
+> [!info] 🔍 [[02 - MODULOS/Hacking Ético/01 - Web Fuzzing|1. Guía de Web Fuzzing - Bug Bounty]]
+> *Guía completa y fiel de técnicas de fuzzing: Wordlists de SecLists, enumeración de directorios/archivos, recursive fuzzing, GET/POST fuzzing, VHosts, Web APIs (REST, SOAP, GraphQL) y tablas comparativas de filtros y matchers (`ffuf`, `gobuster`, `feroxbuster`).*
+> &emsp;↳ 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing|Herramientas de Web Fuzzing (Catálogo y Usos)]]
 
 > [!info] 🎯 [[02 - MODULOS/Hacking Ético/02 - Reconocimiento y Herramientas Bug Bounty|2. Reconocimiento y Arsenal de Herramientas Bug Bounty]]
 > *Flujo de reconocimiento completo con más de 30 herramientas: `subfinder`, `httpx`, `dnsx`, `gowitness`, `katana`, `nuclei`, scripts Bash personalizados y patrones GF.*

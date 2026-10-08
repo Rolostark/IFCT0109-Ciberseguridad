@@ -1,226 +1,138 @@
 ---
-title: "Guía de Web Fuzzing — Bug Bounty & Hacking Ético"
+title: "🔍 Guía de Web Fuzzing — Bug Bounty"
 aliases:
-  - Web Fuzzing
+  - Guía de Web Fuzzing - Bug Bounty
+  - Web Fuzzing Bug Bounty
   - Fuzzing
-  - Fuzzing Bug Bounty
-  - Guia Fuzzing
   - ffuf
   - gobuster
   - feroxbuster
 tags:
+  - ifct0109
   - hacking-etico
   - fuzzing
   - bug-bounty
-  - web
-  - ffuf
-  - gobuster
-  - feroxbuster
+  - wordlists
   - seclists
-  - api-fuzzing
-  - ifct0109
+  - apis
 ---
 
-# 🔍 Guía de Web Fuzzing — Bug Bounty & Hacking Ético
+# 🔍 Guía de Web Fuzzing - Bug Bounty
 
-> [!abstract] Fase: Enumeración y Descubrimiento de Contenido Web
-> Guía completa y práctica de técnicas de **fuzzing web** para el descubrimiento de rutas, archivos ocultos, parámetros GET/POST, subdominios, virtual hosts y APIs en auditorías de seguridad y programas de Bug Bounty.
-> 
-> 🔗 **Navegación:** [[02 - MODULOS/04 - Hacking Ético|⬅️ Volver a Hacking Ético]] &emsp;|&emsp; [[02 - MODULOS/Hacking Ético/02 - Reconocimiento y Herramientas Bug Bounty|🎯 Ir a Reconocimiento]] &emsp;|&emsp; [[00 - INDICE|🏠 Inicio]]
-
----
-
-## 🛠️ Herramientas Esenciales de Web Fuzzing e Instalación
-
-> [!info] Ecosistema de Herramientas
-> Selección de utilidades de alto rendimiento para auditoría web ofensiva y recolección de activos:
-
-### 1. FFUF (Fuzz Faster U Fool)
-* Herramienta ultrarrápida y flexible escrita en Go.
-* **Casos de uso:** Enumeración de directorios y archivos, fuzzing recursivo, parámetros GET/POST y valores de variables.
-* **Instalación:**
-  ```bash
-  # En Kali / Debian / Ubuntu:
-  sudo apt install ffuf -y
-  # O mediante Go:
-  go install github.com/ffuf/ffuf/v2@latest
-  ```
-
-### 2. Gobuster
-* Herramienta clásica de enumeración por fuerza bruta escrita en Go.
-* **Casos de uso:** Descubrimiento de directorios, fuzzing de Virtual Hosts (VHost) y resolución DNS de subdominios.
-* **Instalación:**
-  ```bash
-  sudo apt install gobuster -y
-  # O mediante Go:
-  go install github.com/OJ/gobuster/v3@latest
-  ```
-
-### 3. Feroxbuster
-* Herramienta recursiva de alta concurrencia escrita en Rust.
-* **Casos de uso:** Descubrimiento profundo de contenido web con control automático de recursión y filtrado dinámico.
-* **Instalación:**
-  ```bash
-  sudo apt install feroxbuster -y
-  # O mediante Cargo / script oficial:
-  curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash
-  ```
-
-### 4. cURL
-* Utilidad universal por línea de comandos para transferencia de datos y validación de cabeceras HTTP/S.
-* **Casos de uso:** Verificación manual de hallazgos, inspección de respuestas y pruebas directas.
-* **Instalación:**
-  ```bash
-  sudo apt install curl -y
-  ```
-
-### 5. Subfinder
-* Herramienta pasiva de reconocimiento de subdominios desarrollada por ProjectDiscovery.
-* **Casos de uso:** Mapeo inicial de superficie de ataque sin generar tráfico directo contra el objetivo.
-* **Instalación:**
-  ```bash
-  go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-  ```
-
-### 6. API Fuzzer (`webfuzz_api`)
-* Herramienta especializada en endpoints REST, SOAP y GraphQL.
-* **Repositorio oficial:** [GitHub — PandaSt0rm/webfuzz_api](https://github.com/PandaSt0rm/webfuzz_api)
-* **Instalación:**
-  ```bash
-  git clone https://github.com/PandaSt0rm/webfuzz_api.git
-  cd webfuzz_api && pip install -r requirements.txt
-  ```
-
-### 7. SecLists
-* La colección de diccionarios de referencia mundial para auditorías de seguridad: [GitHub — SecLists](https://github.com/danielmiessler/SecLists).
-* **Instalación / Descarga:**
-  ```bash
-  sudo apt install seclists -y
-  # O clonado directo desde GitHub:
-  git clone --depth 1 https://github.com/danielmiessler/SecLists.git /opt/SecLists
-  ```
+> [!abstract] Información de la Guía
+> **Fase:** Enumeración y Descubrimiento de Contenido Web  
+> **Descripción:** Guía completa de técnicas de fuzzing web para descubrimiento de directorios, archivos, parámetros, subdominios y APIs en programas de Bug Bounty.  
+> **Herramientas:** Guía para la instalación de las herramientas necesarias en el [[02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing|enlace]].
 
 ---
 
-## 📚 Diccionarios Recomendados (SecLists)
+## 📚 Wordlists (SecLists)
 
-Ubicaciones estándar dentro del repositorio SecLists (`/usr/share/seclists/` o `/opt/SecLists/`) clasificadas por propósito:
-
-### 📁 Nombres de Ficheros y Directorios
-* `Discovery/Web-Content/common.txt` — Diccionario básico rápido para pruebas preliminares.
-* `Discovery/Web-Content/directory-list-2.3-medium.txt` — Estándar de la industria (extraído de sitios reales).
-* `Discovery/Web-Content/big.txt` — Lista exhaustiva para descubrimientos profundos.
-* `Discovery/Web-Content/raft-large-directories.txt` — Directorios comunes ordenados por frecuencia.
-* `Discovery/Web-Content/directory-list-2.3-big.txt` — Diccionario extendido para auditorías exhaustivas.
-
-### 🏷️ Parámetros Web
+### Nombres de ficheros y directorios
 * `Discovery/Web-Content/common.txt`
-* `Discovery/Web-Content/burp-parameter-names.txt` — Lista clásica de Burp Suite para descubrir parámetros ocultos.
+* `Discovery/Web-Content/directory-list-2.3-medium.txt`
+* `Discovery/Web-Content/big.txt`
+* `Discovery/Web-Content/raft-large-directories.txt`
+* `Discovery/Web-Content/directory-list-2.3-big.txt`
 
-### 🌐 Virtual Hosts (VHost)
+### Parámetros WEB
+* `Discovery/Web-Content/common.txt`
+* `Discovery/Web-Content/burp-parameter-names.txt`
+
+### VHost
 * `Discovery/Web-Content/common.txt`
 
-### 🔎 Subdominios (DNS)
-* `Discovery/DNS/subdomains-top1million-5000.txt` — Los 5.000 subdominios más frecuentes de Internet.
+### Subdomains
+* `Discovery/DNS/subdomains-top1million-5000.txt`
 
-### 📄 Extensiones de Archivo
+### Extensiones
 * `Discovery/Web-Content/web-extensions.txt`
 * `Discovery/Web-Content/web-extensions-big.txt`
 
-### 🔌 Endpoints de APIs
+### APIs
 * `Discovery/Web-Content/api/api-endpoints.txt`
 * `Discovery/Web-Content/api/actions.txt`
 * `Discovery/Web-Content/api/objects.txt`
 
 ---
 
-## 🎯 Comandos Prácticos de Web Fuzzing
+## 🎯 Web Fuzzing
 
-### 1. Enumeración de Directorios
-
+### Enumeración de Directorios
 ```bash
-# FFUF: coloreado (-c), ignorar comentarios (-ic)
 ffuf -ic -c -u http://IP:PORT/FUZZ -w wordlist.txt
-
-# Gobuster
+```
+```bash
 gobuster dir -u http://IP:PORT -w wordlist.txt
-
-# Feroxbuster
+```
+```bash
 feroxbuster -u http://IP:PORT -w wordlist.txt
 ```
 
-### 2. Enumeración de Archivos con Extensiones
-
+### Enumeración de Archivos
 ```bash
-# FFUF con extensiones comunes
 ffuf -ic -c -v -w wordlist.txt -u http://IP:PORT/FUZZ -e .php,.html,.txt
-
-# Gobuster con flags de extensión
+```
+```bash
 gobuster dir -u http://IP:PORT -w wordlist.txt -x php,html,txt
-
-# Feroxbuster (profundidad 1)
+```
+```bash
 feroxbuster -u http://IP:PORT -w wordlist.txt -x php,html,txt -d 1
 ```
 
-### 3. Fuzzing Recursivo
-
+### Recursive Fuzzing
 ```bash
-# FFUF recursivo hasta nivel 2 con límite de peticiones (rate limiting)
 ffuf -ic -c -v -w wordlist.txt -u http://IP:PORT/FUZZ -e .html -recursion -recursion-depth 2 -rate 500 -timeout 0
-
-# Feroxbuster recursivo hasta nivel 4
+```
+```bash
 feroxbuster -u http://IP:PORT -w wordlist.txt -x php,html,txt -d 4
 ```
 
-### 4. Fuzzing de Parámetros y Valores (Parameter Fuzzing)
+### Parameter and Value Fuzzing
 
-#### Método GET:
+#### GET
 ```bash
-# Validar respuesta base
 curl http://IP:PORT/get.php
-
-# Descubrir nombres de parámetros ocultos (?FUZZ=1)
-ffuf -ic -c -v -r -w wordlist.txt -u http://IP:PORT/get.php?FUZZ=1 -fc 404
-
-# Descubrir valores válidos para un parámetro identificado (?PARAM=FUZZ)
-ffuf -ic -c -v -r -w wordlist.txt -u http://IP:PORT/get.php?PARAM=FUZZ -fc 404
+```
+```bash
+ffuf -ic -c -v -r -w wordlist -u http://IP:PORT/get.php?FUZZ=1 -fc 404
+```
+```bash
+ffuf -ic -c -v -r -w wordlist -u http://IP:PORT/get.php?PARAM=FUZZ -fc 404
 ```
 
-#### Método POST:
+#### POST
 ```bash
-# Probar endpoint POST
 curl -d "" http://IP:PORT/post.php
-
-# Descubrir nombres de parámetros por POST
+```
+```bash
 ffuf -ic -c -r -v -w wordlist.txt -u http://IP:PORT/post.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "FUZZ=1" -fc 404
-
-# Descubrir valores por POST
+```
+```bash
 ffuf -ic -c -r -v -w wordlist.txt -u http://IP:PORT/post.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "y=FUZZ" -fc 404
 ```
 
-### 5. Fuzzing de Virtual Hosts y Subdominios
-
+### Virtual Host and Subdomain Fuzzing
 ```bash
-# 1. Asociar IP al dominio en la resolución local si es necesario
 echo "IP domain.dns" | sudo tee -a /etc/hosts
-
-# 2. Fuzzing de Virtual Hosts (VHost) en cabecera Host con Gobuster
+```
+```bash
 gobuster vhost -w wordlist.txt -u http://DOMAIN.DNS:PORT --append-domain -o vhosts.txt && cat vhosts.txt | grep 200
+```
 
-# 3. Enumeración de subdominios por fuerza bruta DNS
+### Subdomain Fuzzing
+```bash
 gobuster dns -d example.org -w wordlist.txt
-
-# 4. Descubrimiento pasivo rápido con Subfinder
+```
+```bash
 subfinder -d example.org -silent
 ```
 
-### 6. Validación de Hallazgos
-
+### Validating Findings
 ```bash
-# Petición completa
 curl http://IP:PORT
-
-# Inspeccionar únicamente las cabeceras HTTP devueltas
+```
+```bash
 curl -I http://IP:PORT
 ```
 
@@ -228,94 +140,104 @@ curl -I http://IP:PORT
 
 ## 🔌 Web APIs Fuzzing
 
-### 1. REST Endpoints y Parámetros
-* **Estructura típica:**
-  * `/users` — Colección de recursos de usuarios.
-  * `/users/123` — Recurso específico con identificador `123`.
-  * `/products` — Colección de recursos de productos.
-  * `/products/456` — Recurso específico con identificador `456`.
-* **Metodología de enumeración:**
-  * Revisar documentación pública o rutas expuestas (`/swagger.json`, `/openapi.json`, `/v1/api-docs`).
-  * Análisis de tráfico de red a través de proxy (Burp Suite / OWASP ZAP).
-  * Fuzzing de nombres de parámetros utilizando `Discovery/Web-Content/api/`.
+### REST Endpoints and Parameters
 
-### 2. SOAP (Simple Object Access Protocol)
-* Los parámetros y métodos se definen en el archivo XML **WSDL** (*Web Services Description Language*), que describe la interfaz, operaciones y estructura de mensajes.
-* **Enumeración:**
-  * Análisis de archivos `.wsdl` expuestos (`?wsdl`).
-  * Inspección de tráfico SOAP XML.
-  * Fuzzing de métodos y parámetros con listas API.
+#### Estructura:
+* `/users` - Represents a collection of user resources.
+* `/users/123` - Represents a specific user with the ID 123.
+* `/products` - Represents a collection of product resources.
+* `/products/456` - Represents a specific product with the ID 456.
 
-### 3. GraphQL APIs
-* Generalmente cuentan con un único punto de entrada común: `/graphql`.
-* **Descubrimiento de Queries y Mutaciones:**
-  * **Introspección:** Enviar una consulta de introspección para volcar todo el esquema si no está deshabilitado en producción:
-    ```graphql
-    { "__schema": { "types": { "name": true } } }
-    ```
-  * Documentación y análisis de tráfico en cliente web.
+#### Enumeración:
+* API Documentation
+* Proxy Network Traffic Analysis
+* Parameter Name Fuzzing (`Discovery/Web-Content/api/`)
 
-### 4. Tipos de API Fuzzing
-* **Parameter Fuzzing:** Encontrar campos no documentados que activen lógica administrativa o depuración (`debug=true`, `admin=1`).
-* **Data Format Fuzzing:** Modificar tipos de datos esperados (arrays en vez de enteros, objetos JSON anidados, inyecciones de tipo).
-* **Sequence Fuzzing:** Alterar el flujo habitual de llamadas consecutivas (ej.: confirmar compra antes de pagar).
+### SOAP (Simple Object Access Protocol)
+The parameters are defined in the Web Services Description Language (WSDL) file, an XML-based document that describes the web service's interface, operations, and message formats.
 
-### 5. Script Automatizado para APIs (`webfuzz_api`)
-Utilidad en Python para auditoría masiva de endpoints:
+#### Enumeración:
+* WSDL Analysis
+* Proxy Network Traffic Analysis
+* Fuzzing for Parameter Names and Values (`Discovery/Web-Content/api/`)
+
+### GraphQL API
+Endpoint is usually a URL like `/graphql` and serves as the entry point for all queries and mutations sent to the API.
+
+#### Discovering Queries and Mutations:
+* Introspection
+* API Documentation
+* Proxy Network Traffic Analysis
+
+### Types of API Fuzzing
+* Parameter Fuzzing
+* Data Format Fuzzing
+* Sequence Fuzzing
+
+### API Fuzzing Tool
+* **Repositorio:** [https://github.com/PandaSt0rm/webfuzz_api](https://github.com/PandaSt0rm/webfuzz_api)
+
 ```bash
 python3 api_fuzzer.py http://IP:PORT > api_fuzz.txt && cat api_fuzz.txt | grep -v 404
 ```
 
 ---
 
-## 🔧 Filtros y Opciones de Coincidencia (Matchers & Filters)
+## 🔧 Filtros de Herramientas
 
-### 1. Opciones en FFUF
+### FFUF
 
-#### Matchers (Mostrar respuestas que coincidan con la condición):
-| Parámetro | Función | Descripción |
+#### MATCHER OPTIONS:
+| Flag | Descripción |
+| :--- | :--- |
+| `-mc` | Match HTTP status codes, or "all" for everything. (default: 200,204,301,302,307,401,403) |
+| `-ml` | Match amount of lines in response |
+| `-mr` | Match regexp |
+| `-ms` | Match HTTP response size |
+| `-mw` | Match amount of words in response |
+
+#### FILTER OPTIONS:
+| Flag | Descripción |
+| :--- | :--- |
+| `-fc` | Filter HTTP status codes from response. Comma separated list of codes and ranges |
+| `-fl` | Filter by amount of lines in response. Comma separated list of line counts and ranges |
+| `-fr` | Filter regexp |
+| `-fs` | Filter HTTP response size. Comma separated list of sizes and ranges |
+| `-fw` | Filter by amount of words in response. Comma separated list of word counts and ranges |
+
+---
+
+### Gobuster
+
+| Flag | Descripción | Escenario de Ejemplo |
 | :--- | :--- | :--- |
-| `-mc` | **Match Status Code** | Coincidir con códigos HTTP (por defecto: 200, 204, 301, 302, 307, 401, 403). Usar `all` para todos. |
-| `-ml` | **Match Lines** | Coincidir por número exacto de líneas en el cuerpo de la respuesta. |
-| `-mr` | **Match Regexp** | Coincidir cuando la respuesta contenga una expresión regular específica. |
-| `-ms` | **Match Size** | Coincidir por tamaño exacto en bytes de la respuesta. |
-| `-mw` | **Match Words** | Coincidir por cantidad exacta de palabras devueltas. |
+| `-s` (include) | Include only responses with the specified status codes (comma-separated). | You're looking for redirects, so you filter for codes 301,302,307 |
+| `-b` (exclude) | Exclude responses with the specified status codes (comma-separated). | The server returns many 404 errors. Exclude them with -b 404 |
+| `--exclude-length` | Exclude responses with specific content lengths (comma-separated, supports ranges). | You're not interested in 0-byte or 404-byte responses, so use --exclude-length 0,404 |
 
-#### Filters (Ocultar respuestas no deseadas):
-| Parámetro | Función | Descripción |
+---
+
+### Feroxbuster
+
+| Flag | Descripción | Escenario de Ejemplo |
 | :--- | :--- | :--- |
-| `-fc` | **Filter Status Code** | Filtrar y descartar códigos HTTP específicos (ej: `-fc 404,403`). |
-| `-fl` | **Filter Lines** | Descartar respuestas con un número concreto de líneas (ej: `-fl 12`). |
-| `-fr` | **Filter Regexp** | Descartar respuestas que coincidan con una expresión regular. |
-| `-fs` | **Filter Size** | Descartar respuestas de tamaños específicos en bytes (muy útil para omitir páginas de error personalizadas, ej: `-fs 2849`). |
-| `-fw` | **Filter Words** | Descartar respuestas con una cantidad específica de palabras. |
+| `--dont-scan` | Exclude specific URLs or patterns from being scanned (even if found in links during recursion). | You know the /uploads directory contains only images, so you can exclude it using --dont-scan /uploads. |
+| `-S, --filter-size` | Exclude responses based on their size (in bytes). You can specify single sizes or comma-separated ranges. | You've noticed many 1KB error pages. Use -S 1024 to exclude them. |
+| `-X, --filter-regex` | Exclude responses whose body or headers match the specified regular expression. | Filter out pages with a specific error message using -X "Access Denied". |
+| `-W, --filter-words` | Exclude responses with a specific word count or range of word counts. | Eliminate responses with very few words (e.g., error messages) using -W 0-10. |
+| `-N, --filter-lines` | Exclude responses with a specific line count or range of line counts. | Filter out long, verbose pages with -N 50-. |
+| `-C, --filter-status` | Exclude responses based on specific HTTP status codes. This operates as a denylist. | Suppress common error codes like 404 and 500 using -C 404,500. |
+| `--filter-similar-to` | Exclude responses that are similar to a given webpage. | Remove duplicate or near-duplicate pages based on a reference page using --filter-similar-to error.html. |
+| `-s, --status-codes` | Include only responses with the specified status codes. This operates as an allowlist (default: all). | Focus on successful responses using -s 200,204,301,302. |
 
 ---
 
-### 2. Opciones de Filtrado en Gobuster
-
-| Flag | Tipo | Descripción | Escenario de Ejemplo |
-| :--- | :--- | :--- | :--- |
-| `-s` | Include (Permitir) | Incluir únicamente respuestas con códigos específicos. | Buscar redirecciones específicas: `-s 301,302,307`. |
-| `-b` | Exclude (Denegar) | Excluir respuestas con los códigos HTTP especificados. | Ocultar errores no deseados: `-b 404`. |
-| `--exclude-length` | Exclude Size | Excluir respuestas según longitud en bytes (soporta rangos). | Omitir respuestas vacías o errores comunes: `--exclude-length 0,404`. |
+> [!note] 📝 Nota
+> Todas estas técnicas deben aplicarse dentro del scope autorizado del programa de Bug Bounty. El fuzzing agresivo puede generar mucho tráfico, ajusta los parámetros de rate y timeout según sea necesario.
 
 ---
 
-### 3. Opciones de Filtrado Avanzado en Feroxbuster
-
-| Flag | Tipo | Descripción | Escenario de Ejemplo |
-| :--- | :--- | :--- | :--- |
-| `--dont-scan` | Exclusión de ruta | Omitir URLs o patrones para evitar recursión en bucle. | Excluir directorios con estáticos pesados: `--dont-scan /uploads`. |
-| `-S, --filter-size` | Filtrado por tamaño | Excluir respuestas según tamaño en bytes o rangos. | Omitir páginas genéricas de error de 1KB: `-S 1024`. |
-| `-X, --filter-regex` | Expresión regular | Filtrar respuestas cuyo cuerpo o cabeceras coincidan con un regex. | Descartar páginas de acceso restringido: `-X "Access Denied"`. |
-| `-W, --filter-words` | Filtrado por palabras | Descartar respuestas según conteo o rango de palabras. | Eliminar errores concisos: `-W 0-10`. |
-| `-N, --filter-lines` | Filtrado por líneas | Descartar respuestas según cantidad de líneas. | Omitir respuestas muy largas: `-N 50-`. |
-| `-C, --filter-status` | Lista negra de códigos | Excluir códigos HTTP concretos. | Oprimir errores estándar: `-C 404,500`. |
-| `--filter-similar-to` | Similitud de página | Descartar páginas muy similares a una de referencia. | Evitar duplicados de error suave: `--filter-similar-to error.html`. |
-| `-s, --status-codes` | Lista blanca de códigos | Incluir únicamente respuestas con los códigos definidos. | Centrarse en respuestas de éxito: `-s 200,204,301,302`. |
-
----
-
-> [!warning] Responsabilidad y Buenas Prácticas
-> Todas estas técnicas deben aplicarse **estrictamente dentro del ámbito (*scope*) autorizado** del programa de Bug Bounty o contrato de auditoría. El fuzzing agresivo puede degradar el rendimiento del servidor o activar mecanismos de bloqueo (WAF/Rate Limiting); modula siempre la concurrencia (`-t`, `-rate`) y los tiempos de espera (`-timeout`).
+## 🔗 Navegación y Referencias
+* 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing|Guía de Herramientas de Web Fuzzing (Instalación y Usos)]]
+* 🎯 [[02 - MODULOS/Hacking Ético/02 - Reconocimiento y Herramientas Bug Bounty|Arsenal de Reconocimiento Bug Bounty]]
+* ⬅️ [[02 - MODULOS/04 - Hacking Ético|Volver al Módulo de Hacking Ético]]
