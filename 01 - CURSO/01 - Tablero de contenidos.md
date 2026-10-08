@@ -22,11 +22,11 @@ kanban-plugin: basic
 - [ ] Registro de Windows
 - [ ] Visor de Sucesos
 - [ ] 7. Administración del control de accesos adecuados de los sistemas de información
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Creación de NAS]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault|POC — Creación de NAS]]
 - [ ] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|POC — MS-DOS]]
 - [ ] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/02 - Conexiones Directas e Inversas con Netcat|POC — Conexiones inversas y directas]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Curso de Linux]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Active Directory]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux|POC — Curso de Linux]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Sistemas/02 - Active Directory en Windows Server 2019|POC — Active Directory]]
 
 
 ## 🛡️ Seguridad Digital
@@ -40,16 +40,16 @@ kanban-plugin: basic
 ## 🧩 POCs (Prácticas de Concepto)
 
 - [ ] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|POC — MS-DOS]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Linux]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Sistemas]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Conceptos Fundamentales]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Herramientas de Auditoría]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Encriptado de datos]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Firewall]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux|POC — Linux]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault|POC — Sistemas]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/01 - Conexión Segura con SSH y Túneles|POC — Conceptos Fundamentales]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap|POC — Herramientas de Auditoría]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/01 - Cifrado de Contenedores con 7-Zip|POC — Encriptado de datos]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire|POC — Firewall]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Vulnerabilidades WEB]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Escalada de Privilegios en Windows]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Gestión de Incidentes de Seguridad]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Pentesting en Android]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio|POC — Pentesting en Android]]
 
 
 ## 💻 MF0486_3: Seguridad en equipos Informáticos

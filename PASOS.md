@@ -108,6 +108,47 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * `01 - CURSO/01 - Tablero de contenidos.md` y `01 - CURSO/02 - Tablero de contenidos curso 023.md`: Enlaces directos a las nuevas notas en las tarjetas Kanban.
   * `03 - EXTRA/Documentos/MS-DOS CheatSheet.md`: Enlaces cruzados hacia las prácticas interactivas correspondientes.
 
+---
+
+## 📌 Paso 11: Integración Integral de Todos los Módulos de Prácticas (PoCs)
+* Extracción, adaptación y conversión integral de todos los módulos prácticos disponibles en `cursosmfr.es/ifct0109/pocs/`:
+  * **Descarga de activos binarios offline:**
+    * Paquete de herramientas y datasets de filtrado: `archivos_descargados/paquetes_7z/recursos_filtros.7z` (12 KB).
+    * Documento técnico de resolución de Hades: `archivos_descargados/documentos/hades.pdf` (529 KB).
+    * Paquete de recursos de Android Studio y APKs: `archivos_descargados/paquetes_7z/recursos_android.7z` (134 MB).
+    * Logo oficial de Debian: `archivos_descargados/imagenes/debian-logo.png`.
+  * **Módulo Linux (`02 - MODULOS/Prácticas (PoCs)/Linux/` - 13 notas):**
+    * `00 - Índice del Módulo Linux.md`: Hub del módulo con accesos organizados.
+    * `01 - Curso de Linux - Introducción y Entorno.md`: Historia de GNU/Linux, distros de hacking, arquitectura del kernel, entorno gráfico y guías completas de despliegue en WSL y Docker.
+    * `02 - Curso de Linux - Estructura de Archivos (FHS).md`: Jerarquía de directorios estándar, `/bin`, `/etc`, `/proc`, `/sys`, `/var`, `/tmp` y particularidades de Kali Linux.
+    * `03 - Curso de Linux - Comandos Esenciales de Sistema.md`: Navegación, manipulación, visualización, búsqueda, archivado con `tar` y paquetería `apt`/`dpkg`.
+    * `04 - Curso de Linux - Gestión de Grupos y Sudoers.md`: Grupos del sistema, `/etc/group`, sintaxis avanzada de `/etc/sudoers`, auditoría con `sudo -l` y vectores de escalada.
+    * `05 - Curso de Linux - Gestión de Usuarios y Autenticación.md`: `/etc/passwd`, `/etc/shadow`, algoritmos de hash, ciclo de vida de usuarios, cracking y persistencia.
+    * `06 - Curso de Linux - Permisos, SUID, SGID y Sticky Bit.md`: Permisos rwx, notación octal, bits especiales de seguridad, auditoría con `find` y explotación GTFOBins.
+    * `07 - Filtrado de Información en Linux.md`: Práctica completa con `grep`, `egrep`, Regex, `cut`, `tr`, `sort`, `uniq`, `awk` y dataset descargable.
+    * `08 - Curso de Bash Scripting en Linux.md`: Scripting base, variables de entorno y locales, control de flujo y automatización para pentesting.
+    * `09 - Linux Capabilities y Escalada de Privilegios.md`: Auditoría de capabilities (`getcap`, `setcap`, `capsh`), abuso de `CAP_NET_BIND_SERVICE`, `CAP_SETUID` y escalada de privilegios.
+    * `10 - Instalación de Debian + DWM (Entorno Minimalista).md`: Compilación de DWM, `dmenu` y configuración de entorno minimalista.
+    * `11 - Laboratorio VENUS (HackMyVM).md`: Writeup exhaustivo de las 54 misiones del reto Venus en HackMyVM.
+    * `12 - Laboratorio HADES (HackMyVM).md`: Solucionario integral de las 50 fases del reto Hades (SSTV, audio, IRC, Gemini, Conky, QR, Wireshark y binarios SUID).
+  * **Módulo Sistemas (`02 - MODULOS/Prácticas (PoCs)/Sistemas/` - 2 notas):**
+    * `01 - Creación de NAS con OpenMediaVault.md`: Despliegue de NAS con OMV, volúmenes RAID, cuotas y recursos compartidos (SMB/NFS/FTP).
+    * `02 - Active Directory en Windows Server 2019.md`: Controlador de Dominio, DNS, OUs, usuarios, grupos y directivas GPO de endurecimiento.
+  * **Módulo Conceptos Fundamentales (`02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/` - 8 notas):**
+    * SSH y túneles, cURL y peticiones HTTP, Firefox DevTools para inspección web, transferencia de archivos (`wget`, `scp`, `nc`), arquitectura web, ataques MITM con envenenamiento ARP, ingeniería social/phishing y generación de payloads con Msfvenom.
+  * **Módulo Herramientas de Auditoría (`02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/` - 11 notas):**
+    * Nmap, Responder (LLMNR/NBT-NS), Metasploit, Hashcat, Gobuster, Hydra, WiFi (Aircrack-ng), Wireshark, BloodHound, Pivoting de redes y análisis de Buffer Overflow.
+  * **Módulo Encriptado de Datos (`02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/` - 6 notas):**
+    * 7-Zip (AES-256), EncFS, BitLocker, VeraCrypt (volúmenes ocultos), Gpg4win (claves PGP/firmas) y Esteganografía forense.
+  * **Módulo Firewall (`02 - MODULOS/Prácticas (PoCs)/Firewall/` - 7 notas):**
+    * IPFire (instalación, zonas verde/roja/azul/naranja, reglas perimetrales, NAT, OpenVPN/IPsec, IDS Suricata, proxy Squid) y Firewall avanzado de Windows y Linux (Iptables/UFW).
+  * **Módulo Pentesting en Android (`02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/` - 7 notas):**
+    * Android Studio, metodología de análisis dinámico y estático, Apktool, túneles Ngrok/Serveo, C2 L3MON, ofuscación Smali y APK Easy Tool.
+* **Actualización del Catálogo y Tableros Kanban:**
+  * Reestructuración de `02 - MODULOS/05 - Prácticas (PoCs).md` con matriz global y accesos directos temáticos.
+  * Enlace de todas las tarjetas prácticas en `01 - CURSO/01 - Tablero de contenidos.md` y `01 - CURSO/02 - Tablero de contenidos curso 023.md`.
+
+
 
 
 

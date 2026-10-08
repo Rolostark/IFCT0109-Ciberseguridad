@@ -22,11 +22,11 @@ kanban-plugin: basic
 - [x] Registro de Windows #completado
 - [x] Visor de Sucesos #completado
 - [x] 7. Administración del control de accesos adecuados de los sistemas de información #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Creación de NAS]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault|POC — Creación de NAS]] #completado
 - [x] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|POC — MS-DOS]] #completado
 - [x] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/02 - Conexiones Directas e Inversas con Netcat|POC — Conexiones inversas y directas]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Curso de Linux]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Active Directory]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux|POC — Curso de Linux]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Sistemas/02 - Active Directory en Windows Server 2019|POC — Active Directory]] #completado
 
 
 ## 🛡️ Seguridad Digital
@@ -40,16 +40,16 @@ kanban-plugin: basic
 ## 🧩 POCs (Prácticas de Concepto)
 
 - [x] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|POC — MS-DOS]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Linux]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Sistemas]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Conceptos Fundamentales]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Herramientas de Auditoría]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Encriptado de datos]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Firewall]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux|POC — Linux]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault|POC — Sistemas]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/01 - Conexión Segura con SSH y Túneles|POC — Conceptos Fundamentales]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap|POC — Herramientas de Auditoría]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/01 - Cifrado de Contenedores con 7-Zip|POC — Encriptado de datos]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire|POC — Firewall]] #completado
 - [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Vulnerabilidades WEB]] #completado
 - [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Escalada de Privilegios en Windows]] #completado
 - [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Gestión de Incidentes de Seguridad]] #completado
-- [x] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Pentesting en Android]] #completado
+- [x] [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio|POC — Pentesting en Android]] #completado
 
 
 ## 💻 MF0486_3: Seguridad en equipos Informáticos

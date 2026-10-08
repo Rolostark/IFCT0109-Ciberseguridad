@@ -1,5 +1,5 @@
 ---
-title: "🧪 Pruebas de Concepto (PoCs)"
+title: "🧪 Pruebas de Concepto (PoCs) — Laboratorios Oficiales"
 aliases:
   - PoCs
   - Practicas
@@ -8,47 +8,65 @@ tags:
   - ifct0109/pocs
   - laboratorios
   - ejercicios
+  - linux
   - msdos
-  - netcat
+  - redes
+  - auditoria
+  - hacking-etico
 ---
 
-# 🧪 Pruebas de Concepto (PoCs) — Ejercicios del Curso
+# 🧪 Pruebas de Concepto (PoCs) — Catálogo Integral de Laboratorios
 
 > [!abstract] Catálogo de Prácticas
-> Recopilación de laboratorios prácticos paso a paso que integran el temario oficial del certificado **IFCT0109 (Seguridad Informática)**.
+> Recopilación exhaustiva de laboratorios prácticos paso a paso que integran el temario oficial del certificado **IFCT0109 (Seguridad Informática)**. Todos los contenidos han sido desacoplados y adaptados para su ejecución completa en modo **offline**.
 > 
 > 🔗 **Navegación:** [[00 - INDICE|🏠 Inicio]] &emsp;|&emsp; [[01 - CURSO/01 - Tablero de contenidos|🗂️ Tablero de Contenidos]] &emsp;|&emsp; [[01 - CURSO/02 - Tablero de contenidos curso 023|📋 Tablero Curso 023]]
 
 ---
 
-## 💾 Módulo MS-DOS y Conexiones de Red (Acceso Directo)
+## 🗂️ Módulos de Prácticas (Acceso Rápido)
 
-> [!info] 💻 [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|1. Práctica Comandos de MS-DOS y Automatización Batch]]
-> *Guía paso a paso de 24 ejercicios en CMD: permisos elevados, sintaxis de ayuda (`help`, `/?`), variables de entorno (`%PATH%`), búsqueda recursiva de archivos, operaciones de disco, redirecciones de flujo (`>`, `>>`) y scripts por lotes (`.bat`).*
+> [!info] 🐧 [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux|Módulo Completo de Linux (13 Notas y Retos HackMyVM)]]
+> *Curso de Linux para Pentesting (Módulos 1 a 6), filtrado de datos (grep, awk, sed), Bash Scripting, Linux Capabilities, Debian + DWM y writeups íntegros de las VMs **Venus** (54 misiones) y **Hades** (50 misiones).*
 
-> [!info] 🔌 [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/02 - Conexiones Directas e Inversas con Netcat|2. Práctica de Conexiones Directas e Inversas con Netcat]]
-> *Laboratorio interactivo de comunicaciones en red con Netcat (`nc`): diferencias entre Bind Shell y Reverse Shell, bypass de cortafuegos y NAT, transferencia/exfiltración de archivos, parámetros de conexión y consideraciones de seguridad perimetral.*
+> [!info] 💾 [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|Módulo MS-DOS y Conexiones de Red]]
+> *Comandos de administración en Windows (24 ejercicios prácticos) y [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/02 - Conexiones Directas e Inversas con Netcat|Conexiones Directas e Inversas con Netcat]] (Bind Shell vs Reverse Shell).*
+
+> [!info] 🖥️ [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault|Módulo de Sistemas (Almacenamiento y Dominios)]]
+> *Despliegue de almacenamiento en red [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault|NAS con OpenMediaVault]] y administración de [[02 - MODULOS/Prácticas (PoCs)/Sistemas/02 - Active Directory en Windows Server 2019|Active Directory y GPOs en Windows Server 2019]].*
+
+> [!info] 📖 [[02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/01 - Conexión Segura con SSH y Túneles|Módulo de Conceptos Fundamentales]]
+> *Túneles SSH, peticiones cURL, auditoría web con Firefox DevTools, protocolos HTTP, ataques MITM, phishing y creación de payloads con Msfvenom.*
+
+> [!info] 🔍 [[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap|Módulo de Herramientas de Auditoría]]
+> *Reconocimiento con Nmap, envenenamiento LLMNR con Responder, explotación con Metasploit, cracking GPU con Hashcat, fuzzing con Gobuster, fuerza bruta con Hydra, auditoría WiFi, Wireshark, BloodHound, Pivoting y Buffer Overflow.*
+
+> [!info] 🔒 [[02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/01 - Cifrado de Contenedores con 7-Zip|Módulo de Encriptado de Datos]]
+> *Cifrado de ficheros (7-Zip), directorios (EncFS), discos enteros (BitLocker), volúmenes ocultos (VeraCrypt), infraestructura asimétrica (Gpg4win) y técnicas de esteganografía.*
+
+> [!info] 🛡️ [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire|Módulo de Seguridad Perimetral y Firewalls]]
+> *Topologías por zonas con IPFire, políticas de filtrado y NAT, túneles VPN, IDS/IPS Suricata, servidor proxy Squid y cortafuegos avanzados en Windows y Linux (Iptables/UFW).*
+
+> [!info] 📱 [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio|Módulo de Pentesting en Android]]
+> *Configuración de AVD, metodología de auditoría móvil, ingeniería inversa con Apktool y APK Easy Tool, port forwarding con Ngrok/Serveo, monitoreo con L3MON y análisis de ofuscación Smali.*
 
 ---
 
-## 🗂️ Catálogo Global de Módulos de Prácticas
+## 📊 Matriz Global de Prácticas y Laboratorios
 
-| Área | Icono | Descripción del Laboratorio | Acceso a Laboratorio |
+| Área Técnica | Icono | Prácticas Clave Incluidas | Acceso Directo al Módulo |
 | :--- | :---: | :--- | :--- |
-| **MS-DOS** | 💾 | Comandos del sistema, batch scripting y gestión de disco en sistemas Windows. | [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS\|Comandos MS-DOS]] &bull; [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/02 - Conexiones Directas e Inversas con Netcat\|Netcat]] |
-| **Linux** | 🐧 | Administración de Debian, configuración de DWM, pipes, filtros de texto y permisos. | [[03 - EXTRA/Documentos/Linux Comandos Esenciales\|Comandos Linux]] |
-| **Sistemas** | 🖥️ | Configuración de almacenamiento, servicios de red y servidores Windows/Linux. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Sistemas]] |
-| **Conceptos Fundamentales** | 📖 | Inspección con DevTools en navegadores, manipulación DOM y protocolos web. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Conceptos]] |
-| **Herramientas de Auditoría** | 🔍 | Técnicas de pivoting de redes, túneles SSH y pruebas de concepto de Buffer Overflow. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Auditoría]] |
-| **Encriptado de Datos** | 🔒 | Cifrado simétrico/asimétrico, firmas digitales, GPG y gestión de infraestructura PKI. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Encriptado]] |
-| **Firewall** | 🛡️ | Reglas iptables, nftables, pfSense y segmentación perimetral con VPNs. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Firewall]] |
-| **Vulnerabilidades Web** | 🕷️ | Explotación de SQLi, XSS, CSRF, IDOR y SSRF en entornos controlados. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Vuln Web]] |
-| **Escalada en Windows** | ⚡ | Privesc en entornos Windows: servicios vulnerables, tokens, DLL Hijacking y SeImpersonatePrivilege. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Windows]] |
-| **Gestión de Incidentes** | 🚨 | Análisis de malware en sandboxes, triaje SIEM y protocolos de respuesta. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Incidentes]] |
-| **Pentesting en Android** | 📱 | Descompilación de APKs, análisis estático con Jadx, bypass de SSL Pinning con Frida. | [[02 - MODULOS/05 - Prácticas (PoCs)\|PoC Android]] |
+| **Linux** | 🐧 | Curso Pentesting (1–6), Filtros, Bash Scripting, Capabilities, Debian+DWM, VMs Venus y Hades | [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux\|Acceder a Linux]] |
+| **MS-DOS** | 💾 | Consola CMD (24 ejercicios), sintaxis de ayuda, batch scripting y Netcat directo/inverso | [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS\|Acceder a MS-DOS]] |
+| **Sistemas** | 🖥️ | Servidor NAS OpenMediaVault (RAID/SMB/NFS) y Controlador de Dominio Active Directory 2019 | [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault\|Acceder a Sistemas]] |
+| **Conceptos Fundamentales** | 📖 | Túneles SSH, cURL, Firefox DevTools, transferencia de ficheros, HTTP, MITM, Phishing, Msfvenom | [[02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/01 - Conexión Segura con SSH y Túneles\|Acceder a Conceptos]] |
+| **Herramientas de Auditoría** | 🔍 | Nmap, Responder, Metasploit, Hashcat, Gobuster, Hydra, WiFi, Wireshark, BloodHound, Pivoting, BoF | [[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap\|Acceder a Auditoría]] |
+| **Encriptado de Datos** | 🔒 | 7-Zip, EncFS, BitLocker, VeraCrypt, Gpg4win (firmas/PKI) y Esteganografía forense | [[02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/01 - Cifrado de Contenedores con 7-Zip\|Acceder a Encriptado]] |
+| **Firewall** | 🛡️ | IPFire (zonas, reglas, NAT, OpenVPN/IPsec, IDS Suricata, Proxy Squid) y Firewall Windows/Linux | [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire\|Acceder a Firewall]] |
+| **Pentesting en Android** | 📱 | Android Studio, Apktool, Smali, Ngrok, Serveo, C2 L3MON, ofuscación y APK Easy Tool | [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio\|Acceder a Android]] |
 
 ---
 
 > [!tip] Navegación Cruzada
 > * Consulta el estado de realización de estas prácticas en el [[01 - CURSO/02 - Tablero de contenidos curso 023|Tablero Kanban del Curso 023]].
-> * Dispones también del [[03 - EXTRA/Documentos/MS-DOS CheatSheet|CheatSheet de Comandos Rápidos de MS-DOS]].
+> * Dispones de los recursos pesados descargados offline en la carpeta `archivos_descargados/paquetes_7z/` y `archivos_descargados/documentos/`.
