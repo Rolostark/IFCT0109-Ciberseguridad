@@ -87,14 +87,12 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
 
 ---
 
-## 📌 Paso 9: Guía Integral de Web Fuzzing para Hacking Ético
-* Descarga y conversión del tutorial técnico alojado en `cursosmfr.es/ifct0109/hacking/fuzzing/` y su módulo de herramientas `tools/index.html`:
-  * Creación de `02 - MODULOS/Hacking Ético - Guía de Web Fuzzing.md`.
-  * Catálogo de herramientas ofensivas (FFUF, Gobuster, Feroxbuster, cURL, Subfinder, API Fuzzer, SecLists).
-  * Tabulación de rutas exactas de diccionarios SecLists para directorios, parámetros, VHosts, subdominios y APIs.
-  * Comandos prácticos de enumeración, recursión, parameter fuzzing (GET y POST) y VHosts.
-  * Metodología de auditoría de APIs (REST, SOAP WSDL, GraphQL con introspección y herramienta `webfuzz_api`).
-  * Tablas comparativas de banderas de filtrado y matchers (códigos de estado, tamaño, palabras, líneas, regex y similitud).
-  * Vinculación bidireccional desde `02 - MODULOS/04 - Hacking Ético.md`.
+## 📌 Paso 9: Subcarpeta Hacking Ético y Guías Integrales (Fuzzing y Reconocimiento)
+* Descarga y conversión de los módulos técnicos de `cursosmfr.es/ifct0109/hacking/`:
+  * Creación de la subcarpeta `02 - MODULOS/Hacking Ético/`.
+  * **`01 - Web Fuzzing.md`**: Guía exhaustiva de fuzzing web (FFUF, Gobuster, Feroxbuster, cURL, Subfinder, API Fuzzer, SecLists), con comandos de instalación paso a paso, rutas de wordlists, fuzzing GET/POST/VHost, APIs (REST, SOAP, GraphQL) y tablas comparativas de matchers y filtros.
+  * **`02 - Reconocimiento y Herramientas Bug Bounty.md`**: Arsenal completo de más de 30 herramientas de reconocimiento y enumeración (`httpx`, `WhatWeb`, `wafw00f`, `dnsx`, `puredns`, `katana`, `gau`, `gowitness`, `gf`, `nuclei`), scripts de automatización Bash (`virustotal.sh`, `lostfuzzer.sh`, `gf_critical_script.sh`), servicios de inteligencia y recursos online.
+* Actualización de `02 - MODULOS/04 - Hacking Ético.md` como nodo central (*hub*) con accesos directos y llamadas temáticas.
+
 
 

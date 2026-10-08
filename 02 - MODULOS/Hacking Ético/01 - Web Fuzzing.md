@@ -26,41 +26,85 @@ tags:
 > [!abstract] Fase: Enumeración y Descubrimiento de Contenido Web
 > Guía completa y práctica de técnicas de **fuzzing web** para el descubrimiento de rutas, archivos ocultos, parámetros GET/POST, subdominios, virtual hosts y APIs en auditorías de seguridad y programas de Bug Bounty.
 > 
-> 🔗 **Navegación:** [[02 - MODULOS/04 - Hacking Ético|⬅️ Volver a Hacking Ético]] &emsp;|&emsp; [[00 - INDICE|🏠 Inicio]] &emsp;|&emsp; [[03 - EXTRA/02 - Recursos Bug Bounty|🐛 Recursos Bug Bounty]]
+> 🔗 **Navegación:** [[02 - MODULOS/04 - Hacking Ético|⬅️ Volver a Hacking Ético]] &emsp;|&emsp; [[02 - MODULOS/Hacking Ético/02 - Reconocimiento y Herramientas Bug Bounty|🎯 Ir a Reconocimiento]] &emsp;|&emsp; [[00 - INDICE|🏠 Inicio]]
 
 ---
 
-## 🛠️ Herramientas Esenciales de Web Fuzzing
+## 🛠️ Herramientas Esenciales de Web Fuzzing e Instalación
 
 > [!info] Ecosistema de Herramientas
 > Selección de utilidades de alto rendimiento para auditoría web ofensiva y recolección de activos:
 
-* **FFUF (Fuzz Faster U Fool):**
-  * Herramienta ultrarrápida y flexible escrita en Go.
-  * **Casos de uso:** Enumeración de directorios y archivos, fuzzing recursivo, parámetros GET/POST y valores de variables.
-* **Gobuster:**
-  * Herramienta clásica de enumeración por fuerza bruta escrita en Go.
-  * **Casos de uso:** Descubrimiento de directorios, fuzzing de Virtual Hosts (VHost) y resolución DNS de subdominios.
-* **Feroxbuster:**
-  * Herramienta recursiva de alta concurrencia escrita en Rust.
-  * **Casos de uso:** Descubrimiento profundo de contenido web con control automático de recursión y filtrado dinámico.
-* **cURL:**
-  * Utilidad universal por línea de comandos para transferencia de datos y validación de cabeceras HTTP/S.
-  * **Casos de uso:** Verificación manual de hallazgos, inspección de respuestas y pruebas directas.
-* **Subfinder:**
-  * Herramienta pasiva de reconocimiento de subdominios desarrollada por ProjectDiscovery.
-  * **Casos de uso:** Mapeo inicial de superficie de ataque sin generar tráfico directo contra el objetivo.
-* **API Fuzzer (`webfuzz_api`):**
-  * Herramienta especializada en endpoints REST, SOAP y GraphQL.
-  * **Repositorio oficial:** [GitHub — PandaSt0rm/webfuzz_api](https://github.com/PandaSt0rm/webfuzz_api)
-* **SecLists:**
-  * La colección de diccionarios de referencia mundial para auditorías de seguridad: [GitHub — SecLists](https://github.com/danielmiessler/SecLists).
+### 1. FFUF (Fuzz Faster U Fool)
+* Herramienta ultrarrápida y flexible escrita en Go.
+* **Casos de uso:** Enumeración de directorios y archivos, fuzzing recursivo, parámetros GET/POST y valores de variables.
+* **Instalación:**
+  ```bash
+  # En Kali / Debian / Ubuntu:
+  sudo apt install ffuf -y
+  # O mediante Go:
+  go install github.com/ffuf/ffuf/v2@latest
+  ```
+
+### 2. Gobuster
+* Herramienta clásica de enumeración por fuerza bruta escrita en Go.
+* **Casos de uso:** Descubrimiento de directorios, fuzzing de Virtual Hosts (VHost) y resolución DNS de subdominios.
+* **Instalación:**
+  ```bash
+  sudo apt install gobuster -y
+  # O mediante Go:
+  go install github.com/OJ/gobuster/v3@latest
+  ```
+
+### 3. Feroxbuster
+* Herramienta recursiva de alta concurrencia escrita en Rust.
+* **Casos de uso:** Descubrimiento profundo de contenido web con control automático de recursión y filtrado dinámico.
+* **Instalación:**
+  ```bash
+  sudo apt install feroxbuster -y
+  # O mediante Cargo / script oficial:
+  curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash
+  ```
+
+### 4. cURL
+* Utilidad universal por línea de comandos para transferencia de datos y validación de cabeceras HTTP/S.
+* **Casos de uso:** Verificación manual de hallazgos, inspección de respuestas y pruebas directas.
+* **Instalación:**
+  ```bash
+  sudo apt install curl -y
+  ```
+
+### 5. Subfinder
+* Herramienta pasiva de reconocimiento de subdominios desarrollada por ProjectDiscovery.
+* **Casos de uso:** Mapeo inicial de superficie de ataque sin generar tráfico directo contra el objetivo.
+* **Instalación:**
+  ```bash
+  go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+  ```
+
+### 6. API Fuzzer (`webfuzz_api`)
+* Herramienta especializada en endpoints REST, SOAP y GraphQL.
+* **Repositorio oficial:** [GitHub — PandaSt0rm/webfuzz_api](https://github.com/PandaSt0rm/webfuzz_api)
+* **Instalación:**
+  ```bash
+  git clone https://github.com/PandaSt0rm/webfuzz_api.git
+  cd webfuzz_api && pip install -r requirements.txt
+  ```
+
+### 7. SecLists
+* La colección de diccionarios de referencia mundial para auditorías de seguridad: [GitHub — SecLists](https://github.com/danielmiessler/SecLists).
+* **Instalación / Descarga:**
+  ```bash
+  sudo apt install seclists -y
+  # O clonado directo desde GitHub:
+  git clone --depth 1 https://github.com/danielmiessler/SecLists.git /opt/SecLists
+  ```
 
 ---
 
 ## 📚 Diccionarios Recomendados (SecLists)
 
-Ubicaciones estándar dentro del repositorio [SecLists](https://github.com/danielmiessler/SecLists) clasificadas por propósito:
+Ubicaciones estándar dentro del repositorio SecLists (`/usr/share/seclists/` o `/opt/SecLists/`) clasificadas por propósito:
 
 ### 📁 Nombres de Ficheros y Directorios
 * `Discovery/Web-Content/common.txt` — Diccionario básico rápido para pruebas preliminares.
