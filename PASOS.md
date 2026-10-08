@@ -262,3 +262,20 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
 * **Interconexión Global del Vault:**
   * Actualización de la matriz y tarjetas de acceso en `02 - MODULOS/05 - Prácticas (PoCs).md` con enlaces directos hacia los 11 módulos completos del curso.
 
+---
+
+## 📌 Paso 19: Transformación del Repositorio de Enlaces a Tablero Kanban Interactivo
+* **Conversión a Formato Oficial Obsidian Kanban:**
+  * Transformación de `03 - EXTRA/01 - Enlaces favoritos.md` al formato `kanban-plugin: basic` con configuración `%% kanban:settings %%`.
+  * Organización de los enlaces del portal oficial `cursosmfr.es/ifct0109/links/` en 9 columnas horizontales visuales:
+    1. **Recursos y CheatSheets:** PDFs y cheatsheets locales (`msdos.pdf`, `lpi-material.pdf`, `linuxcommands.pdf`, `nmap_cs.pdf`, imágenes `tmux`, `terminator`, `linux.png`, `certificaciones.jpg`, retos y expresiones regulares).
+    2. **SGSI y Normativa:** ISO 27002, ENS Navegable del CCN-CERT y Controles CIS.
+    3. **Seguridad Informática y Auditoría:** Generadores de informes (SysReptor, Peng), herramientas forenses (NirSoft) y extensiones del navegador (FoxyProxy, Wappalyzer, HackTools, HackBar, User-Agent Switcher, Cookie-Editor).
+    4. **Bug Bounty y Certificaciones:** 10 plataformas de Bug Bounty (YesWeHack, HackerOne, Intigriti, Bugcrowd, Open Bug Bounty, Zerod.io, Secur0, Immunefi, ZDI, Google Bug Hunters), repositorios de writeups e informes, y certificaciones oficiales (CompTIA, OffSec, EC-Council, eJPT, HTB, PortSwigger, Braindumps).
+    5. **CTFs y Laboratorios:** 17 plataformas prácticas (PortSwigger Academy, HTB, TryHackMe, DockerLabs, HackViser, The Hackers Labs, HackMyVM, OverTheWire, RingZer0, AttackDefense, WebSploit, PentesterLab, OSBoxes, TJNull OSCP).
+    6. **OSINT y Privacidad:** Marcos OSINT, Google Dorks, Shodan, Censys, PimEyes, tests de privacidad (PrivacyTests, EFF Fingerprinting, Tor), identidades sintéticas y temporales (YOPmail, Receive SMS, Fake Name, FaceApp, ThisPersonDoesNotExist), y servicios VPN (Mullvad, Riseup, Proton, TunnelBear, Hide.me, ExpressVPN, NordVPN, perfiles OpenVPN libres).
+    7. **Inteligencia Artificial:** Asistentes (Claude, ChatGPT, Copilot, Gemini, Perplexity), detectores/humanizadores (QuillBot, Humbot), multimedia generativa (Suno, Raphael, Lumiere, Genmo, Sora) y entornos locales (Ollama, LM Studio, Pinokio, Hugging Face).
+    8. **Academias, Cursos y Multimedia:** Cisco NetAcad (Networking, Linux, Hacking Ético), Full Stack Open, HackViser, PortSwigger, y simulacro en vídeo de ataque real.
+    9. **Cuestionarios de Autoevaluación:** 25 formularios oficiales clasificados en Cuestionario Inicial, Gestión de Servicios MF0490_3 (7 tests), Controles ISO 27002 (8 tests) y Seguridad Digital (9 tests de Microsoft Forms).
+
+
