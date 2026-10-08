@@ -74,3 +74,14 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
 * Reemplazo de todos los enlaces que apuntaban al servidor remoto `cursosmfr.es` por rutas relativas locales y wikilinks.
 * Configuración de `.gitignore` para excluir binarios pesados (`*.7z`) y mantener el repositorio optimizado.
 * Inicialización del repositorio Git con commits estructurados por etapas.
+
+---
+
+## 📌 Paso 8: Desglose Exhaustivo de Controles ISO/IEC 27002:2022
+* Extracción e importación integral de los contenidos detallados de `cursosmfr.es/ifct0109/iso27002/`:
+  * Creación de la subcarpeta `02 - MODULOS/ISO 27002/`.
+  * **`01 - Seguridad Física.md`**: 14 controles (7.1 a 7.14) con sus objetivos formativos, aspectos clave numerados, subsección de gestión y destrucción de soportes (7.10) y anclajes `^c71` a `^c714`.
+  * **`02 - Seguridad Lógica.md`**: 20 controles de las cláusulas 5, 6 y 8 (RBAC, DAM/IRM, teletrabajo, MFA, UEBA, Security by Design, sincronización horaria, utilidades privilegiadas) y anclajes específicos.
+  * **`03 - Robustecimiento de Sistemas y Redes.md`**: 15 controles tecnológicos (código malicioso, análisis de vulnerabilidades, CIS Benchmarks, borrado seguro, DLP, backups 3-2-1, alta disponibilidad, microsegmentación de redes, filtrado web y ciclo de vida de claves criptográficas).
+* Actualización de la nota central `02 - MODULOS/02 - ISO 27002.md` con enlaces directos por control hacia sus anclajes respectivos.
+
