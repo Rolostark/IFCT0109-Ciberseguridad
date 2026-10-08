@@ -28,8 +28,12 @@ tags:
 > *Guía completa y fiel de técnicas de fuzzing: Wordlists de SecLists, enumeración de directorios/archivos, recursive fuzzing, GET/POST fuzzing, VHosts, Web APIs (REST, SOAP, GraphQL) y tablas comparativas de filtros y matchers (`ffuf`, `gobuster`, `feroxbuster`).*
 > &emsp;↳ 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing|Herramientas de Web Fuzzing (Catálogo y Usos)]]
 
-> [!info] 🎯 [[02 - MODULOS/Hacking Ético/02 - Reconocimiento y Herramientas Bug Bounty|2. Reconocimiento y Arsenal de Herramientas Bug Bounty]]
-> *Flujo de reconocimiento completo con más de 30 herramientas: `subfinder`, `httpx`, `dnsx`, `gowitness`, `katana`, `nuclei`, scripts Bash personalizados y patrones GF.*
+> [!info] 🎯 [[02 - MODULOS/Hacking Ético/02 - Reconocimiento Bug Bounty|2. Metodología de Reconocimiento Bug Bounty]]
+> *Flujo de reconocimiento completo en 13 pasos con comandos reales (`00_` a `13_`): `httpx`, `dnsx`, `puredns`, `katana`, `gowitness`, `gf`, `nuclei`, scripts Bash y recursos OSINT.*
+> &emsp;↳ 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Reconocimiento Bug Bounty|Herramientas de Reconocimiento Bug Bounty (Catálogo y Usos)]]
+
+> [!info] 💻 [[02 - MODULOS/Hacking Ético/03 - Máquinas Hackeables (VMs)|3. Máquinas Hackeables (VMs y Dockerlabs)]]
+> *Entornos prácticos con escenarios de vulnerabilidad reales: Linux (básicos, web, avanzadas), Windows Server y Active Directory, y contenedores Dockerlabs con guías de despliegue.*
 
 ---
 
@@ -39,21 +43,22 @@ tags:
 * **Herramientas principales:** `ffuf`, `gobuster`, `feroxbuster`, `cURL` y `webfuzz_api`.
 * **Diccionarios clave:** Colección completa de [SecLists](https://github.com/danielmiessler/SecLists).
 * **Técnicas cubiertas:** Fuzzing recursivo, parámetros ocultos, virtual hosts y esquemas GraphQL.
-* 📖 **Ver manual completo:** [[02 - MODULOS/Hacking Ético/01 - Web Fuzzing|Acceso al Tutorial Detallado de Web Fuzzing]]
+* 📖 **Ver manual completo:** [[02 - MODULOS/Hacking Ético/01 - Web Fuzzing|Acceso al Tutorial Detallado de Web Fuzzing]] &emsp;|&emsp; 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing|Catálogo de Herramientas]]
 
 ### 🎯 Reconocimiento Bug Bounty Hunter
 * **Metodología estructurada:** Recolección pasiva (OSINT) y activa (DNS, puertos, crawling).
 * **Arsenal:** `subfinder`, `httpx`, `naabu`, `gowitness`, `katana`, `gau`, `gf` y `nuclei`.
 * **Automatización:** Scripts integrados (`virustotal.sh`, `lostfuzzer.sh`, `gf_critical_script.sh`).
-* 📖 **Ver arsenal completo:** [[02 - MODULOS/Hacking Ético/02 - Reconocimiento y Herramientas Bug Bounty|Acceso al Arsenal de Reconocimiento]]
+* 📖 **Ver metodología completa:** [[02 - MODULOS/Hacking Ético/02 - Reconocimiento Bug Bounty|Acceso a la Metodología de Reconocimiento]] &emsp;|&emsp; 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Reconocimiento Bug Bounty|Catálogo de Herramientas]]
 
 ---
 
 ## 💻 2. Máquinas Hackeables (Entornos de Práctica)
 
-* **Diversas Máquinas Virtuales (VMs):**
-  * Laboratorios descargables en formatos `.ova` / `.vmdk` para VirtualBox o VMware.
-  * Simulación de vulnerabilidades reales: subida de archivos arbitraria, inyecciones SQL, RCE y escalada de privilegios local.
+* **Diversas Máquinas Virtuales (VMs) y Dockerlabs:**
+  * Escenarios en entornos Linux (básicos, web y avanzados), Windows Server y Active Directory (`dc01` a `dc03`, examen, big).
+  * Contenedores ultraligeros de Dockerlabs (`dockerlabs.es`) con scripts `auto_deploy.sh`.
+* 📖 **Ver catálogo de máquinas:** [[02 - MODULOS/Hacking Ético/03 - Máquinas Hackeables (VMs)|Acceso a las Máquinas Hackeables y Guía Docker]]
 
 ---
 

@@ -239,5 +239,6 @@ python3 api_fuzzer.py http://IP:PORT > api_fuzz.txt && cat api_fuzz.txt | grep -
 
 ## 🔗 Navegación y Referencias
 * 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Web Fuzzing|Guía de Herramientas de Web Fuzzing (Instalación y Usos)]]
-* 🎯 [[02 - MODULOS/Hacking Ético/02 - Reconocimiento y Herramientas Bug Bounty|Arsenal de Reconocimiento Bug Bounty]]
+* 🎯 [[02 - MODULOS/Hacking Ético/02 - Reconocimiento Bug Bounty|Metodología de Reconocimiento Bug Bounty]]
+* 🛠️ [[02 - MODULOS/Hacking Ético/Herramientas de Reconocimiento Bug Bounty|Herramientas de Reconocimiento Bug Bounty]]
 * ⬅️ [[02 - MODULOS/04 - Hacking Ético|Volver al Módulo de Hacking Ético]]

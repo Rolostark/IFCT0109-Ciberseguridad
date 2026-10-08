@@ -177,3 +177,15 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
 * **Interconexión Total mediante Obsidian Wikilinks y Navegación Bidireccional:**
   * Reemplazo de todos los enlaces `.html` remotos o huérfanos por wikilinks nativos (`[[...]]`) de Obsidian que garantizan navegación fluida y funcionalidad 100% offline.
   * Actualización integral del catálogo matriz `02 - MODULOS/05 - Prácticas (PoCs).md`.
+
+---
+
+## 📌 Paso 14: Sincronización 1:1 de la Metodología Bug Bounty de Reconocimiento, Arsenal y Máquinas Hackeables
+* **Autenticación con Cookie de Sesión Oficial (`PHPSESSID`):**
+  * Acceso e inspección directa a `cursosmfr.es/ifct0109/hacking/recon/index.php`, `recon/tools/index.html`, `hacking/index.php` y `hacking/vms/index.php`.
+* **Despliegue Fiel de la Subcarpeta `02 - MODULOS/Hacking Ético/`:**
+  * **`02 - Reconocimiento Bug Bounty.md`:** Transcripción 1:1 de la metodología oficial en 13 fases operativas numeradas (`00_` a `13_`): Scope, información perimetral (`httpx`, `whatweb`, `wafw00f`, `cdncheck`), resolución DNS e IPInfo, Google Dorks, enumeración masiva pasiva y activa de subdominios (`subfinder`, `crt`, `shuffledns`, `alterx`), validación con `puredns`, protección WAF/CDN, escaneo de puertos y conversión con `naabu`/`nmap`/`nmapurls`, análisis web con `httpx`, capturas con `gowitness` y Chrome headless, recolección y deduplicación de URLs (`urlfinder`, `katana`, `urless`, `gau`), filtrado por vectores críticos con patrones `gf` y escaneo DAST con `nuclei`, y scripts bash automatizados.
+  * **`Herramientas de Reconocimiento Bug Bounty.md`:** Catálogo oficial 1:1 de herramientas agrupadas por categorías técnicas (Análisis Web, DNS, Subdominios, Dorks, Puertos, Screenshots, Crawling, GF Patterns, Vulnerabilidades, Inteligencia OSINT, Scripts y Recursos Online).
+  * **`03 - Máquinas Hackeables (VMs).md`:** Catálogo integral de máquinas de laboratorio para entrenamiento práctico: procedimiento previo de conexión en Red NAT con Kali Linux y descubrimiento con `netdiscover`, catálogo clasificado de máquinas Linux (Conceptos Básicos, Vulnerabilidades Web OWASP, Avanzadas), sistemas Windows Server y Active Directory (`dc01` a `dc03`, examen, big), y plataforma Dockerlabs con guía paso a paso de despliegue mediante scripts `auto_deploy.sh`.
+* **Alineación del Hub Central y Navegación:**
+  * Reestructuración de `02 - MODULOS/04 - Hacking Ético.md` interconectando las 3 secciones principales del módulo (Web Fuzzing, Reconocimiento Bug Bounty y Máquinas Hackeables).
