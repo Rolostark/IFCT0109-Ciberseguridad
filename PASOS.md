@@ -223,3 +223,14 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
     15. **`Helium.md`:** Servicios de monitorización y elevación con binarios del sistema.
 * **Actualización del Catálogo Central de VMs:**
   * Actualización de la tabla en `02 - MODULOS/Hacking Ético/03 - Máquinas Hackeables (VMs).md` vinculando las 15 máquinas directamente con Obsidian Wikilinks escapados.
+
+---
+
+## 📌 Paso 17: Integración Total 1:1 de las 42 Máquinas Hackeables en Obsidian
+* **Despliegue de los 4 Bloques Completos de Máquinas (`02 - MODULOS/Hacking Ético/Máquinas/`):**
+  * **Vulnerabilidades Web (12 máquinas):** `Vulny.md`, `Evil box one.md`, `Uvalde.md`, `Inferno.md`, `Friendly2.md`, `Flower.md`, `Insomnia.md`, `Cengbox.md`, `Faust.md`, `Liceo.md`, `Nebula.md`, `Medusa.md`.
+  * **Avanzadas (7 máquinas):** `Superhuman.md`, `Chromatica.md`, `w140.md`, `Aragog.md`, `Observer.md`, `Twister.md`, `dc09.md`.
+  * **Windows Server Standalone (3 máquinas):** `ws2008.md` (integrando las 39 capturas de pantalla offline de explotación con EternalBlue y Meterpreter), `Liar.md`, `Simple.md`.
+  * **Active Directory (5 laboratorios):** `dc01.md`, `dc02.md`, `dc03.md`, `Examen ad.md`, `BIG.md` (con flujos de Kerberoasting, BloodHound, Pass-the-Hash y volcado con secretsdump).
+* **Interconexión Matrix y Enlaces Nativos:**
+  * Actualización total de las tablas de `02 - MODULOS/Hacking Ético/03 - Máquinas Hackeables (VMs).md` interconectando el 100% de las 42 máquinas del curso con Obsidian Wikilinks.
