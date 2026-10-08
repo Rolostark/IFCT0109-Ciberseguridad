@@ -47,23 +47,23 @@ Antes de iniciar cualquier ejercicio contra una máquina víctima en VirtualBox 
 ### 📂 Conceptos Básicos
 Máquinas introductorias diseñadas para asentar enumeración de servicios (FTP anónimo, HTTP, SSH), fuerza bruta controlada con Hydra y escalada local básica con GTFOBins o permisos `sudo`.
 
-| Máquina                                                 | Enfoque Principal / Técnicas                                          |
-| :------------------------------------------------------ | :-------------------------------------------------------------------- |
-| **[[02 - MODULOS/Hacking Ético/Máquinas/Thoth|thoth]]** | FTP anónimo · Diccionario Rockyou con Hydra · `sudo -l` GTFOBins      |
-| **`mhz_c1f`**                                           | Enumeración de directorios web · Credenciales por defecto · Sudoers   |
-| **`looz`**                                              | Fuzzing de endpoints · Explotación de CMS · Path traversal            |
-| **`funbox`**                                            | Servicios heredados · Explotación de servicios de red no autenticados |
-| **`friendly`**                                          | Servicios web sencillos · Reverse shell · Permisos débiles            |
-| **`funbox7`**                                           | Criptografía básica · Crackeo de hashes · Tareas cron                 |
-| **`connection`**                                        | Puertos de gestión · Filtrado de credenciales · Grupos locales        |
-| **`alzheimer`**                                         | Mala configuración de servidor · Elevación vertical                   |
-| **`hommie`**                                            | Enumeración de usuarios SMB/SSH · Sanitización deficiente             |
-| **`moneybox`**                                          | Fuerza bruta SSH · Binarios SUID · Captura de flags                   |
-| **`osbytesec`**                                         | Vulnerabilidades en servicios web ligeros · Bypass de autenticación   |
-| **`dpwwn-1`**                                           | MySQL expuesto · Inyección SQL básica · Escalada por servicios        |
-| **`hannah`**                                            | Cabeceras HTTP · Parámetros ocultos · Escalada básica                 |
-| **`pwned`**                                             | Explotación web inicial · Shell interactiva · Permisos de fichero     |
-| **`helium`**                                            | Servicios de monitorización · Elevación con binarios del sistema      |
+| Máquina | Enfoque Principal / Técnicas |
+| :--- | :--- |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/Thoth\|thoth]]** | FTP anónimo · Diccionario Rockyou con Hydra · `sudo -l` GTFOBins |
+| **[[02 - MODULOS/Hacking Ético/Máquinas/mhz_c1f\|mhz_c1f]]** | Enumeración de directorios web · Credenciales por defecto · Sudoers |
+| **`looz`**                                    | Fuzzing de endpoints · Explotación de CMS · Path traversal            |                                                                  |
+| **`funbox`**                                  | Servicios heredados · Explotación de servicios de red no autenticados |                                                                  |
+| **`friendly`**                                | Servicios web sencillos · Reverse shell · Permisos débiles            |                                                                  |
+| **`funbox7`**                                 | Criptografía básica · Crackeo de hashes · Tareas cron                 |                                                                  |
+| **`connection`**                              | Puertos de gestión · Filtrado de credenciales · Grupos locales        |                                                                  |
+| **`alzheimer`**                               | Mala configuración de servidor · Elevación vertical                   |                                                                  |
+| **`hommie`**                                  | Enumeración de usuarios SMB/SSH · Sanitización deficiente             |                                                                  |
+| **`moneybox`**                                | Fuerza bruta SSH · Binarios SUID · Captura de flags                   |                                                                  |
+| **`osbytesec`**                               | Vulnerabilidades en servicios web ligeros · Bypass de autenticación   |                                                                  |
+| **`dpwwn-1`**                                 | MySQL expuesto · Inyección SQL básica · Escalada por servicios        |                                                                  |
+| **`hannah`**                                  | Cabeceras HTTP · Parámetros ocultos · Escalada básica                 |                                                                  |
+| **`pwned`**                                   | Explotación web inicial · Shell interactiva · Permisos de fichero     |                                                                  |
+| **`helium`**                                  | Servicios de monitorización · Elevación con binarios del sistema      |                                                                  |
 
 ---
 
