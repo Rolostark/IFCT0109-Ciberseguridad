@@ -63,19 +63,19 @@ tags:
 
 ## 📊 Matriz Global de Prácticas y Laboratorios
 
-| Área Técnica | Icono | Prácticas Clave Incluidas | Acceso Directo al Módulo |
-| :--- | :---: | :--- | :--- |
-| **Linux** | 🐧 | Curso Pentesting (WSL/Docker, Módulos 1–8), Filtros, Bash Scripting, Capabilities, Debian+DWM, VMs Venus y Hades | [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux\|Acceder a Linux]] |
-| **MS-DOS** | 💾 | Consola CMD (24 ejercicios), sintaxis de ayuda, batch scripting y Netcat directo/inverso | [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS\|Acceder a MS-DOS]] |
-| **Sistemas** | 🖥️ | Servidor NAS OpenMediaVault y Laboratorio 6 partes de Active Directory 2019 (DC, OUs, GPOs, Regedit) | [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault\|Acceder a Sistemas]] |
-| **Conceptos Fundamentales** | 📖 | Túneles SSH, cURL, DevTools Lab (10 módulos), transferencia de ficheros, HTTP, MITM, Phishing, Msfvenom | [[02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/01 - Conexión Segura con SSH y Túneles\|Acceder a Conceptos]] |
-| **Herramientas de Auditoría** | 🔍 | Nmap, Responder, Metasploit, Hashcat, Gobuster, Hydra, WiFi, Wireshark (+Retos), BloodHound (4 labs), Pivoting (5 labs), BoF (2 labs) | [[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap\|Acceder a Auditoría]] |
-| **Encriptado de Datos** | 🔒 | 7-Zip, EncFS, BitLocker, VeraCrypt, Gpg4win (firmas/PKI) y Esteganografía forense | [[02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/01 - Cifrado de Contenedores con 7-Zip\|Acceder a Encriptado]] |
-| **Firewall** | 🛡️ | IPFire (zonas, reglas, NAT, OpenVPN/IPsec, IDS Suricata, Proxy Squid) y Firewall Windows/Linux | [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire\|Acceder a Firewall]] |
-| **Vulnerabilidades WEB** | 🕷️ | DVWA (10 laboratorios OWASP) y VulnWeb (8 laboratorios: Inyecciones, SSTI, CSRF, XSS, SQLi, JWT) | Módulo Web PoC |
-| **Escalada en Windows** | ⚡ | CheatSheet comandos, Kernel, Servicios inseguros, DLL Hijacking, Unquoted Paths, Registro, SAM, Tokens | Módulo EscPriv Windows |
-| **Gestión de Incidentes** | 🚨 | Análisis de Malware (Dinámico, Estático, Reversa), SOC & MITRE ATT&CK, SIEM Wazuh, Forense Digital | Módulo Incidentes PoC |
-| **Pentesting en Android** | 📱 | Android Studio, Apktool, Smali, Ngrok, Serveo, C2 L3MON, ofuscación y APK Easy Tool | [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio\|Acceder a Android]] |
+| Área Técnica                  | Icono | Prácticas Clave Incluidas                                                                                                             | Acceso Directo al Módulo                                                                                                      |
+| :---------------------------- | :---: | :------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------- |
+| **Linux**                     |  🐧   | Curso Pentesting (WSL/Docker, Módulos 1–8), Filtros, Bash Scripting, Capabilities, Debian+DWM, VMs Venus y Hades                      | [[02 - MODULOS/Prácticas (PoCs)/Linux/00 - Índice del Módulo Linux\|Acceder a Linux]]                                         |
+| **MS-DOS**                    |  💾   | Consola CMD (24 ejercicios), sintaxis de ayuda, batch scripting y Netcat directo/inverso                                              | [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS\|Acceder a MS-DOS]]                                            |
+| **Sistemas**                  |  🖥️  | Servidor NAS OpenMediaVault y Laboratorio 6 partes de Active Directory 2019 (DC, OUs, GPOs, Regedit)                                  | [[02 - MODULOS/Prácticas (PoCs)/Sistemas/01 - Creación de NAS con OpenMediaVault\|Acceder a Sistemas]]                        |
+| **Conceptos Fundamentales**   |  📖   | Túneles SSH, cURL, DevTools Lab (10 módulos), transferencia de ficheros, HTTP, MITM, Phishing, Msfvenom                               | [[02 - MODULOS/Prácticas (PoCs)/Conceptos Fundamentales/01 - Conexión Segura con SSH y Túneles\|Acceder a Conceptos]]         |
+| **Herramientas de Auditoría** |  🔍   | Nmap, Responder, Metasploit, Hashcat, Gobuster, Hydra, WiFi, Wireshark (+Retos), BloodHound (4 labs), Pivoting (5 labs), BoF (2 labs) | [[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap\|Acceder a Auditoría]] |
+| **Encriptado de Datos**       |  🔒   | 7-Zip, EncFS, BitLocker, VeraCrypt, Gpg4win (firmas/PKI) y Esteganografía forense                                                     | [[02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/01 - Cifrado de Contenedores con 7-Zip\|Acceder a Encriptado]]            |
+| **Firewall**                  |  🛡️  | IPFire (zonas, reglas, NAT, OpenVPN/IPsec, IDS Suricata, Proxy Squid) y Firewall Windows/Linux                                        | [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire\|Acceder a Firewall]]                 |
+| **Vulnerabilidades WEB**      |  🕷️  | DVWA (10 laboratorios OWASP) y VulnWeb (8 laboratorios: Inyecciones, SSTI, CSRF, XSS, SQLi, JWT)                                      | Módulo Web PoC                                                                                                                |
+| **Escalada en Windows**       |   ⚡   | CheatSheet comandos, Kernel, Servicios inseguros, DLL Hijacking, Unquoted Paths, Registro, SAM, Tokens                                | Módulo EscPriv Windows                                                                                                        |
+| **Gestión de Incidentes**     |  🚨   | Análisis de Malware (Dinámico, Estático, Reversa), SOC & MITRE ATT&CK, SIEM Wazuh, Forense Digital                                    | Módulo Incidentes PoC                                                                                                         |
+| **Pentesting en Android**     |  📱   | Android Studio, Apktool, Smali, Ngrok, Serveo, C2 L3MON, ofuscación y APK Easy Tool                                                   | [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio\|Acceder a Android]]         |
 
 ---
 
