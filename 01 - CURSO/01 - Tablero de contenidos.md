@@ -23,8 +23,8 @@ kanban-plugin: basic
 - [ ] Visor de Sucesos
 - [ ] 7. Administración del control de accesos adecuados de los sistemas de información
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Creación de NAS]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — MS-DOS]]
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Conexiones inversas y directas]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|POC — MS-DOS]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/02 - Conexiones Directas e Inversas con Netcat|POC — Conexiones inversas y directas]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Curso de Linux]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Active Directory]]
 
@@ -39,7 +39,7 @@ kanban-plugin: basic
 
 ## 🧩 POCs (Prácticas de Concepto)
 
-- [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — MS-DOS]]
+- [ ] [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|POC — MS-DOS]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Linux]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Sistemas]]
 - [ ] [[02 - MODULOS/05 - Prácticas (PoCs)|POC — Conceptos Fundamentales]]

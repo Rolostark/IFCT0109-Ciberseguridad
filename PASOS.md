@@ -94,5 +94,20 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * **`02 - Reconocimiento y Herramientas Bug Bounty.md`**: Arsenal completo de más de 30 herramientas de reconocimiento y enumeración (`httpx`, `WhatWeb`, `wafw00f`, `dnsx`, `puredns`, `katana`, `gau`, `gowitness`, `gf`, `nuclei`), scripts de automatización Bash (`virustotal.sh`, `lostfuzzer.sh`, `gf_critical_script.sh`), servicios de inteligencia y recursos online.
 * Actualización de `02 - MODULOS/04 - Hacking Ético.md` como nodo central (*hub*) con accesos directos y llamadas temáticas.
 
+---
+
+## 📌 Paso 10: Integración de Prácticas PoC de MS-DOS y Conexiones de Red con Netcat
+* Descarga y adaptación de los laboratorios alojados en `cursosmfr.es/ifct0109/pocs/msdos/`:
+  * Descarga y aislamiento local de imágenes ilustrativas en `archivos_descargados/imagenes/msdos/` (`image1.png`, `image2.png`, `image3.png`, `image4.png`).
+  * Descarga y almacenamiento del binario para Windows en `archivos_descargados/paquetes_7z/nc.7z` (contraseña `123456`).
+  * Creación de la subcarpeta `02 - MODULOS/Prácticas (PoCs)/MS-DOS/`.
+  * **`01 - Comandos de MS-DOS.md`**: Transcripción completa de los 24 ejercicios prácticos del entorno CMD (permisos de administrador, `help`, personalización con `color`, `shutdown` y cancelación, diagnóstico ICMP con `ping` continuo `-t`, variable `%PATH%` y vectores de Privilege Escalation / DLL Hijacking, navegación y filtros de búsqueda recursiva `dir /s`, manipulación de directorios, redirecciones de salida `>` y `>>`, creación por consola con `copy con infored.bat`, y análisis técnico del script por lotes interactivo con variables `set /p`).
+  * **`02 - Conexiones Directas e Inversas con Netcat.md`**: Guía técnica detallada sobre fundamentos de sockets en red (Bind Shell vs Reverse Shell), bypass de firewalls y tablas NAT mediante conexiones inversas salientes, escenarios de chat, ejecución remota interactiva (`cmd.exe`/`/bin/bash`), transferencia y exfiltración de archivos con `<` y `>`, desglose de flags de Netcat, tabla comparativa técnica, contramedidas defensivas (EDR, NDR, egress filtering) y cláusula de uso ético.
+* Actualización de notas vinculadas:
+  * `02 - MODULOS/05 - Prácticas (PoCs).md`: Añadido bloque destacado de acceso directo al módulo MS-DOS y actualización de enlaces de la tabla.
+  * `01 - CURSO/01 - Tablero de contenidos.md` y `01 - CURSO/02 - Tablero de contenidos curso 023.md`: Enlaces directos a las nuevas notas en las tarjetas Kanban.
+  * `03 - EXTRA/Documentos/MS-DOS CheatSheet.md`: Enlaces cruzados hacia las prácticas interactivas correspondientes.
+
+
 
 

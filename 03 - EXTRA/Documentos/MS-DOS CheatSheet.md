@@ -13,6 +13,8 @@ tags:
 
 > [!abstract] Documento Original
 > **Archivo PDF Original:** [📥 Descargar msdos.pdf](../../archivos_descargados/documentos/msdos.pdf)
+> 
+> 🔗 **Laboratorios Prácticos:** [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/01 - Comandos de MS-DOS|Práctica 01 — Comandos de MS-DOS]] &emsp;|&emsp; [[02 - MODULOS/Prácticas (PoCs)/MS-DOS/02 - Conexiones Directas e Inversas con Netcat|Práctica 02 — Conexiones con Netcat]]
 
 ---
 
