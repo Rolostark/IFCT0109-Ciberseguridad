@@ -25,10 +25,10 @@ tags:
 * **Certificaciones:**
   * [Mapa General de Certificaciones en Seguridad Informática](../archivos_descargados/imagenes/certificaciones.jpg)
 * **MS-DOS:**
-  * [MSDOS CheatSheet (PDF)]([[03 - EXTRA/Documentos/MS-DOS CheatSheet|MS-DOS CheatSheet (Markdown)]] · [Descargar PDF](../archivos_descargados/documentos/msdos.pdf))
+  * [[03 - EXTRA/Documentos/MS-DOS CheatSheet|MS-DOS CheatSheet (Markdown)]] · [📥 Descargar PDF](../archivos_descargados/documentos/msdos.pdf)
 * **Linux:**
-  * [Material Gratuito de Preparación LPIC (PDF)]([[03 - EXTRA/Documentos/Material Preparación LPIC|Material LPIC (Markdown)]] · [Descargar PDF](../archivos_descargados/documentos/lpi-material.pdf))
-  * [Listado de Comandos Esenciales de Linux (PDF)]([[03 - EXTRA/Documentos/Linux Comandos Esenciales|Linux Comandos Esenciales (Markdown)]] · [Descargar PDF](../archivos_descargados/documentos/linuxcommands.pdf))
+  * [[03 - EXTRA/Documentos/Material Preparación LPIC|Material Gratuito de Preparación LPIC (Markdown)]] · [📥 Descargar PDF](../archivos_descargados/documentos/lpi-material.pdf)
+  * [[03 - EXTRA/Documentos/Linux Comandos Esenciales|Listado de Comandos Esenciales de Linux (Markdown)]] · [📥 Descargar PDF](../archivos_descargados/documentos/linuxcommands.pdf)
   * [Linux CheatSheet Visual (PNG)](../archivos_descargados/imagenes/linux.png)
   * [Árbol Mental de Comandos de Linux (XMind)](https://xmind.app/m/WwtB/)
   * [Linux Commands Challenge](https://cmdchallenge.com/) — Retos interactivos de terminal en el navegador.
@@ -36,7 +36,7 @@ tags:
   * [TMUX CheatSheet (PNG)](../archivos_descargados/imagenes/tmux.png)
   * [Terminator CheatSheet (PNG)](../archivos_descargados/imagenes/terminator.png)
 * **Nmap:**
-  * [Nmap CheatSheet Oficial (PDF)]([[03 - EXTRA/Documentos/Nmap CheatSheet|Nmap CheatSheet (Markdown)]] · [Descargar PDF](../archivos_descargados/documentos/nmap_cs.pdf))
+  * [[03 - EXTRA/Documentos/Nmap CheatSheet|Nmap CheatSheet Oficial (Markdown)]] · [📥 Descargar PDF](../archivos_descargados/documentos/nmap_cs.pdf)
   * [Nmap Árbol de Parámetros (PNG)](../archivos_descargados/imagenes/nmap.png)
 * **Expresiones Regulares (Regex):**
   * [RegexLearn — Laboratorio 101 interactivo](https://regexlearn.com/learn/regex101)
