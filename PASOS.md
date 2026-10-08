@@ -234,3 +234,31 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
   * **Active Directory (5 laboratorios):** `dc01.md`, `dc02.md`, `dc03.md`, `Examen ad.md`, `BIG.md` (con flujos de Kerberoasting, BloodHound, Pass-the-Hash y volcado con secretsdump).
 * **Interconexión Matrix y Enlaces Nativos:**
   * Actualización total de las tablas de `02 - MODULOS/Hacking Ético/03 - Máquinas Hackeables (VMs).md` interconectando el 100% de las 42 máquinas del curso con Obsidian Wikilinks.
+
+---
+
+## 📌 Paso 18: Importación Integral de los Módulos Restantes de Prácticas (PoCs)
+* **Descubrimiento y Auditoría de `pocs/index.php`:**
+  * Inspección integral de los 11 módulos oficiales de la plataforma de Manuel FR, identificando 3 áreas técnicas no migradas previamente: **Vulnerabilidades Web**, **Escalada de Privilegios en Windows** y **Gestión de Incidentes de Seguridad**.
+* **Descarga Offline Multihilo de Medios y Capturas (428 Imágenes):**
+  * Descarga y verificación al 100% (428/428) de todas las capturas de pantalla y diagramas de las prácticas en sus rutas dedicadas:
+    * `archivos_descargados/imagenes/vulnerabilidades_web/`
+    * `archivos_descargados/imagenes/escalada_de_privilegios_en_windows/`
+    * `archivos_descargados/imagenes/gestion_de_incidentes/`
+* **Despliegue del Módulo: Vulnerabilidades Web (`02 - MODULOS/Prácticas (PoCs)/Vulnerabilidades Web/`):**
+  * Creación del índice maestro `00 - Índice del Módulo Vulnerabilidades Web.md`.
+  * **DVWA (10 Prácticas):** Command Injection, Brute Force, CSRF, Local File Inclusion (LFI), Insecure File Upload, XSS, SQL Injection (Fundamentos, Union-based, automatización con SQLMap, Blind SQLi boolean/time-based).
+  * **VulnWeb Lab Docker (8 Módulos):** OS Command Injection, SSTI (Jinja2/Twig), LFI/RFI, CSRF, File Upload (bypass MIME/Magic Bytes), Cross-Site Scripting, SQL Injection y autenticación con Tokens JWT.
+* **Despliegue del Módulo: Escalada de Privilegios en Windows (`02 - MODULOS/Prácticas (PoCs)/Escalada de Privilegios en Windows/`):**
+  * Creación del índice maestro `00 - Índice del Módulo Escalada de Privilegios en Windows.md`.
+  * Generación del `Cheatsheet de Comandos de Escalada.md` con la sintaxis completa de ataque organizada por fases.
+  * **17 Laboratorios Técnicos:** Enumeración y recopilación del sistema, explotación del kernel (WES-NG), servicios inseguros (Insecure Permissions, DLL Hijacking, Unquoted Service Paths, Weak Registry, Insecure Executables), registro de Windows (Autorun, AlwaysInstallElevated), extracción de credenciales (Registro, Credential Manager, Archivos de configuración, SAM/SYSTEM), aplicaciones de terceros, tareas programadas (`schtasks`), carpeta de inicio (`Startup`) y suplantación de privilegios con tokens (`SeImpersonatePrivilege` con Juicy Potato / God Potato).
+* **Despliegue del Módulo: Gestión de Incidentes de Seguridad (`02 - MODULOS/Prácticas (PoCs)/Gestión de Incidentes/`):**
+  * Creación del índice maestro `00 - Índice del Módulo Gestión de Incidentes.md`.
+  * **Análisis de Malware (3 Prácticas):** Análisis Dinámico (sandbox, Process Hacker, Regshot, Wireshark), Análisis Estático (hashes, PE-bear, FLOSS, Strings) e Ingeniería Inversa (desensamblado con Ghidra y depuración con x64dbg).
+  * **SOC & MITRE ATT&CK (7 Prácticas):** Introducción al SOC y modelos de Tiers, Cyber Threat Intelligence (CTI, IOCs vs IOAs, TTPs, Pirámide del Dolor), MITRE ATT&CK Framework, ATT&CK Navigator (layers y cobertura defensiva), Operacionalización defensiva y Purple Teaming, MITRE D3FEND (contramedidas y hardening) y Caso de Estudio Real.
+  * **SIEM y Wazuh (6 Prácticas):** Introducción a SIEM y arquitectura Wazuh, despliegue de appliance OVA y agentes, detección de vulnerabilidades CVE y evaluación SCA (CIS Benchmarks), detección de malware (FIM, YARA, VirusTotal, Sysmon), respuesta ante incidentes automatizada con Active Response, e integración de Wazuh como IDS con Suricata en Debian 12.
+  * **Análisis Forense Digital (9 Prácticas):** Adquisición de memoria RAM (FTK Imager, DumpIt, RFC 3227) y disco duro (E01, metadatos, cadena de custodia), análisis de RAM con Volatility (`pstree`, `malfind`, credenciales), análisis de disco con FTK Imager (NIST DOMEX), análisis integral con Autopsy (palabras clave, timeline, artefactos), análisis con OSForensics, práctica evaluable HDD (20 preguntas), análisis forense de dispositivos móviles iPhone/iOS (bases de datos SQLite, PList), y práctica evaluable móvil (20 preguntas).
+* **Interconexión Global del Vault:**
+  * Actualización de la matriz y tarjetas de acceso en `02 - MODULOS/05 - Prácticas (PoCs).md` con enlaces directos hacia los 11 módulos completos del curso.
+

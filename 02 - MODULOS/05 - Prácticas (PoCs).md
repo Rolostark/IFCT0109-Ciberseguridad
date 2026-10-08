@@ -47,13 +47,13 @@ tags:
 > [!info] 🛡️ [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire|Módulo de Seguridad Perimetral y Firewalls]]
 > *Topologías por zonas con IPFire, políticas perimetrales y NAT, túneles VPN (OpenVPN/IPsec), IDS/IPS Suricata, servidor proxy Squid y cortafuegos avanzados en Windows y Linux (Iptables/NFTables/UFW).*
 
-> [!info] 🕷️ Módulo de Vulnerabilidades Web (PoC)
+> [!info] 🕷️ [[02 - MODULOS/Prácticas (PoCs)/Vulnerabilidades Web/00 - Índice del Módulo Vulnerabilidades Web|Módulo de Vulnerabilidades Web (PoC)]]
 > *Laboratorios prácticos sobre aplicaciones vulnerables: **DVWA** (10 prácticas: Inyecciones de comandos, fuerza bruta, CSRF, LFI, subida de ficheros, XSS, SQLi manual y con SQLmap) y **VulnWeb** (8 módulos: Command Injection, SSTI, LFI/RFI, CSRF, File Upload, XSS, SQLi, Tokens JWT).*
 
-> [!info] ⚡ Módulo de Escalada de Privilegios en Windows
+> [!info] ⚡ [[02 - MODULOS/Prácticas (PoCs)/Escalada de Privilegios en Windows/00 - Índice del Módulo Escalada de Privilegios en Windows|Módulo de Escalada de Privilegios en Windows]]
 > *Arsenal de elevación local (17 laboratorios y cheatsheet de comandos): Recopilación de información, exploits de kernel, servicios (permisos inseguros, DLL Hijacking, Unquoted Paths, Weak Registry, ejecutables reemplazables), claves de registro (Autorun, AlwaysInstallElevated), contraseñas (registro, archivos, SAM), tareas programadas y suplantación de tokens (`SeImpersonatePrivilege`).*
 
-> [!info] 🚨 Módulo de Gestión de Incidentes de Seguridad
+> [!info] 🚨 [[02 - MODULOS/Prácticas (PoCs)/Gestión de Incidentes/00 - Índice del Módulo Gestión de Incidentes|Módulo de Gestión de Incidentes de Seguridad]]
 > *Flujo defensivo integral: **Análisis de Malware** (análisis dinámico en sandbox, estático e ingeniería inversa), **SOC & MITRE ATT&CK Framework**, monitorización y defensa activa con **SIEM y Wazuh**, y **Análisis Forense Digital** (adquisición, preservación y cadena de custodia).*
 
 > [!info] 📱 [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio|Módulo de Pentesting en Android]]
@@ -72,9 +72,9 @@ tags:
 | **Herramientas de Auditoría** |  🔍   | Nmap, Responder, Metasploit, Hashcat, Gobuster, Hydra, WiFi, Wireshark (+Retos), BloodHound (4 labs), Pivoting (5 labs), BoF (2 labs) | [[02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap\|Acceder a Auditoría]] |
 | **Encriptado de Datos**       |  🔒   | 7-Zip, EncFS, BitLocker, VeraCrypt, Gpg4win (firmas/PKI) y Esteganografía forense                                                     | [[02 - MODULOS/Prácticas (PoCs)/Encriptado de Datos/01 - Cifrado de Contenedores con 7-Zip\|Acceder a Encriptado]]            |
 | **Firewall**                  |  🛡️  | IPFire (zonas, reglas, NAT, OpenVPN/IPsec, IDS Suricata, Proxy Squid) y Firewall Windows/Linux                                        | [[02 - MODULOS/Prácticas (PoCs)/Firewall/01 - Instalación y Topología de Red con IPFire\|Acceder a Firewall]]                 |
-| **Vulnerabilidades WEB**      |  🕷️  | DVWA (10 laboratorios OWASP) y VulnWeb (8 laboratorios: Inyecciones, SSTI, CSRF, XSS, SQLi, JWT)                                      | Módulo Web PoC                                                                                                                |
-| **Escalada en Windows**       |   ⚡   | CheatSheet comandos, Kernel, Servicios inseguros, DLL Hijacking, Unquoted Paths, Registro, SAM, Tokens                                | Módulo EscPriv Windows                                                                                                        |
-| **Gestión de Incidentes**     |  🚨   | Análisis de Malware (Dinámico, Estático, Reversa), SOC & MITRE ATT&CK, SIEM Wazuh, Forense Digital                                    | Módulo Incidentes PoC                                                                                                         |
+| **Vulnerabilidades WEB**      |  🕷️  | DVWA (10 laboratorios OWASP) y VulnWeb (8 laboratorios: Inyecciones, SSTI, CSRF, XSS, SQLi, JWT)                                      | [[02 - MODULOS/Prácticas (PoCs)/Vulnerabilidades Web/00 - Índice del Módulo Vulnerabilidades Web\|Acceder a Vulnerabilidades Web]] |
+| **Escalada en Windows**       |   ⚡   | CheatSheet comandos, Kernel, Servicios inseguros, DLL Hijacking, Unquoted Paths, Registro, SAM, Tokens                                | [[02 - MODULOS/Prácticas (PoCs)/Escalada de Privilegios en Windows/00 - Índice del Módulo Escalada de Privilegios en Windows\|Acceder a Escalada en Windows]] |
+| **Gestión de Incidentes**     |  🚨   | Análisis de Malware (Dinámico, Estático, Reversa), SOC & MITRE ATT&CK, SIEM Wazuh, Forense Digital                                    | [[02 - MODULOS/Prácticas (PoCs)/Gestión de Incidentes/00 - Índice del Módulo Gestión de Incidentes\|Acceder a Gestión de Incidentes]] |
 | **Pentesting en Android**     |  📱   | Android Studio, Apktool, Smali, Ngrok, Serveo, C2 L3MON, ofuscación y APK Easy Tool                                                   | [[02 - MODULOS/Prácticas (PoCs)/Pentesting en Android/01 - Entorno y Emulador con Android Studio\|Acceder a Android]]         |
 
 ---
