@@ -279,3 +279,33 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
     9. **Cuestionarios de Autoevaluación:** 25 formularios oficiales clasificados en Cuestionario Inicial, Gestión de Servicios MF0490_3 (7 tests), Controles ISO 27002 (8 tests) y Seguridad Digital (9 tests de Microsoft Forms).
 
 
+---
+
+## 📌 Paso 20: Reestructuración y Enriquecimiento de la Guía de Comandos Esenciales de Linux
+* **Diagnóstico de Formato:**
+  * Corrección de `03 - EXTRA/Documentos/Linux Comandos Esenciales.md`, el cual presentaba una importación defectuosa de más de 1.800 líneas donde cada palabra del PDF se encontraba fragmentada en una línea individual dentro de un único bloque de código Bash ilegible.
+* **Transformación y Estructuración Fiel (+100 Comandos de `linuxcommands.pdf`):**
+  * Transcripción y tabulación íntegra de los 125 comandos y operadores contenidos en el documento oficial de Waleed Mousa.
+  * Creación de un **Índice Temático Rápido** con anclajes directos navegables.
+  * Distribución en 19 tablas estructuradas con sintaxis de comando, descripción técnica en español y ejemplos prácticos:
+    1. Operaciones con Archivos (22 comandos).
+    2. Operaciones con Directorios (5 comandos).
+    3. Gestión de Procesos y Redirecciones (10 comandos y descriptores `&>`, `1>`, `2>`).
+    4. Permisos y Propietarios de Archivos (con callout explicativo de notación octal).
+    5. Redes y Conectividad (13 comandos: `ping`, `dig`, `netstat`, `ss`, `curl`, `nmap`, etc.).
+    6. Compresión y Empaquetado (`tar`, `gzip`, `zip`, `bzip2`).
+    7. Procesamiento y Filtrado de Texto (`grep`, `sed`, `awk`, `cut`, `wc`, `diff`).
+    8. Uso de Disco y Almacenamiento (`df`, `du`, `free`, `whereis`).
+    9. Información del Sistema y Hardware (`uname`, `uptime`, `whoami`, etc.).
+    10. Gestión de Paquetes APT (`update`, `upgrade`, `install`, `remove`).
+    11. Operadores de Ejecución y Control de Flujo (`;`, `&&`, `||`, `&`).
+    12. Control de Versiones con Git (19 comandos esenciales).
+    13. Variables de Entorno y Alias (`env`, `export`, `$PATH`, `alias`).
+    14. Programación de Tareas con Cron (con desglose de los 5 campos y directiva `@reboot`).
+    15. Gestión de Paquetes Python con PIP (`freeze`, `install -r`).
+    16. Fundamentos de Bash Scripting (Shebang, `$0..$N`, `if`, `for`, `while`, funciones).
+    17. Monitorización del Sistema y Rendimiento (`iostat`, `vmstat`, `htop`).
+    18. Búsqueda y Localización de Ficheros (`locate`, `whereis`, `which`).
+    19. Rendimiento de Disco y Comandos de Prueba (`dd`, `hdparm`, `yes` y alerta de seguridad para *Fork Bomb*).
+* **Interconexión con el Vault:**
+  * Cabecera con migas de pan y enlaces cruzados hacia los 8 laboratorios temáticos de Linux en `02 - MODULOS/Prácticas (PoCs)/Linux/` y el manual de certificación LPIC-1.
