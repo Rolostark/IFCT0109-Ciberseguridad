@@ -322,3 +322,24 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
     * **Tema 103 (Comandos GNU/Unix):** Línea de comandos, entorno `$PATH`, comillas y variables, filtros de texto (`cut`, `sort`, `uniq`, `paste`, `tr`, `wc`, `tee`), wildcards de shell, tabla de descriptores (0, 1, 2) y redirecciones (`&>`, `2> /dev/null`, Here Doc `<<`), señales POSIX (1, 2, 9, 15, 18, 19) y terminales multiplexadas (`tmux` y `screen`), prioridades de proceso (*Niceness* de -20 a 19 con `nice` y `renice`), Regex básicas/extendidas con `grep` y `sed -i`, y guía de examen para modos de edición en `vi`/`vim`.
     * **Tema 104 (Dispositivos, Sistemas de Archivos y FHS):** Particionado MBR vs GPT (`fdisk`, `gdisk`, `parted`), formateo (`mkfs.ext4`, `mkfs.xfs`, `mkswap`), mantenimiento (`df -h`, `df -i`, `fsck`, `tune2fs`), análisis exhaustivo de los 6 campos obligatorios de `/etc/fstab`, permisos especiales de seguridad (SUID `4000`, SGID `2000`, Sticky Bit `1000`) y cálculo de `umask`, tabla comparativa de Enlaces Duros (*Hard Links*) vs Enlaces Simbólicos (*Soft Links*), y desglose de la jerarquía estándar FHS con herramientas de búsqueda (`find`, `locate`, `which`, `whereis`).
   * Inclusión de caja de consejos y puntos clave (*Exam Tips*) para responder preguntas habituales de certificación del LPI.
+
+---
+
+## 📌 Paso 22: Reestructuración y Enriquecimiento Profesional del CheatSheet de Nmap
+* **Diagnóstico de Formato:**
+  * Transformación de `03 - EXTRA/Documentos/Nmap CheatSheet.md`, el cual contenía un volcado plano desordenado de texto del PDF `nmap_cs.pdf` dentro de un bloque ` ```text ` con texto fragmentado, cortes de palabras por ligaduras ("Microso", "a er", "o en") e índices descolocados.
+* **Estructuración y Tabulación Integral de Nmap:**
+  * Inclusión de metadatos YAML enriquecidos, migas de pan y enlaces al laboratorio práctico `02 - MODULOS/Prácticas (PoCs)/Herramientas de Auditoría/01 - Escaneo y Enumeración de Redes con Nmap.md`.
+  * Generación de un **Índice Temático Rápido** navegable mediante anclajes directos.
+  * Distribución en 11 secciones operativas estructuradas en tablas:
+    1. **Especificación de Objetivos:** Escaneo de IP individual, listas, rangos, CIDR, importación desde archivo (`-iL`), objetivos aleatorios (`-iR`) y exclusiones (`--exclude`).
+    2. **Descubrimiento de Hosts:** *List Scan* (`-sL`), *Ping Scan* (`-sn`), bypass de cortafuegos ICMP (`-Pn`), sondeos TCP SYN/ACK (`-PS`, `-PA`), UDP (`-PU`), ARP en Capa 2 (`-PR`) y deshabilitación de DNS (`-n`).
+    3. **Especificación de Puertos:** Puertos individuales (`-p`), rangos, combinación TCP/UDP, escaneo completo (`-p-`), puertos por servicio, *Fast scan* (`-F`) y top ports (`--top-ports`).
+    4. **Técnicas de Escaneo de Puertos:** Comparativa técnica y explicación a nivel de sockets de TCP SYN Stealth (`-sS`), TCP Connect (`-sT`), UDP (`-sU`), TCP ACK (`-sA`), Window (`-sW`), Maimon (`-sM`), Null (`-sN`), FIN (`-sF`), Xmas (`-sX`) e IP Protocol (`-sO`).
+    5. **Detección de Versiones y SO:** Versiones de servicios (`-sV`, `--version-intensity`), fingerprinting de SO (`-O`, `--osscan-guess`) y modo integral agresivo (`-A`).
+    6. **Temporización y Rendimiento:** Desglose de las 6 plantillas `-T0` (Paranoid) a `-T5` (Insane), y ajustes finos (`--min-rate`, `--max-retries`, `--scan-delay`, `--host-timeout`).
+    7. **Evasión de Firewalls/IDS:** Fragmentación de paquetes (`-f`, `--mtu`), señuelos (`-D Decoys`), suplantación de IP (`-S`), puerto de origen fijo (`-g 53`), proxies HTTP/SOCKS y relleno aleatorio (`--data-length`).
+    8. **Nmap Scripting Engine (NSE):** Categorías oficiales (`default`, `vuln`, `auth`, `discovery`, `safe`, etc.), sintaxis de ejecución con argumentos y scripts esenciales para pentesting (SMB EternalBlue, HTTP Title/Enum, SSL Ciphers, DNS Brute, Vulners).
+    9. **Formatos de Salida (Output):** Normal (`-oN`), XML (`-oX`), Grepable (`-oG`), el estándar profesional All Formats (`-oA`), verbosidad y modo depuración.
+    10. **One-Liners de Terminal:** Filtrado avanzado de resultados con `awk`, `grep`, `uniq`, comparación de escaneos temporales con `ndiff` y generación de informes visuales con `xsltproc`.
+    11. **Mapeo de Escaneos Complejos:** Diagrama de secuencia Mermaid para el **Idle Scan / Zombie Scan (`-sI`)** explicando el abuso del contador IPID, y explicación técnica del ataque de rebote FTP (*FTP Bounce Attack* `-b`).
