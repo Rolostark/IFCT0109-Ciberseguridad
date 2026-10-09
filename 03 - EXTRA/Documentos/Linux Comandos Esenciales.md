@@ -25,14 +25,14 @@ tags:
 > 👨‍💻 **Autor Original:** Waleed Mousa (*Essential Linux Commands [+100]*)
 > 
 > 🔗 **Laboratorios Prácticos Relacionados en el Vault:**
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/01 - Curso de Linux - Introducción y Entorno|Linux 01 — Introducción y Entorno (WSL y Docker)]]
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/02 - Curso de Linux - Estructura de Archivos (FHS)|Linux 02 — Estructura de Archivos (FHS)]]
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/03 - Curso de Linux - Comandos Esenciales de Sistema|Linux 03 — Comandos Esenciales de Sistema]]
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/04 - Curso de Linux - Gestión de Grupos y Sudoers|Linux 04 — Gestión de Grupos y Sudoers]]
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/05 - Curso de Linux - Gestión de Usuarios y Autenticación|Linux 05 — Gestión de Usuarios y Autenticación]]
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/06 - Curso de Linux - Permisos, SUID, SGID y Sticky Bit|Linux 06 — Permisos, SUID y Escalada]]
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/07 - Filtrado de Información en Linux|Linux 07 — Filtrado Avanzado (Grep, Sed, Awk)]]
-> * [[02 - MODULOS/Prácticas (PoCs)/Linux/08 - Curso de Bash Scripting en Linux|Linux 08 — Curso de Bash Scripting]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/01 - Curso de Linux para Pentesting|Linux 01 — Curso de Linux para Pentesting]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/04 - Curso de Linux - Estructura de Archivos (FHS)|Linux 04 — Estructura de Archivos (FHS)]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/05 - Curso de Linux - Comandos Básicos|Linux 05 — Comandos Básicos]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/06 - Curso de Linux - Gestión de Grupos|Linux 06 — Gestión de Grupos]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/07 - Curso de Linux - Gestión de Usuarios|Linux 07 — Gestión de Usuarios]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/08 - Curso de Linux - Permisos y Seguridad|Linux 08 — Permisos Especiales y SUID]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/09 - Filtrado de Información en Linux|Linux 09 — Filtrado Avanzado (Grep, Sed, Awk)]]
+> * [[02 - MODULOS/Prácticas (PoCs)/Linux/10 - Curso de Bash Scripting en Linux|Linux 10 — Curso de Bash Scripting]]
 > * [[03 - EXTRA/Documentos/Material Preparación LPIC|Material Preparación Certificación LPIC-1]]
 
 ---

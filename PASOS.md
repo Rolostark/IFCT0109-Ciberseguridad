@@ -309,3 +309,16 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
     19. Rendimiento de Disco y Comandos de Prueba (`dd`, `hdparm`, `yes` y alerta de seguridad para *Fork Bomb*).
 * **Interconexión con el Vault:**
   * Cabecera con migas de pan y enlaces cruzados hacia los 8 laboratorios temáticos de Linux en `02 - MODULOS/Prácticas (PoCs)/Linux/` y el manual de certificación LPIC-1.
+
+---
+
+## 📌 Paso 21: Síntesis Ejecutiva y Resumen Didáctico de la Guía Oficial LPIC-1 (Examen 101 y 102)
+* **Diagnóstico de Contenido:**
+  * Sustitución del volcado en bruto de `03 - EXTRA/Documentos/Material Preparación LPIC.md` (que consistía en un bloque de texto plano con 300 líneas de índice con puntos suspensivos y las primeras 5 páginas del PDF cortadas abruptamente) por una **Guía Resumida Ejecutiva de Estudio Oficial**.
+* **Condensación Estructurada del Manual Oficial (571 Páginas):**
+  * Síntesis de los 4 grandes temas oficiales de certificación LPIC-1 (Versión 5.0):
+    * **Tema 101 (Arquitectura del Sistema):** Hardware (`/proc`, `/sys`, `/dev`, `lspci`, `lsusb`, `modprobe`), diagrama Mermaid del proceso de arranque (Firmware → GRUB → Kernel + initramfs → Systemd PID 1), tabla comparativa de Runlevels SysVinit vs Targets de Systemd (`rescue`, `multi-user`, `graphical`, `reboot`, etc.) y comandos de apagado.
+    * **Tema 102 (Instalación y Paquetería):** Particionado y LVM (PV, VG, LV), comparativa GRUB Legacy vs GRUB 2 (`/etc/default/grub`, `grub-mkconfig`), bibliotecas compartidas (`.so`, `/etc/ld.so.conf`, `ldconfig`, `ldd`), tablas comparativas de bajo y alto nivel para Debian (`dpkg` vs `apt`) y Red Hat / SUSE (`rpm` vs `yum`/`dnf`/`zypper`), y virtualización (Hipervisores Tipo 1/2, Docker, Namespaces y Cgroups).
+    * **Tema 103 (Comandos GNU/Unix):** Línea de comandos, entorno `$PATH`, comillas y variables, filtros de texto (`cut`, `sort`, `uniq`, `paste`, `tr`, `wc`, `tee`), wildcards de shell, tabla de descriptores (0, 1, 2) y redirecciones (`&>`, `2> /dev/null`, Here Doc `<<`), señales POSIX (1, 2, 9, 15, 18, 19) y terminales multiplexadas (`tmux` y `screen`), prioridades de proceso (*Niceness* de -20 a 19 con `nice` y `renice`), Regex básicas/extendidas con `grep` y `sed -i`, y guía de examen para modos de edición en `vi`/`vim`.
+    * **Tema 104 (Dispositivos, Sistemas de Archivos y FHS):** Particionado MBR vs GPT (`fdisk`, `gdisk`, `parted`), formateo (`mkfs.ext4`, `mkfs.xfs`, `mkswap`), mantenimiento (`df -h`, `df -i`, `fsck`, `tune2fs`), análisis exhaustivo de los 6 campos obligatorios de `/etc/fstab`, permisos especiales de seguridad (SUID `4000`, SGID `2000`, Sticky Bit `1000`) y cálculo de `umask`, tabla comparativa de Enlaces Duros (*Hard Links*) vs Enlaces Simbólicos (*Soft Links*), y desglose de la jerarquía estándar FHS con herramientas de búsqueda (`find`, `locate`, `which`, `whereis`).
+  * Inclusión de caja de consejos y puntos clave (*Exam Tips*) para responder preguntas habituales de certificación del LPI.
