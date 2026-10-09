@@ -343,3 +343,23 @@ Este documento registra cronológicamente los pasos ejecutados para transformar 
     9. **Formatos de Salida (Output):** Normal (`-oN`), XML (`-oX`), Grepable (`-oG`), el estándar profesional All Formats (`-oA`), verbosidad y modo depuración.
     10. **One-Liners de Terminal:** Filtrado avanzado de resultados con `awk`, `grep`, `uniq`, comparación de escaneos temporales con `ndiff` y generación de informes visuales con `xsltproc`.
     11. **Mapeo de Escaneos Complejos:** Diagrama de secuencia Mermaid para el **Idle Scan / Zombie Scan (`-sI`)** explicando el abuso del contador IPID, y explicación técnica del ataque de rebote FTP (*FTP Bounce Attack* `-b`).
+
+---
+
+## 📌 Paso 23: Reestructuración y Sincronización Fiel 1:1 de Conclusiones Finales (Guía de Especialidades)
+* **Auditoría e Inspección del Portal Oficial (`cursosmfr.es/ifct0109/final/`):**
+  * Descarga y cotejo íntegro del HTML de `final/index.html` frente a la nota local `03 - EXTRA/04 - Conclusiones Finales.md`.
+* **Reorganización Estructurada y Enriquecimiento Visual:**
+  * Inclusión de metadatos YAML, migas de pan y callout con objetivo pedagógico.
+  * **Índice Rápido de Especialidades** con anclajes directos a cada perfil.
+  * Desglose completo de los **7 Perfiles Profesionales de Ciberseguridad** + Bloque de **Búsqueda de Empleo**:
+    1. **⚖️ GRC / Compliance:** Funciones de auditoría/riesgo/ENS/RGPD, herramientas (PILAR, MAGERIT, ISO 27001, ENS Navegable), recursos oficiales y certificación AENOR.
+    2. **🔵 Analista SOC / Blue Team:** Monitorización SIEM/EDR, triage, threat hunting, laboratorios (LetsDefend, Hackviser, TryHackMe), formaciones oficiales (Splunk, Wazuh) y certificaciones prácticas (CSOA, HTB CJCA, LetsDefend, HTB CDSA).
+    3. **🖥️ Técnico en Seguridad Informática:** Hardening, gestión de vulnerabilidades, firewalls (pfSense, IPFire, UFW), CIS Benchmarks, formación Tenable/Qualys y certificación HTB CJCA.
+    4. **🔴 Pentester / Red Team:** Metodología ofensiva, herramientas de explotación y Active Directory (Metasploit, BloodHound, Impacket), recursos (CVE, NVD, Exploit-DB) y certificaciones prácticas progresivas (CAPT, HTB CPTS, OSCP, HTB CAPE, HTB CWPE).
+    5. **🌐 Pentester Web:** Explotación OWASP Top 10, herramientas (Burp Suite, Caido, SQLMap, FFUF), recursos formativos de referencia (PortSwigger Web Security Academy, OWASP WSTG) y certificaciones avanzadas (CAPT, CWSE, HTB CWES, BSCP, HTB CWEE).
+    6. **🦠 Analista de Malware:** Análisis estático, dinámico y reversing (Ghidra, IDA Pro, x64dbg), repositorios de malware en vivo (MalwareBazaar abuse.ch), formación Coursera, formación oficial Hex-Rays IDA Pro y certificación GREM de GIAC/SANS.
+    7. **🔍 Forense Digital:** Adquisición de evidencias, análisis de RAM y disco (Autopsy, FTK Imager, Volatility), directorios de referencia (DFIR.training, Forensic Focus), plataformas de casos reales (CyberDefenders, Blue Team Labs Online), formación oficial Autopsy y certificaciones de referencia (GCFE, GCFA).
+    8. **🔎 Búsqueda de Empleo y Directorio INCIBE:** Directorio oficial del Catálogo de Empresas y Servicios de Ciberseguridad de INCIBE con enlace web directo y referencia al marco ENISA ECSF.
+* **Integración Cruzada con los Laboratorios del Vault:**
+  * Vinculación en cada perfil con los módulos prácticos existentes del vault (MAGERIT, ISO 27002, Firewalls, Active Directory, CheatSheets de Linux/Windows/Nmap, Hacking Ético, Bug Bounty, PoCs de Vulnerabilidades Web, Análisis de Malware, Forense Digital y SOC/Wazuh).
